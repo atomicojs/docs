@@ -85,7 +85,7 @@ component.props = { myName: { type: String } };
 
 ### Prop.reflect
 
-si la propiedad reflect se define como true, se reflejara su valor como atributo del webcomponent, esto es útil para la declaración de estados del CSS, ejemplo:
+Si la propiedad "reflect" se define como true se refleja su valor como atributo del webcomponent, esto es útil para la declaración de estados del CSS, ejemplo:
 
 ```jsx
 component.props = {
