@@ -38,7 +38,7 @@ customElement.define("web-component", c(component));
 
 Considere que:
 
-1. Todo nombre de prop Camel case será traducido a para su uso como atributo al formato Kebab case, este comportamiento puede ser modificado mediante la propiedad "attr" al usar una declaración estructurada.
+1. los nombre de prop en formato Camel Case será traducido a para su uso como atributo al formato Kebab Case, este comportamiento puede ser modificado mediante la propiedad "attr" al usar una declaración estructurada.
 2. Las declaraciones estructuradas requieren mínimamente la propiedad "type".
 3. No todos los tipos pueden usar la propiedades "reflect".
 4. La forma de declarar la propiedad "value" puede variar según el tipo.
@@ -61,7 +61,7 @@ component.props = {
 
 ## Declaraciones estructuradas
 
-Mejora la definición simple añadiendo declaraciones utilitarias, permitiendo declarar en un objeto asociado a la prop, tipo, reflejo como atributo, valor por defecto y emisión de eventos ante el cambio.
+Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo asociar efectos como reflejar el valor de la propiedad como atributos, emitir eventos o asociar valores por defecto.
 
 ### Prop.type
 

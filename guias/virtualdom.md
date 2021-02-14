@@ -63,8 +63,8 @@ function component() {
 
 Una regla importante del virtualDOM de Atomico es que **todo webcomponent debe retornar el tag `<host/>`** ya que este representa el estado del DOM del webcomponent, como:
 
-1. Declaración del shadowDOM, mediante la propiedad `shadowDom`
-2. Declaración de eventos, atributos o propiedades.
+1. Habilitar el uso del shadowDOM declarando la propiedad `shadowDom`
+2. Asociación de eventos, atributos o propiedades.
 3. Template del webcomponent.
 
 ## Template
@@ -132,7 +132,7 @@ Puede declarar un método declarando en el tag host una función sin el uso del 
 document.querySelector("my-component").myMethod();
 ```
 
-Si al momento de la creacion o actualización del DOM no detecta la propiedad en el prototipo se asociara como un método del nodo permitiendo asi que este pueda ser recuperado desde el nodo, ejemplo:
+Si al crear o actualizar el DOM no detecta el uso de la propiedad, se asociara como método de esta, permitiendo así ser accedida desde el DOM, ejemplo:
 
 ```jsx
 const myElement = new MyElement();
