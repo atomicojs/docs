@@ -61,7 +61,7 @@ component.props = {
 
 ## Declaraciones estructuradas
 
-Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo asociar efectos como reflejar el valor de la propiedad como atributos, emitir eventos o asociar valores por defecto.
+Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo reflejar el valor de la propiedad como atributos, emitir automáticamente eventos o asociar valores por defecto. **Recuerde este tipo de declaraciones requieren mínimamente el uso de la propiedad type.**
 
 ### Prop.type
 
@@ -72,16 +72,16 @@ component.props = { myName: String };
 component.props = { myName: { type: String } };
 ```
 
-| Tipo | Acepta `reflect` |
+| Tipo | Soporta la propiedad "reflect" |
 | :--- | :--- |
-| **String** | Si |
-| **Number** | Si |
-| **Boolean** | Si |
-| **Object** | Si |
-| **Array** | Si |
-| **Promise** | No |
-| **Symbol** | No |
-| **Function** | No |
+| **String** | ✔️ |
+| **Number** | ✔️ |
+| **Boolean** | ✔️ |
+| **Object** | ✔️ |
+| **Array** | ✔️ |
+| **Promise** | ❌ |
+| **Symbol** | ❌ |
+| **Function** | ❌ |
 
 ### Prop.reflect
 
