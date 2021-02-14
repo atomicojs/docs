@@ -61,7 +61,7 @@ function component() {
 }
 ```
 
-Una regla importante del virtualDOM de Atomico es que **todo webcomponent debe retornar el tag `<host/>`**. El tag host representara el estado del DOM del webcomponent, como:
+Una regla importante del virtualDOM de Atomico es que **todo webcomponent debe retornar el tag `<host/>`** ya que este representa el estado del DOM del webcomponent, como:
 
 1. Declaración del shadowDOM, mediante el atributo `shadowDom`
 2. Declaración de eventos, atributos o propiedades.
