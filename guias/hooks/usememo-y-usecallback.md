@@ -10,7 +10,7 @@ Donde :
 
 1. `memoValue` : Retorno memorizado por useMemo 
 2. `callback`:  Función que se ejecuta una o mas veces según `optionalArgumentList`.
-3. `optionalArgumentList`: Array de argumentos que controla la ejecución de `callback`, si un argumento de `optionalArgumentList` cambia detonara que `callback` sea ejecutado nuevamente.
+3. `optionalArgumentList`: Array de argumentos a observar por `useEffect`, si uno de estos argumentos cambia entre renderizaciones `useEffect` ejecutara nuevamente el `callback`, memorizando un nuevo retorno.
 
 ### useCallback
 
