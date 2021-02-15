@@ -6,7 +6,7 @@ description: >-
 
 # Test Hooks
 
-Atomico ofrece un submodulo llamado "atomico/test-hooks", este modulo es parte directa del core de Atomico y le permitirá ejecutar el customHook de forma controlada sin la necesidad de webcomponents.
+El submodulo "atomico/test-hooks" es parte directa del core de Atomico y le permitirá ejecutar el customHook de forma controlada sin la necesidad de usar webcomponents.
 
 ```javascript
 import { createHooks } from "atomico/test-hooks";
@@ -14,7 +14,7 @@ import { createHooks } from "atomico/test-hooks";
 
 ### createHooks
 
-función que crea una colección que permite asociar hooks para ejecutarlos en un ciclo de vida controlado.
+función que crea un contexto asilado que se comparte globalmente con los hooks de Atomico al momento de ejecutar el método load.
 
 #### Instancia
 
@@ -24,10 +24,10 @@ const hooks = createHooks(opcionalRender, opcionalHost);
 
 Donde:
 
-* **optionalRender**: Callback que permite reiniciar el ciclo de vida del hook, este callback será ejecutado cada vez que un hook como [useState ](../hooks/usestate.md)o [useReducer ](../hooks/usereducer.md)soliciten la actualización del scope, Atomico lo usa para renderizar nuevamente el webcomponent.
-* **opcionalHost**: ****permite dar un objeto a ser compartido mediante el hook [useHost](../hooks/usehost.md), Atomico lo usa para compartir la instancia del webcomponent.
+* **optionalRender**: Callback que permite reiniciar el ciclo de vida del hook, este callback será ejecutado cada vez que un hook como [useState ](../hooks/usestate.md)o [useReducer ](../hooks/usereducer.md)soliciten la actualización del scope. Atomico lo usa para renderizar nuevamente el webcomponent.
+* **opcionalHost**: ****permite compartir un objeto para el hook [useHost](../hooks/usehost.md). Atomico lo usa para compartir la instancia del webcomponent.
 
-#### Retorno 
+#### Retorno de la instancia
 
 ```typescript
 interface Hooks {
@@ -38,10 +38,10 @@ interface Hooks {
 
 Donde
 
-* **load**:  función que asocia permite asociar el scope del callback a un habito de contexto global temporal. 
-* **clearEffect:** funcion que permite recolectar los efectos de useLayoutEffect, **al ejecutar clearEffect se retornara un callback que permite finalizar la recoleccion final de useEffect cerrando el ciclo de efectos secundarios.**
+* **load**:  Función que asocia permite asociar el scope del callback a un habito de contexto global temporal. 
+* **clearEffect:** Función que activa el colector de useLayoutEffect, al ejecutar clearEffect se retornara un callback que permite finalizar la el colector para useEffect cerrando el ciclo de efectos secundarios.
 
-  Opcionalmente clearEffect acepta un parámetro booleano que comunica que la colección de Hooks ha debe ser desmontada si este se define como true.
+  Si clearEffect recibe como parámetro true comunica el desmontaje.
 
 ### Ejemplo:
 
