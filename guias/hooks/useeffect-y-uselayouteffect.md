@@ -12,8 +12,8 @@ useEffect(effectCallback, optionalArgumentList);
 
 Donde :
 
-1. `effectCallback` : Función que se ejecuta una o mas veces según `optionalArgumentList`, `effectCallback`  puede retornar una función que será ejecutada solo si ```effectCallback`` \` es nuevamente ejecutado o el wecomponents es desmontado.
-2. `optionalArgumentList`: Array de argumentos a observar por `useEffect`, si uno de estos argumentos cambia entre renderizaciones `effectCallback` será ejecutado nuevamente. Si `optionalArgumentList` se define como una array vacío\(`[]`\),  useEffect solo ejecutara `effectCallback`  al crear el webcomponent .
+1. `effectCallback` : Función que se ejecuta una o mas veces según `optionalArgumentList`, `effectCallback`  puede retornar una función que será ejecutada solo si ```effectCallback`` \` es nuevamente ejecutado o el webcomponent es desmontado.
+2. `optionalArgumentList`:  Array de argumentos que controla la ejecución de `effectCallback`, si un argumento de `optionalArgumentList` cambia detonara que `effectCallback` sea ejecutado nuevamente sin antes limpiar los efectos suscritos por la ejecución anterior.
 
 ### Ejemplo
 
@@ -36,5 +36,5 @@ useEffect(listenerClickWindow, []);
 
 ### useLayoutEffect
 
-Comportamiento idéntico a useEffect, pero con ejecución síncrona a la finalización del render.
+Replica la lógica de useEffect pero con ejecución síncrona al render.
 
