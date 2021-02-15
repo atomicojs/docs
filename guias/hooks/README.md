@@ -4,7 +4,7 @@ description: >-
   Atomico
 ---
 
-# Hooks
+# 🎣 Hooks
 
 ### Hooks propios para webcomponents
 

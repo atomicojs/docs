@@ -4,7 +4,7 @@ description: >-
   atributos reactivos que detonan la lógica o interfaz del webcomponent.
 ---
 
-# Props\(Propiedades\)
+# 🧬 Props\(Propiedades\)
 
 ## Sintaxis
 

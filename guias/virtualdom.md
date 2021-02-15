@@ -4,7 +4,7 @@ description: >-
   webcomponents.
 ---
 
-# VirtualDOM
+# 🧩 VirtualDOM
 
 ## Sintaxis
 
