@@ -25,4 +25,7 @@
   * [useChildNodes](atomico/kit/usechildnodes.md)
   * [useForceRender](atomico/kit/untitled.md)
   * [useListener](atomico/kit/uselistener.md)
+  * [useRender](atomico/kit/userender.md)
+  * [useRouter](atomico/kit/userouter.md)
+  * [useSlot](atomico/kit/useslot.md)
 
