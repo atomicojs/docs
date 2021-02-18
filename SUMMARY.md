@@ -23,5 +23,5 @@
 
 * [🛠️ kit](atomico/kit/README.md)
   * [useChildNodes](atomico/kit/usechildnodes.md)
-  * [Untitled](atomico/kit/untitled.md)
+  * [useForceRender](atomico/kit/untitled.md)
 
