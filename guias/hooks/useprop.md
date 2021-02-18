@@ -8,9 +8,19 @@ useProp permite trabajar con una prop\(propiedad\) del webcomponent de forma sim
 
 ### Sintaxis
 
+{% tabs %}
+{% tab title="JS" %}
+```javascript
+const [value, setValue] = useProp(myProp);
+```
+{% endtab %}
+
+{% tab title="TS" %}
 ```typescript
 const [value, setValue] = useProp<PropType>(myProp);
 ```
+{% endtab %}
+{% endtabs %}
 
 Donde : 
 
