@@ -6,6 +6,8 @@ description: >-
 
 # 👋 Atomico
 
+{% tabs %}
+{% tab title="JSX" %}
 ```jsx
 import { c } from "atomico"; // 2.5kB
 
@@ -19,6 +21,41 @@ component.props = {
 
 customElements.define("my-component", c(component));
 ```
+{% endtab %}
+
+{% tab title="TSX" %}
+```jsx
+import { Props, c } from "atomico"; // 2.5kB
+
+function component({ name }:Props<typeof component.props>) {
+  return <host shadowDom>Hello, {name}</host>;
+}
+
+component.props = {
+  name: String,
+};
+
+customElements.define("my-component", c(component));
+```
+{% endtab %}
+
+{% tab title="JS" %}
+```javascript
+import { c } from "atomico"; // 2.5kB
+import html from "atomico/html"; // .5kB
+
+function component({ name }) {
+  return html`<host shadowDom>Hello, ${name}</host>`;
+}
+
+component.props = {
+  name: String,
+};
+
+customElements.define("my-component", c(component));
+```
+{% endtab %}
+{% endtabs %}
 
 Atomico simplifica el aprendizaje, flujo de trabajo y el mantenimiento al crear webcomponents y lo  logra con :
 
