@@ -26,7 +26,7 @@ import { useForceRender } from "@atomico/kit/use-force-render";
 
 Donde: 
 
-1. `forceRender`: Callback para forzar la renderizacion del webcomponent.
+1. `forceRender`: Callback para forzar la renderización del webcomponent.
 
 ### Ejemplo
 
