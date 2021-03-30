@@ -21,11 +21,11 @@
 
 ## @atomico
 
-* [🛠️ @atomico/hooks\(Trabajando\)](atomico/kit/README.md)
-  * [useChildNodes](atomico/kit/usechildnodes.md)
-  * [useForceRender](atomico/kit/useforcerender.md)
-  * [useListener](atomico/kit/uselistener.md)
-  * [useRender](atomico/kit/userender.md)
-  * [useRouter](atomico/kit/userouter.md)
-  * [useSlot](atomico/kit/useslot.md)
+* [🛠️ @atomico/hooks\(Trabajando\)](atomico/atomico-hooks/README.md)
+  * [useChildNodes](atomico/atomico-hooks/usechildnodes.md)
+  * [useForceRender](atomico/atomico-hooks/useforcerender.md)
+  * [useListener](atomico/atomico-hooks/uselistener.md)
+  * [useRender](atomico/atomico-hooks/userender.md)
+  * [useRouter](atomico/atomico-hooks/userouter.md)
+  * [useSlot](atomico/atomico-hooks/useslot.md)
 
