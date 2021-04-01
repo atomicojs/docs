@@ -26,6 +26,6 @@
   * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
   * [use-force-render](atomico/atomico-hooks/use-force-render.md)
   * [use-render](atomico/atomico-hooks/use-render.md)
-  * [useRouter](atomico/atomico-hooks/userouter.md)
-  * [useSlot](atomico/atomico-hooks/useslot.md)
+  * [use-router](atomico/atomico-hooks/use-router.md)
+  * [use-slot](atomico/atomico-hooks/use-slot.md)
 

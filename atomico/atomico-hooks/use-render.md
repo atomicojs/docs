@@ -6,6 +6,18 @@ description: >-
 
 # use-render
 
+### Instalación
+
+```bash
+npm install @atomico/hooks
+```
+
+### Modulo
+
+```javascript
+import { useRender } from "@atomico/hooks/use-render";
+```
+
 ### Sintaxis
 
 ```jsx

@@ -7,13 +7,13 @@ description: Captura todos los nodos no creados por el render del webcomponent.
 ### Instalación
 
 ```bash
-npm install @atomico/kit
+npm install @atomico/hooks
 ```
 
 ### Modulo
 
 ```javascript
-import { useChildNodes } from "@atomico/kit/use-child-nodes";
+import { useChildNodes } from "@atomico/hooks/use-child-nodes";
 ```
 
 ### Sintaxis

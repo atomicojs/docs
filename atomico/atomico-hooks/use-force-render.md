@@ -9,13 +9,13 @@ description: >-
 ### Instalación
 
 ```bash
-npm install @atomico/kit
+npm install @atomico/hooks
 ```
 
 ### Modulo
 
 ```javascript
-import { useForceRender } from "@atomico/kit/use-force-render";
+import { useForceRender } from "@atomico/hooks/use-force-render";
 ```
 
 ### Sintaxis
