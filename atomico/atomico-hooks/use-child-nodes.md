@@ -1,5 +1,7 @@
 ---
-description: Captura todos los nodos no creados por el render del webcomponent.
+description: >-
+  Captura todos los nodos no creados por el render del webcomponent, ideal para
+  aplicar polyfill de slot en LightDOM.
 ---
 
 # use-child-nodes
