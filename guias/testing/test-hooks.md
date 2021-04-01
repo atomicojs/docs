@@ -60,7 +60,7 @@ export function useCounter(initialValue) {
 }
 ```
 
-**./use-counter.test.js:** el  ejemplo se basa en el entorno de test de [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/).64
+**./use-counter.test.js:** el  ejemplo se basa en el entorno de test de [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/).
 
 ```javascript
 import { expect } from "@esm-bundle/chai";
