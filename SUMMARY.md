@@ -22,6 +22,7 @@
 ## @atomico
 
 * [🛠️ @atomico/hooks\(Trabajando\)](atomico/atomico-hooks/README.md)
+  * [use-parent](atomico/atomico-hooks/use-parent.md)
   * [use-responsive-state](atomico/atomico-hooks/use-responsive-state.md)
   * [use-promise](atomico/atomico-hooks/use-promise.md)
   * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
