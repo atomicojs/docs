@@ -22,7 +22,6 @@
 ## @atomico
 
 * [🛠️ @atomico/hooks\(Trabajando\)](atomico/atomico-hooks/README.md)
-  * [use-async-effect](atomico/atomico-hooks/use-async-effect.md)
   * [use-force-render](atomico/atomico-hooks/use-force-render.md)
   * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
   * [use-promise](atomico/atomico-hooks/use-promise.md)
@@ -32,5 +31,6 @@
   * [use-render](atomico/atomico-hooks/use-render.md)
   * [use-router](atomico/atomico-hooks/use-router.md)
   * [use-slot](atomico/atomico-hooks/use-slot.md)
+  * [use-async-effect](atomico/atomico-hooks/use-async-effect.md)
   * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
 

@@ -13,7 +13,10 @@ npm install @atomico/hooks
 ### Modulo
 
 ```javascript
-import { useResizeObserver, useResizeObserverState } from "@atomico/hooks/use-resize-observer";
+import { 
+    useResizeObserver, 
+    useResizeObserverState 
+} from "@atomico/hooks/use-resize-observer";
 ```
 
 ### Sintaxis

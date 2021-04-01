@@ -15,7 +15,12 @@ npm install @atomico/hooks
 ### Modulo
 
 ```javascript
-import { useRouter, useRoute, redirect, getPath } from "@atomico/hooks/use-router";
+import { 
+    useRouter, 
+    useRoute, 
+    redirect, 
+    getPath 
+} from "@atomico/hooks/use-router";
 ```
 
 ### Sintaxis
