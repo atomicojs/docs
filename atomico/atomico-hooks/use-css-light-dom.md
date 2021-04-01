@@ -21,6 +21,18 @@ import { useCssLightDom } from "@atomico/hooks/use-css-light-dom";
 ```jsx
 const css = useCssLightDom();
 
-return 
+return (
+  <host
+    class={css`
+      width: 100px;
+      height: 100px;
+      :hover {
+        background: red;
+      }
+    `}
+  >
+    <slot ref={ref}></slot>
+  </host>
+);
 ```
 
