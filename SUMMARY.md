@@ -22,12 +22,14 @@
 ## @atomico
 
 * [🛠️ @atomico/hooks\(Trabajando\)](atomico/atomico-hooks/README.md)
-  * [use-parent](atomico/atomico-hooks/use-parent.md)
-  * [use-responsive-state](atomico/atomico-hooks/use-responsive-state.md)
-  * [use-promise](atomico/atomico-hooks/use-promise.md)
-  * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
   * [use-force-render](atomico/atomico-hooks/use-force-render.md)
+  * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
+  * [use-promise](atomico/atomico-hooks/use-promise.md)
+  * [use-responsive-state](atomico/atomico-hooks/use-responsive-state.md)
+  * [use-parent](atomico/atomico-hooks/use-parent.md)
+  * [use-resize-observer](atomico/atomico-hooks/use-resize-observer.md)
   * [use-render](atomico/atomico-hooks/use-render.md)
   * [use-router](atomico/atomico-hooks/use-router.md)
   * [use-slot](atomico/atomico-hooks/use-slot.md)
+  * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
 
