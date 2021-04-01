@@ -36,3 +36,7 @@ return (
 );
 ```
 
+{% hint style="info" %}
+El formato de CSS es Atomico a la clase, por lo que evite el uso de selectores de árbol.
+{% endhint %}
+
