@@ -2,22 +2,22 @@
 
 * [👋 Atomico](README.md)
 
-## Api <a id="guias"></a>
+## Api
 
-* [🧬 Props\(Propiedades\)](guias/props.md)
-* [🧩 VirtualDOM](guias/virtualdom.md)
-* [🎣 Hooks](guias/hooks/README.md)
-  * [useProp](guias/hooks/useprop.md)
-  * [useEvent](guias/hooks/useevent.md)
-  * [useHost](guias/hooks/usehost.md)
-  * [useState](guias/hooks/usestate.md)
-  * [useReducer](guias/hooks/usereducer.md)
-  * [useRef](guias/hooks/useref.md)
-  * [useEffect y useLayoutEffect](guias/hooks/useeffect-y-uselayouteffect.md)
-  * [useMemo y useCallback](guias/hooks/usememo-y-usecallback.md)
-* [🔬 Testing](guias/testing/README.md)
-  * [Test DOM](guias/testing/test-dom.md)
-  * [Test Hooks](guias/testing/test-hooks.md)
+* [🧬 Props\(Propiedades\)](api/props.md)
+* [🧩 VirtualDOM](api/virtualdom.md)
+* [🎣 Hooks](api/hooks/README.md)
+  * [useProp](api/hooks/useprop.md)
+  * [useEvent](api/hooks/useevent.md)
+  * [useHost](api/hooks/usehost.md)
+  * [useState](api/hooks/usestate.md)
+  * [useReducer](api/hooks/usereducer.md)
+  * [useRef](api/hooks/useref.md)
+  * [useEffect y useLayoutEffect](api/hooks/useeffect-y-uselayouteffect.md)
+  * [useMemo y useCallback](api/hooks/usememo-y-usecallback.md)
+* [🔬 Testing](api/testing/README.md)
+  * [Test DOM](api/testing/test-dom.md)
+  * [Test Hooks](api/testing/test-hooks.md)
 
 ## @atomico
 
@@ -33,4 +33,8 @@
   * [use-slot](atomico/atomico-hooks/use-slot.md)
   * [use-async-effect](atomico/atomico-hooks/use-async-effect.md)
   * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
+
+## guías
+
+* [Typescript](guias/typescript.md)
 

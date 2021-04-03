@@ -65,13 +65,13 @@ Atomico simplifica el aprendizaje, flujo de trabajo y el mantenimiento al crear 
 
 ### Api
 
-{% page-ref page="guias/props.md" %}
+{% page-ref page="api/props.md" %}
 
-{% page-ref page="guias/hooks/" %}
+{% page-ref page="api/hooks/" %}
 
-{% page-ref page="guias/testing/" %}
+{% page-ref page="api/testing/" %}
 
-{% page-ref page="guias/virtualdom.md" %}
+{% page-ref page="api/virtualdom.md" %}
 
 
 
