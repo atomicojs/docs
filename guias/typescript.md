@@ -73,20 +73,13 @@ function component(props) {}
 
 c(component); // ✔️
 
-// CASO 2
-function component(props) {}
-
-component.props = {};
-
-c(component);//❌ - las props no pueden definirse vacias 
-
 // CASO 3
 function component(props) {}
 
 component.props = {
     value: {
         type: Number,
-        value: "hola",
+        value: "...",
     },
 };
 
@@ -95,7 +88,7 @@ c(component); // ❌ -  la propiedad value debe ser del tipo declarado en type
 
 ## Hooks
 
-La mayoría de los hooks resuelven los tipos de forma automática, pero otros requieren una declaración para mejorar la experiencia de tipado.
+La mayoría de los hooks infieren los tipos, pero otros requieren una declaración para mejorar la experiencia de tipado, ejemplo:
 
 ### useProp
 
@@ -107,7 +100,7 @@ Fuerza el tipo `number`para `value` y `setValue`, segun el ejemplo `value` solo 
 
 ### useState
 
-**useState infiere el tipo en la mayoría de los casos.**
+**useState infiere el tipo en la mayoría de los casos,** pero el no usar un estado inicial impide un tipado estricto, pude corregir esto de la siguiente manera:
 
 ```typescript
 const [value, setValue] = useState<number>();
