@@ -4,9 +4,9 @@ description: Mejora la experiencia de desarrollo de Atomico con Typescript.
 
 # Typescript
 
-## Tsx o Ts
+## ¿Tsx o Ts?
 
-Una de las ventajas de Typescript es el apoyo a React, Atomico hereda esos beneficios al usar JSX permitiendo ganar el autocompletado de propiedades, atributos y eventos al construir su código usando TSX. Esto no invalida el uso de TS al crear webcomponents con Atomico la selección todo dependerá del desarrollador.
+Una de las ventajas de Typescript es el apoyo a React, Atomico hereda esos beneficios al usar JSX permitiendo ganar jsx-runtime, autocompletado de propiedades, atributos y eventos al construir su código usando TSX. Esto no invalida el uso de TS al crear webcomponents con Atomico, la selección dependerá directamente del desarrollador.
 
 ### Configuración recomendada
 
