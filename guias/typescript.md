@@ -35,7 +35,7 @@ Una de las ventajas de Typescript es el apoyo a React, Atomico hereda esos benef
 de la configuración se destaca:
 
 1. `jsx` y `jsxImportSource`  garantiza el uso de jsx-runtime con Atomico en Typescript, eliminado la necesidad de usar jsxFactory al usar JSX.
-2. `noImplicitAny`, para que Typescript comprenda que su componente usa props, use el tipo `Props`
+2. `noImplicitAny`, para completar el retorno de las props use el tipo `Props`. Es valido eliminar el uso de `noImplicityAny`,  ya que en ocasiones puede ser muy estricto ante situaciones de tipo variadas, hay que recordar que JS por naturaleza es dinámico.
 
 {% hint style="info" %}
 Atomico posee una construcción de tipo basa en mi experiencia\([@uppercod](https://twitter.com/uppercod)\), estoy atento a sus recomendaciones ya que busco dar soporte completo a Typescript.
