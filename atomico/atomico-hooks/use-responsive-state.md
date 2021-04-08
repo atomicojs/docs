@@ -1,7 +1,7 @@
 ---
 description: >-
-  Declare a state based on an expression, the state will be defined according to
-  window.matchMedia
+  Declare un estado basado en una expresión responsiva similar al uso del tag
+  img[srcset].
 ---
 
 # use-responsive-state
