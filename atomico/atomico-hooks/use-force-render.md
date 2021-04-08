@@ -6,6 +6,8 @@ description: >-
 
 # use-force-render
 
+### ⚠️ Desde la versión de atomico@1.14.\* existe el hook useUpdate, con la misma pero en el core de Atomico.
+
 ### Instalación
 
 ```bash

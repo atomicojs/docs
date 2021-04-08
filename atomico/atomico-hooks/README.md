@@ -1,2 +1,2 @@
-# 🛠️ @atomico/hooks
+# @atomico/hooks
 

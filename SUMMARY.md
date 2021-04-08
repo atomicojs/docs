@@ -21,7 +21,8 @@
 
 ## @atomico
 
-* [🛠️ @atomico/hooks](atomico/atomico-hooks/README.md)
+* [@atomico/hooks](atomico/atomico-hooks/README.md)
+  * [use-channel](atomico/atomico-hooks/use-channel.md)
   * [use-force-render](atomico/atomico-hooks/use-force-render.md)
   * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
   * [use-promise](atomico/atomico-hooks/use-promise.md)
@@ -33,6 +34,8 @@
   * [use-slot](atomico/atomico-hooks/use-slot.md)
   * [use-async-effect](atomico/atomico-hooks/use-async-effect.md)
   * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
+* [@atomico/components](atomico/atomico-components/README.md)
+  * [router](atomico/atomico-components/router.md)
 
 ## guías
 
