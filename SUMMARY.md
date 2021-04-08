@@ -33,6 +33,7 @@
   * [use-router](atomico/atomico-hooks/use-router.md)
   * [use-slot](atomico/atomico-hooks/use-slot.md)
   * [use-async-effect](atomico/atomico-hooks/use-async-effect.md)
+  * [use-mutation-observer](atomico/atomico-hooks/use-mutation-observer.md)
   * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
 * [@atomico/components](atomico/atomico-components/README.md)
   * [router](atomico/atomico-components/router.md)
