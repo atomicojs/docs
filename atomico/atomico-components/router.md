@@ -10,9 +10,9 @@ description: Gestione rutas para aplicaciones de forma simple y declarativa
 import {
     getPath, // ()=>string
     redirect, // (path:string)=>void
-    RouterRedirect, // HTMLElement
-    RouterSwitch, // HTMLElement
     RouterCase, // HTMLElement
+    RouterSwitch, // HTMLElement
+    RouterRedirect // HTMLElement
 } from "@atomico/components/router";
 ```
 
