@@ -18,16 +18,9 @@ import {
 
 ### Ejemplo
 
+{% tabs %}
+{% tab title="HTML" %}
 ```markup
-<script type="module">
-import { 
-    RouterCase, RouterSwitch, RouterRedirect
-} from "@atomico/components/router";
-
-customElements.define("router-redirect", RouterRedirect);
-customElements.define("router-switch", RouterSwitch);
-customElements.define("router-case", RouterCase);
-</script>
 <router-redirect>
     <a href="/">home</a>
     <router-switch>
@@ -37,12 +30,26 @@ customElements.define("router-case", RouterCase);
     </router-switch>
 </router-redirect>
 ```
+{% endtab %}
+
+{% tab title="IMPORT" %}
+```javascript
+import { 
+    RouterCase, RouterSwitch, RouterRedirect
+} from "@atomico/components/router";
+
+customElements.define("router-redirect", RouterRedirect);
+customElements.define("router-switch", RouterSwitch);
+customElements.define("router-case", RouterCase);
+```
+{% endtab %}
+{% endtabs %}
 
 ### router-redirect
 
 Redirige todo evento `onclick` que declare la propiedad `href` en su target, ejemplo tag &lt;a&gt;.
 
-| Propiedad | Tipo | Descripción |
+| Props | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
 
@@ -50,13 +57,13 @@ Redirige todo evento `onclick` que declare la propiedad `href` en su target, eje
 
 Controla la ruta a mostrar o montar según la expresión del path
 
-| Propiedad | Tipo | Descripción |
+| Props | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
 
 ### router-case
 
-| Propiedad | Tipo | Descripción |
+| Props | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | `String` | Define el `path` en el que se debe mostrar el contenido. |
 | load | `String | ()=>Promise<any>`  | Contenido a importar al momento del match por `path`. |
