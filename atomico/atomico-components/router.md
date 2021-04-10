@@ -21,7 +21,7 @@ import {
 ```markup
 <script type="module">
 import { 
-    RouterRedirect, RouterSwitch, RouterCase 
+    RouterCase, RouterSwitch, RouterRedirect
 } from "@atomico/components/router";
 
 customElements.define("router-redirect", RouterRedirect);
