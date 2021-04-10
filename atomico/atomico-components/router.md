@@ -31,10 +31,36 @@ customElements.define("router-case", RouterCase);
 <router-redirect>
     <a href="/">home</a>
     <router-switch>
-        <router-case path="/" src="./component.js"></router-case>
+        <router-case path="/" load="./component.js"></router-case>
         <router-case path="/[...notFound]" for="notFound"></router-case>
         <h1 slot="notFound">Not Found</h1>
     </router-switch>
 </router-redirect>
 ```
+
+### router-redirect
+
+Redirige todo evento `onclick` que declare la propiedad `href` en su target, ejemplo tag &lt;a&gt;.
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
+
+### router-switch
+
+Controla la ruta a mostrar o montar según la expresión del path
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
+
+### router-case
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| path | `String` | Define el `path` en el que se debe mostrar el contenido. |
+| load | `String | ()=>Promise<any>`  | Contenido a importar al momento del match por `path`. |
+| for | String | Contenido a mostrar al momento del match por `path`, `for` debe apuntar a un slot dentro del padre. |
+
+
 

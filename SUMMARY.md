@@ -36,6 +36,7 @@
   * [use-mutation-observer](atomico/atomico-hooks/use-mutation-observer.md)
   * [use-css-light-dom](atomico/atomico-hooks/use-css-light-dom.md)
 * [@atomico/components](atomico/atomico-components/README.md)
+  * [modal](atomico/atomico-components/modal.md)
   * [router](atomico/atomico-components/router.md)
 
 ## guías
