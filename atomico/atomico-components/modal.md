@@ -4,7 +4,7 @@ description: Componente modal genérico responsivo.
 
 # modal
 
-### Modulo
+## Modulo
 
 ```javascript
 import {
@@ -12,11 +12,10 @@ import {
 } from "@atomico/components/modal";
 ```
 
-### Ejemplo
+## Ejemplo
 
 {% tabs %}
 {% tab title="HTML" %}
-
 ```markup
 <atomico-modal show-after-ms="5000">
     <div>
@@ -25,21 +24,18 @@ import {
     </div>
 </atomico-modal>
 ```
-
 {% endtab %}
 
 {% tab title="IMPORT" %}
-
 ```javascript
 import { Modal } from "@atomico/components/modal";
 
 customElements.define("atomico-modal", Modal);
 ```
-
 {% endtab %}
 {% endtabs %}
 
-### Propiedades
+## Propiedades
 
 **showAfterMs / show-after-ms**: `String`, define los milisegundos a esperar para la activación del modal.
 
@@ -62,3 +58,4 @@ customElements.define("atomico-modal", Modal);
 **fullSize / full-size**: `Boolean`, Habilita el uso background en el modal, este se complementa con el slot background para adjuntar contenido personalizado en el fondo.
 
 **fullSizeClosed / full-size-closed**: `Boolean`, define si el clic en el background oculta el modal.
+
