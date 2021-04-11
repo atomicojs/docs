@@ -35,7 +35,7 @@ customElements.define("atomico-modal", Modal);
 {% endtab %}
 {% endtabs %}
 
-### Props\(Propiedades\)
+### Propiedades
 
 **showAfterMs / show-after-ms**: String, define los milisegundos a esperar para la activación del modal. 
 
