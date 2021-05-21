@@ -43,8 +43,5 @@
 ## guías
 
 * [Typescript](guias/typescript.md)
-
-## Sistemas de diseño
-
-* [Atomico y sistemas de diseño](sistemas-de-diseno/atomico-y-sistemas-de-diseno.md)
+* [Sistemas de diseño](guias/atomico-y-sistemas-de-diseno.md)
 
