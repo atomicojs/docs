@@ -47,7 +47,7 @@ Del ejemplo destacaremos  las siguientes practicas:
 3. El contenido de button es referenciado mediante el uso del tag `slot`. 
 4. `MyButton` es un webcomponent, por lo que puede ser instanciado o extendido.
 
-Ahora supongamos que este botón es parte de nuestro sistema de diseño, que debemos modificar ante la llegada de un nuevo proyecto
+Ahora supongamos que este botón es parte de nuestro sistema de diseño y debemos modificar ante la llegada de un nuevo proyecto.
 
 ### ¿Cómo modificar la apariencia de mi webcomponent creado con Atomico?
 
