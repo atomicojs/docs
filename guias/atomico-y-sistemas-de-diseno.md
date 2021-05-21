@@ -9,7 +9,7 @@ Con Atomico podrás lograr los siguientes objetivos:
 3. **Agnóstico**: su customElement servirá en cualquier librería compatible con la web, ejemplo React, Vue o Svelte.
 4. **Performance**: Atomico posee un performance comparativo a niveles de Svelte, ganando la tercera posición en performance según [**webcomponents.dev**](https://twitter.com/atomicojs/status/1391775734641745929)  en una comparativa de 55 librerías entre las cuales esta React, Vue, Stencil y Lit.
 
-Ahora como punto de partida quiero enseñarte el como se comparta Atomico al momento de ser usado para la creacion de DS\(Sistema de diseño\), comenzando con un botón.
+Quiero enseñarte el como se comporta Atomico al momento de ser usado para la creacion de DS\(Sistema de diseño\), comenzando con un botón.
 
 ```jsx
 import { c, css } from "Atomico";
@@ -47,7 +47,7 @@ Del ejemplo destacaremos  las siguientes practicas:
 3. El contenido de button es referenciado mediante el uso del tag `slot`. 
 4. `MyButton` es customElements, por lo que puede ser instanciado o extendido.
 
-Supongamos que este botón es parte de nuestro sistema de diseño, que ante la llegada de un cliente X deberemos modificar.
+Ahora supongamos que este botón es parte de nuestro sistema de diseño, que debemos modificar ante la llegada de un nuevo proyecto
 
 ### ¿Cómo modificar la apariencia de mi customElement creado con Atomico?
 
