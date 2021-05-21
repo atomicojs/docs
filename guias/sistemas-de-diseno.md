@@ -47,9 +47,9 @@ Del ejemplo destacaremos  las siguientes practicas:
 3. El contenido de button es referenciado mediante el uso del tag `slot`. 
 4. `MyButton` es un webcomponent, por lo que puede ser instanciado o extendido.
 
-Ahora supongamos que este botón es parte de nuestro sistema de diseño y debemos modificar ante la llegada de un nuevo proyecto.
+Ahora supongamos que `MyButton` botón es parte de nuestro sistema de diseño y debemos modificar ante la llegada de un nuevo proyecto pero sin la necesidad de rescribirlo por completo.
 
-### ¿Cómo modificar la apariencia de mi webcomponent creado con Atomico?
+## ¿Cómo modificar la apariencia de mi webcomponent creado con Atomico?
 
 Las técnicas que puedes aplicar con Atomico son:
 
@@ -57,7 +57,7 @@ Las técnicas que puedes aplicar con Atomico son:
 2. Herencia de clase
 3. Selector part
 
-#### Custom properties\(Variables de css\)
+### Custom properties\(Variables de css\)
 
 Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones de custom properties. El mayor potencial de estas es la herencia descendente, ejemplo:
 
@@ -86,10 +86,10 @@ Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones
 
 Del ejemplo destacaremos lo siguiente:
 
-1. El selector `.theme` declara customProperties visibles solo para el selector, **esto posee un efecto positivo vs `:root` porque reduce el conflicto de nombre de las customProperties y limita su uso solo al contenedor asociado**
-2. El selector `my-button[small]` activa las customProperties solo si declaramos la prop small en la instancia del webcomponent.
+1. El selector `.theme` declara custom properties visibles solo para el selector, **esto posee un efecto positivo vs `:root` porque reduce el conflicto de nombre de las custom properties y limita su uso solo al contenedor asociado**
+2. El selector `my-button[small]` activa las custom properties solo si declaramos la propiedad `small` en la instancia del webcomponent.
 
-#### Herencia fuera de Atomico
+### Herencia fuera de Atomico
 
 El webcomponent creado por atomico posee la propiedad `static get styles`, que ante una herencia permite modificar completamente la apariencia de su componente, ejemplo:
 
@@ -119,14 +119,14 @@ class MyNewButton extends MyButton {
 
 Del ejemplo destacaremos lo siguiente:
 
-1. MyNewButton heredara todo del componente anterior props estilos siempre y cuando use `super.styles`.
-2. El css creado asocia la customPropertie `--button-background: teal`, creando una variación en el componente principal.
+1. `MyNewButton` heredara todo del componente anterior; propiedades y estilos.
+2. El css creado asocia la custom propertie `--button-background: teal`, creando una variación en el componente principal.
 
 **Esta herencia también es valida entre componentes de Atomico**, pero esta rescribirá el render, considérela si su busca referenciar variables de css o props\(Propiedades\).
 
-**Selector ::part**
+### **Selector ::part**
 
-Este nos permite modificar la apariencia de los elementos dentro del shadowDOM que hagan uso del atributo `part="<identificador>"`,  ejemplo:
+Nos permite modificar la apariencia de los elementos dentro del shadowDOM que hagan uso del atributo `part="<identificador>"`,  ejemplo:
 
 ```jsx
 import { c } from "atomico";
@@ -154,22 +154,30 @@ my-card::part(header){
 
 ```
 
-Es probable de que su componente posea apariencias variables, ejemplo un modo dark y el problema es que part limita su efecto a solo a estados nativos, por lo que \`::part\(header\).dark\` no funcionara, para escapar de esto solo aplique lógica en su plantilla, ejemplo
+Es probable de que su componente posea apariencias variables, ejemplo un modo dark y el problema es que `part` limita su efecto a solo a  [**pseudoclase**](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes), por lo que \`::part\(header\).dark\` no funcionara, para escapar de esto solo aplique props su componente, ejemplo
 
 ```jsx
-function card({ dark }) {
+function card() {
   return (
     <host shadowDom>
-      <header part={dark ? "theme-dark" : "theme"}>
+      <header>
         <slot name="header" />
       </header>
     </host>
   );
 }
 
-cart.props = {
-  dark: Boolean,
+card.props = {
+  dark: {type: Boolean, reflect: true},
 };
+
+```
+
+```css
+my-card[dark]::part("header"){
+    background: black;
+    color: white;
+}
 ```
 
 Atomico busca facilitar la creación de webcomponents útiles para sistemas de diseño en la siguiente guía conocerás como estructurar y documentar Sistemas de diseño

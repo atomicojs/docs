@@ -2,7 +2,7 @@
 description: Mejora la experiencia de desarrollo de Atomico con Typescript.
 ---
 
-# Typescript
+# 📜 Typescript
 
 ## ¿Tsx o Ts?
 
