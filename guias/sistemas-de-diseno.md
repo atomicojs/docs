@@ -49,7 +49,7 @@ Del ejemplo destacaremos  las siguientes practicas:
 
 Ahora supongamos que `MyButton` botón es parte de nuestro sistema de diseño y debemos modificar ante la llegada de un nuevo proyecto pero sin rescribirlo por completo.
 
-## ¿Cómo modificar la apariencia de mi webcomponent creado con Atomico?
+## ¿Cómo modificar la apariencia un webcomponent creado con Atomico?
 
 Las técnicas que puedes aplicar con Atomico son:
 
