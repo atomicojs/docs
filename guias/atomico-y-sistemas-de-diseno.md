@@ -172,9 +172,7 @@ cart.props = {
 };
 ```
 
-### Conclusión
-
-hemos conocido brevemente el como  a estilizar componentes para sistemas de diseño, en la siguiente guía conocerás como estructurar y documentar Sistemas de diseño 
+Atomico busca facilitar la creación de webcomponents útiles para sistemas de diseño en la siguiente guía conocerás como estructurar y documentar Sistemas de diseño
 
 
 
