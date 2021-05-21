@@ -1,12 +1,12 @@
 # Sistemas de diseño
 
-Uno de los objetivos de Atomico es facilitar el uso de webcomponents mediante un Api funcional, pero el resultado siempre es un CustomElement Estándar y Optimizado útil para representar sistemas de diseño.
+Uno de los objetivos de Atomico es facilitar el uso de webcomponents mediante un Api funcional, pero el resultado siempre es un webcomponent Estándar y Optimizado útil para representar sistemas de diseño.
 
 Con Atomico podrás lograr los siguientes objetivos:
 
 1. **Apariencia escalable y reutilizable**: con Atomico el código es más simple y podrás aplicar practicas que faciliten la reutilización de tu código.
-2. **Comunicación abierta**: su customElements podrá comunicar su estado sea por eventos, propiedades o métodos.
-3. **Agnóstico**: su customElement servirá en cualquier librería compatible con la web, ejemplo React, Vue o Svelte.
+2. **Comunicación abierta**: su webcomponent podrá comunicar su estado sea por eventos, propiedades o métodos.
+3. **Agnóstico**: su webcomponent servirá en cualquier librería compatible con la web, ejemplo React, Vue o Svelte.
 4. **Performance**: Atomico posee un performance comparativo a niveles de Svelte, ganando la tercera posición en performance según [**webcomponents.dev**](https://twitter.com/atomicojs/status/1391775734641745929)  en una comparativa de 55 librerías entre las cuales esta React, Vue, Stencil y Lit.
 
 Quiero enseñarte el como se comporta Atomico al momento de ser usado para la creacion de DS\(Sistema de diseño\), comenzando con un botón.
@@ -14,7 +14,7 @@ Quiero enseñarte el como se comporta Atomico al momento de ser usado para la cr
 ```jsx
 import { c, css } from "Atomico";
 
-// Logica y plantilla
+// Lógica y plantilla
 function myButton() {
   return (
     <host shadowDom>
@@ -45,11 +45,11 @@ Del ejemplo destacaremos  las siguientes practicas:
 1. `myButton.styles`: nos permite asociar estilos de forma estática, esto es altamente eficiente, porque los estilos  procesan solo una vez y pueden ser heredados. 
 2. Usamos customProperties\(variables de css\) para referenciar propiedades del css que queremos mantener  variables.
 3. El contenido de button es referenciado mediante el uso del tag `slot`. 
-4. `MyButton` es customElements, por lo que puede ser instanciado o extendido.
+4. `MyButton` es un webcomponent, por lo que puede ser instanciado o extendido.
 
 Ahora supongamos que este botón es parte de nuestro sistema de diseño, que debemos modificar ante la llegada de un nuevo proyecto
 
-### ¿Cómo modificar la apariencia de mi customElement creado con Atomico?
+### ¿Cómo modificar la apariencia de mi webcomponent creado con Atomico?
 
 Las técnicas que puedes aplicar con Atomico son:
 
@@ -59,7 +59,7 @@ Las técnicas que puedes aplicar con Atomico son:
 
 #### Custom properties\(Variables de css\)
 
-Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones de customProperties. El mayor potencial de estas es la herencia descendente, ejemplo:
+Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones de custom properties. El mayor potencial de estas es la herencia descendente, ejemplo:
 
 ```markup
 <style>
@@ -87,11 +87,11 @@ Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones
 Del ejemplo destacaremos lo siguiente:
 
 1. El selector `.theme` declara customProperties visibles solo para el selector, **esto posee un efecto positivo vs `:root` porque reduce el conflicto de nombre de las customProperties y limita su uso solo al contenedor asociado**
-2. El selector `my-button[small]` activa las customProperties solo si declaramos la prop small en la instancia del customElement.
+2. El selector `my-button[small]` activa las customProperties solo si declaramos la prop small en la instancia del webcomponent.
 
 #### Herencia fuera de Atomico
 
-El creado creado por atomico posee la propiedad `static get styles`, que al extender el customElement creado por atomico peude ser definida para modificar completamente su apariencia, ejemplo:
+El webcomponent creado por atomico posee la propiedad `static get styles`, que ante una herencia permite modificar completamente la apariencia de su componente, ejemplo:
 
 ```javascript
 import { css } from "atomico";
@@ -106,7 +106,7 @@ class MyNewButton extends MyButton {
     ...super.styles,
     /**
      * De la siguiente manera estamos asociados a un nuevo
-     * styleSheet a nuestro customElement
+     * styleSheet a nuestro webcomponent
      */
     css`
       :host {
