@@ -110,6 +110,20 @@ la propiedad key puede recibir valores del tipo de cualquier tipo que permita ge
 </host>
 ```
 
+### Referencias de nodos
+
+Una técnica heredada de React, permite obtener la referencia del nodo a quien se le asocia el objeto Ref a travez de la propiedad ref, ejemplo:
+
+```jsx
+const ref = useRef();
+
+<host ref={ref}></host>; // La referencia será la instancia del custom Element
+
+<input ref={ref}/>; // La referencia será el input
+```
+
+Las referencias deben ser objetos inmutables, para crearlo existe el **hook** [**useRef** ]()que crea una referencia para cada instancia del webcomponent.
+
 ### Propiedad shadowDom
 
 Esta propiedad permite declarar el uso del shadowDom, ejemplo:
