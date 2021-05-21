@@ -47,8 +47,6 @@
 
 ## Soporte
 
----
-
 * [Discord](https://discord.gg/7z3rNhmkNE)
 * [Github](https://github.com/atomicojs/atomico)
 * [Twitter](https://twitter.com/atomicojs)
