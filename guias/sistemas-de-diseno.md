@@ -154,7 +154,7 @@ my-card::part(header){
 
 ```
 
-Es probable de que su componente posea apariencias variables, ejemplo un modo dark y el problema es que `part` limita su efecto a solo a  [**pseudoclase**](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes), por lo que \`::part\(header\).dark\` no funcionara, para escapar de esta limitante puede usar en las props de su componente la propiedad reflect , ejemplo
+Es probable de que su componente posea apariencias variables, ejemplo un modo dark y el problema es que `part` limita su efecto a solo a  [**pseudoclase**](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes), por lo que \`::part\(header\).dark\` no funcionara, para escapar de esta limitante puede usar en las props\(Propiedades\) de su componente la propiedad reflect , ejemplo
 
 ```jsx
 function card() {
