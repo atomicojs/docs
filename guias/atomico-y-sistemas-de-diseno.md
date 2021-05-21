@@ -57,9 +57,9 @@ Las técnicas que puedes aplicar con Atomico son:
 2. Herencia de clase
 3. Selector part
 
-#### Custom properties\(Variables de css\) - [compatibilidad del 95.15%](https://caniuse.com/css-variables)
+#### Custom properties\(Variables de css\)
 
-Estas nos permiten modificar aspectos ya referenciados fisilmente mediante declaraciones de customProperties y el mayor potencial de estas es la herencia descendente, ejemplo:
+Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones de customProperties. El mayor potencial de estas es la herencia descendente, ejemplo:
 
 ```markup
 <style>
@@ -89,7 +89,7 @@ Del ejemplo destacaremos lo siguiente:
 1. El selector `.theme` declara customProperties visibles solo para el selector, **esto posee un efecto positivo vs `:root` porque reduce el conflicto de nombre de las customProperties y limita su uso solo al contenedor asociado**
 2. El selector `my-button[small]` activa las customProperties solo si declaramos la prop small en la instancia del customElement.
 
-#### Herencia fuera de Atomico - [compatibilidad del 94%](https://caniuse.com/shadowdomv1)
+#### Herencia fuera de Atomico
 
 El creado creado por atomico posee la propiedad `static get styles`, que al extender el customElement creado por atomico peude ser definida para modificar completamente su apariencia, ejemplo:
 
@@ -124,7 +124,7 @@ Del ejemplo destacaremos lo siguiente:
 
 **Esta herencia también es valida entre componentes de Atomico**, pero esta rescribirá el render, considérela si su busca referenciar variables de css o props\(Propiedades\).
 
-**Selector ::part -** [**compatibilidad del 90%**](https://caniuse.com/mdn-api_element_part)\*\*\*\*
+**Selector ::part**
 
 Este nos permite modificar la apariencia de los elementos dentro del shadowDOM que hagan uso del atributo `part="<identificador>"`,  ejemplo:
 
