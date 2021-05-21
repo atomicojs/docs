@@ -6,6 +6,8 @@ description: >-
 
 # 👋 Atomico
 
+
+
 {% tabs %}
 {% tab title="JSX" %}
 ```jsx
