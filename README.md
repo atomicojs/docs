@@ -41,8 +41,8 @@ customElements.define("my-component", c(component));
 
 {% tab title="JS" %}
 ```javascript
-import { c } from "atomico"; // 2.5kB
-import html from "atomico/html"; // .5kB
+import { c, html } from "atomico"; // 3.0kB
+
 
 function component({ name }) {
   return html`<host shadowDom>Hello, ${name}</host>`;
