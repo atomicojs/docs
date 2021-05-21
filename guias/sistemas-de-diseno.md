@@ -1,4 +1,4 @@
-# Sistemas de diseño
+# ✨ Sistemas de diseño
 
 Uno de los objetivos de Atomico es facilitar el uso de webcomponents mediante un Api funcional, pero el resultado siempre es un webcomponent Estándar y Optimizado útil para representar sistemas de diseño.
 
