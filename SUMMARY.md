@@ -21,8 +21,8 @@
 
 ## guías
 
-* [Typescript](guias/typescript.md)
 * [✨ Sistemas de diseño](guias/sistemas-de-diseno.md)
+* [Typescript](guias/typescript.md)
 
 ## @atomico
 
