@@ -73,5 +73,7 @@ Atomico simplifica el aprendizaje, flujo de trabajo y el mantenimiento al crear 
 
 {% page-ref page="api/virtualdom.md" %}
 
+{% page-ref page="guias/sistemas-de-diseno.md" %}
+
 
 
