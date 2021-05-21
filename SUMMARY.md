@@ -19,6 +19,11 @@
   * [Test DOM](api/testing/test-dom.md)
   * [Test Hooks](api/testing/test-hooks.md)
 
+## guías
+
+* [Typescript](guias/typescript.md)
+* [✨ Sistemas de diseño](guias/sistemas-de-diseno.md)
+
 ## @atomico
 
 * [@atomico/hooks](atomico/atomico-hooks/README.md)
@@ -39,9 +44,4 @@
   * [router](atomico/atomico-components/router.md)
   * [modal](atomico/atomico-components/modal.md)
   * [send-form](atomico/atomico-components/send-form.md)
-
-## guías
-
-* [Typescript](guias/typescript.md)
-* [✨ Sistemas de diseño](guias/sistemas-de-diseno.md)
 
