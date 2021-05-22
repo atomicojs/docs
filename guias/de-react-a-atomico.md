@@ -15,7 +15,7 @@ description: >-
 
 Los siguientes ejemplos muestran algunas diferencias entre React y Atomico.
 
-### Counter
+### Ejemplo de componente counter
 
 {% tabs %}
 {% tab title="React" %}
@@ -78,20 +78,7 @@ Del ejemplo destacaremos las siguientes diferencias:
 5. El tag host de Atomico similar a los fragmentos de React, pero este representa la instancia del webcomponent y **todo componente creado con Atomico debe retornar el tag `host`**
 6. Esto solo es legibilidad, pero en Atomico no usamos mayúsculas al nombra nuestro componente, estas solo se usan al momento de crear el customElement como en la linea 16, ya que `Counter` si es instanciable
 
-### Hooks
-
-En Atomico encontraras los hooks mas utilitarios de React como: 
-
-1. useRef
-2. useState
-3. useReducer
-4. useLayoutEffect
-5. useEffect
-6. useMemo
-7. useCallback
-8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](../atomico/atomico-hooks/use-channel.md), basado en el api de eventos.
-
-#### customHooks
+### Ejemplo de customHooks
 
 {% tabs %}
 {% tab title="React" %}
@@ -102,10 +89,10 @@ function useJsonPlaceholder(path) {
   const [state, setState] = useState();
   useEffect(() => {
     let cancel;
-    setState({ loading: true });
+    setState(null);
     fetch(`https://jsonplaceholder.typicode.com/${path}`)
       .then(() => res.json())
-      .then((data) => !cancel && setState({ data }));
+      .then((data) => !cancel && setState(data));
     return () => (cancel = true);
   }, [path]);
 }
@@ -114,8 +101,8 @@ export function Component() {
   const posts = useJsonPlaceholder("posts");
   return (
     <>
-      {posts && posts.data
-        ? posts.data.map(({ title }) => <h1>{title}</h1>)
+      {posts 
+        ? posts.map(({ title }) => <h1>{title}</h1>)
         : "Loading..."}
     </>
   );
@@ -131,10 +118,10 @@ function useJsonPlaceholder(path) {
   const [state, setState] = useState();
   useEffect(() => {
     let cancel;
-    setState({ loading: true });
+    setState(null);
     fetch(`https://jsonplaceholder.typicode.com/${path}`)
       .then(() => res.json())
-      .then((data) => !cancel && setState({ data }));
+      .then((data) => !cancel && setState( data ));
     return () => (cancel = true);
   }, [path]);
 }
@@ -143,8 +130,8 @@ function component() {
   const posts = useJsonPlaceholder("posts");
   return (
     <host>
-      {posts && posts.data
-        ? posts.data.map(({ title }) => <h1>{title}</h1>)
+      {posts 
+        ? posts.map(({ title }) => <h1>{title}</h1>)
         : "Loading..."}
     </host>
   );
@@ -158,5 +145,16 @@ Del ejemplo destacaremos las siguientes diferencias:
 1. El api de hooks es igual.
 2. el componente en Atomico retorna el tag host.
 
+#### Hooks soportados
 
+En Atomico encontraras los hooks mas utilitarios de React como: 
+
+1. useRef
+2. useState
+3. useReducer
+4. useLayoutEffect
+5. useEffect
+6. useMemo
+7. useCallback
+8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](../atomico/atomico-hooks/use-channel.md), basado en el api de eventos.
 
