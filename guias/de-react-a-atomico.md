@@ -158,3 +158,83 @@ En Atomico encontraras los hooks mas utilitarios de React como:
 7. useCallback
 8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](../atomico/atomico-hooks/use-channel.md), basado en el api de eventos.
 
+### CSS-in-JS
+
+Es común ver el uso de librerías como Emotion o styled-components para encapsular estilos en React, pero estas añaden un costo adicional, sea por performance o bundle, en Atomico no existe este costo.
+
+{% tabs %}
+{% tab title="First Tab" %}
+```jsx
+const Button = styled.a`
+  /* This renders the buttons above... Edit me! */
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+
+  /* The GitHub button is a primary button
+   * edit this to target it specifically! */
+  ${props => props.primary && css`
+    background: white;
+    color: black;
+  `}
+`
+
+render(
+  <div>
+    <Button
+      href="https://github.com/styled-components/styled-components"
+      target="_blank"
+      rel="noopener"
+      primary
+    >
+      GitHub
+    </Button>
+
+    <Button as={Link} href="/docs">
+      Documentation
+    </Button>
+  </div>
+)
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```jsx
+import { c, css } from "atomico";
+
+function button() {
+  return <host shadowDom><slot/></host>;
+}
+
+button.props = { primary: { type: Boolean, relfect: true } };
+
+button.styles = css`
+  :host {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0.5rem 0;
+    margin: 0.5rem 1rem;
+    width: 11rem;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  :host([primary]) {
+    background: white;
+    color: black;
+  }
+`;
+
+export const Button = c(button);
+```
+{% endtab %}
+{% endtabs %}
+
+En Atomico para declarar css es recomendable que asocies la propiedad styles a tu function, esta permite asociar CSS estándar.  
+
