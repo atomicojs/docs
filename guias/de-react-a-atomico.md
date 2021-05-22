@@ -4,7 +4,7 @@ description: >-
   con un enfoque mas cercano al estándar.
 ---
 
-# De React a Atomico
+# ⚛️ De React a Atomico
 
 #### Si ya eres desarrollador de React y conoces el api de Hooks tendrás el 80% del camino recorrido de Atomico, el 20% restante es un Atomico facilitando el api webcomponents... ahora **¿por que usar Atomico?**:
 
