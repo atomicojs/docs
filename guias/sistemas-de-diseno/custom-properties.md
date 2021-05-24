@@ -4,7 +4,7 @@ description: Teoriza de forma practica la definición de variables para sistemas
 
 # Custom properties
 
-> recomendación personal como autor de Atomico\(@uppercod\), siéntase libre de seguirla o exponerme mejoras formas de uso.
+> Recomendación personal como autor de Atomico\(@uppercod\), siéntase libre de seguirla o enseñarme mejores practicas.
 
 ### Custom properties de thema
 
