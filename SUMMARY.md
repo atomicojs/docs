@@ -21,7 +21,8 @@
 
 ## guías
 
-* [✨ Sistemas de diseño](guias/sistemas-de-diseno.md)
+* [✨ Sistemas de diseño](guias/sistemas-de-diseno/README.md)
+  * [Custom properties](guias/sistemas-de-diseno/custom-properties.md)
 * [📜 Typescript](guias/typescript.md)
 * [⚛️ De React a Atomico](guias/de-react-a-atomico.md)
 
