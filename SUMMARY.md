@@ -52,3 +52,7 @@
 * [Github](https://github.com/atomicojs/atomico)
 * [Twitter](https://twitter.com/atomicojs)
 
+---
+
+* [@atomico/exports](atomico-exports.md)
+

@@ -63,7 +63,7 @@ Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones
 
 ```markup
 <style>
-  .theme {
+  :root {
     --theme-primary: black;
     --button-background: var(--primary);
     --button-padding: 0.5rem 1rem;
@@ -86,8 +86,7 @@ Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones
 
 Del ejemplo destacaremos lo siguiente:
 
-1. El selector `.theme` declara custom properties visibles solo para el selector, **esto posee un efecto positivo vs `:root` porque reduce el conflicto de nombre de las custom properties y limita su uso solo al contenedor asociado**
-2. El selector `my-button[small]` activa las custom properties solo si declaramos la propiedad `small` en la instancia del webcomponent.
+1. El selector `my-button[small]` activa las custom properties solo si declaramos la propiedad `small` en la instancia del webcomponent.
 
 ### Herencia fuera de Atomico
 
