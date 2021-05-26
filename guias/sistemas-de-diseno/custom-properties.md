@@ -46,15 +46,46 @@ El prefijo no es estricto, ya que estas son heredadas directamente del sitio o a
 
 **Ejemplo**
 
+{% tabs %}
+{% tab title="css" %}
 ```css
 :root{
     --ds-primary: var(--theme-primary);
 }
 ```
+{% endtab %}
 
-Al ser una agrupación de variables globales podrán ser referenciadas por el componente sin una importación por parte del componente, ejemplo:
+{% tab title="importación" %}
+```markup
+<link rel="stylesheet" href="my-ds.css">
+```
+{% endtab %}
+{% endtabs %}
 
+Del ejemplo de `importación` quiero que infiera que todas las custom properties globales del sistema de diseño se encuentran solo en el archivo my-ds.css, el beneficio de esto es la importación desde el documento principal, permitiéndonos:
+
+1.  Evitar el bloqueo de la importación tipográfica. 
+2. Estilos antes de la carga, podremos anteponernos a la definición de carga de nuestros componente con estilos bases para mejorar los [**web vitals**](https://web.dev/vitals/) ****o simplemente ocultar nuestro componente para evitar una visualización antes de su carga, ejemplo en tab `Ejemplo de estilos ante de la carga`.
+3. Las variables globales podrán ser referenciadas por el componente sin una importación por parte del componente, ejemplo en tab `ejemplo de uso de variables globales`.
+
+{% tabs %}
+{% tab title="Ejemplo de estilos ante de la carga" %}
+```css
+/**
+Nuestro componente solo mostrará uno
+una vez que se haya registrado.
+**/
+my-component:not(:defined){
+    visibility: hidden;
+}
+```
+{% endtab %}
+
+{% tab title="ejemplo de uso de variables globales" %}
 ```javascript
+// Esto no evita que el componente posea 
+// propiedades únicas o compartidas entre 
+// un grupo de componentes.
 button.styles = css`
   :host {
     background: var(--ds-primary);
@@ -67,8 +98,8 @@ button.styles = css`
   }
 `;
 ```
-
-Esto no evita que el componente posea propiedades únicas o compartidas entre un grupo de componentes.
+{% endtab %}
+{% endtabs %}
 
 **Contexto local**
 
