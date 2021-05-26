@@ -30,7 +30,7 @@ Donde:
 
 1. utility: Toda utilidad que se asocia al tema, ejemplo tamaño de letra, márgenes, espacios, color, fondo y estado.
 
-El prefijo no es estricto ya que el contexto puede ser heredado de la plantilla.
+El prefijo no es estricto, ya que estas son heredadas directamente del sitio o aplicación.
 
 ### Custom properties del sistema de diseño
 
@@ -68,7 +68,7 @@ button.styles = css`
 `;
 ```
 
-Esto no evita que el componente posea propiedades únicas o compartidas entre un grupo de componentes, ejemplo:
+Esto no evita que el componente posea propiedades únicas o compartidas entre un grupo de componentes.
 
 **Contexto local**
 
@@ -80,23 +80,13 @@ button.styles = css`
 `;
 ```
 
-Pero como recomendación evite atomizar lar custom properties, es mas practico generalizar, ya que reduce la complejidad de edición, ejemplo:
+Pero como recomendación evite atomizar lar custom properties, es mas practico generalizar, ya que reduce la complejidad de edición del mismo sistema de diseño, pero esto dependerá directamente del diseño de la UI. Supongamos que hemos formalizado el espacio de acción para todo componente cliqueable, ejemplo: 
 
-```javascript
-input.styles = css`
-  :host {
-    background: var(--ds-primary);
-    padding: var(--ds-input-padding);
-  }
-`;
-
-button.styles = css`
-  :host {
-    background: var(--ds-primary);
-    padding: var(--ds-input-padding);
-  }
-`;
+```css
+:root{
+    --ds-action-space: padding: .5rem 1rem;
+}
 ```
 
-Esto dependerá directamente del diseño UI
+la custom property expuesta podrá ser heredada entre componentes tipo input, button, link, tags y mas.  
 
