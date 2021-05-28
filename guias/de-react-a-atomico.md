@@ -10,8 +10,8 @@ description: >-
 
 1. **Atomico no limitara tu curva de aprendizaje de React**, lo aprendido en Atomico es aplicable en React, ejemplo los hooks y virtualDOM. 
 2. **Atomico solo pesa 3kB** que es el 7% de  React + React-dom.
-3. **Mejor abstracción de componentes**, por ejemplo el uso del ShadowDOM evitara la necesidad de usar css-in-js como styles-components. 
-4. **Componentes Agnósticos**, lo que creas con React solo funciona dentro de React, lo que creas con Atomico funciona en la web, por lo que podrás tus componentes dentro de React, Vue, Svelte o html.
+3. **Mejor abstracción de componentes**, por ejemplo el uso del ShadowDOM evitara la necesidad de usar css-in-js como styles-components o emotion, reduciendo dependencias.
+4. **Componentes Agnósticos**, lo que creas con React solo funciona dentro de React, lo que creas con Atomico funciona en la web, por lo que podrás tus componentes dentro de React, Vue, Svelte o Html.
 
 Los siguientes ejemplos muestran algunas diferencias entre React y Atomico.
 
@@ -61,6 +61,7 @@ function counter() {
 counter.props = { count: { type: Number, value: 0 } }
 
 const Counter = c(counter);
+
 customElements.define(
   "my-counter",
   Counter  
@@ -73,10 +74,10 @@ Del ejemplo destacaremos las siguientes diferencias:
 
 1. En Atomico solo usas una importación.
 2. `useProp` es como `useState`, pero con la diferencia que `useProp` referencia el estado desde la propiedad del webcomponent definida en counter.props.
-3. `counter.props` nos permite crear las propiedades de nuestro webcomponent, estas son como las props de React, pero con una gran diferencia se asocian a la instancia y pueden ser leídas y modificadas referenciando el nodo, ejemplo `document.querySelector("my-counter").count = 10;`
+3. `counter.props` nos permite crear las propiedades de nuestro webcomponent, estas son como las [propTypes de React](https://es.reactjs.org/docs/typechecking-with-proptypes.html), pero con una gran diferencia se asocian a la instancia y pueden ser leídas y modificadas referenciando el nodo, ejemplo `document.querySelector("my-counter").count = 10;`
 4. `ReactDom.render` necesita una referenciamos para montar el componente, en Atomico solo necesitas crear el tag `my-counter`  para crear una nueva instancia del componente.
-5. El tag host de Atomico similar a los fragmentos de React, pero este representa la instancia del webcomponent y **todo componente creado con Atomico debe retornar el tag `host`**
-6. Esto solo es legibilidad, pero en Atomico no usamos mayúsculas al nombra nuestro componente, estas solo se usan al momento de crear el customElement como en la linea 16, ya que `Counter` si es instanciable
+5. El tag host de Atomico similar a `<></>` de React, pero `<host/>` representa la instancia del webcomponent y **todo componente creado con Atomico debe retornar el tag `host`**
+6. Esto solo es legibilidad, pero en Atomico por convención no usamos mayúsculas al nombra nuestro componente, estas solo se usan al momento de crear el customElement como en la linea 16, ya que `Counter` si es instanciable.
 
 ### Ejemplo de customHooks
 
@@ -92,12 +93,12 @@ function useJsonPlaceholder(path) {
     setState(null);
     fetch(`https://jsonplaceholder.typicode.com/${path}`)
       .then(() => res.json())
-      .then((data) => !cancel && setState(data));
+      .then((data) => !cancel && setState( data ));
     return () => (cancel = true);
   }, [path]);
 }
 
-export function Component() {
+function Component() {
   const posts = useJsonPlaceholder("posts");
   return (
     <>
