@@ -164,7 +164,7 @@ En Atomico encontraras los hooks mas utilitarios de React como:
 Es común ver el uso de librerías como Emotion o styled-components para encapsular estilos en React, pero estas añaden un costo adicional, sea por performance o bundle, en Atomico no existe este costo.
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="React" %}
 ```jsx
 const Button = styled.a`
   /* This renders the buttons above... Edit me! */
@@ -204,7 +204,7 @@ render(
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Atomico  ✅" %}
 ```jsx
 import { c, css } from "atomico";
 
@@ -237,5 +237,9 @@ export const Button = c(button);
 {% endtab %}
 {% endtabs %}
 
-En Atomico para declarar css es recomendable que asocies la propiedad styles a tu function, esta permite asociar CSS estándar.  
+En Atomico para declarar css es recomendable que asocies la propiedad styles a tu function, esta permite asociar CSS estándar si buscas aprender mas de esto te recomendamos ver la guía de sistemas de diseño
+
+{% page-ref page="sistemas-de-diseno/" %}
+
+
 
