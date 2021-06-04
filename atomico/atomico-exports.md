@@ -4,6 +4,8 @@ description: Really simple webcomponents export to NPM
 
 # @atomico/exports
 
+![](../.gitbook/assets/grupo-2.png)
+
 Simplifica la generación de build, tipos y exports al distribuir webcomponents en NPM, con `@atomico/exports` tu  podrás:
 
 1. Exportación de múltiples archivos usando expresiones ejemplo : `exports src/components/*.{js,jsx}`.
@@ -11,11 +13,32 @@ Simplifica la generación de build, tipos y exports al distribuir webcomponents 
 3. asociar automáticamente los tipos para typescript y asociarlos al package.json\#typesVersions. flag `--types`
 4. Optimizar la distribución de la build gracias a ESbuild.
 5. Importar los assets mediante el uso de import.meta.url.
-6. Añadir soporte a módulos CSS.
+6. Añadir soporte a módulos CSS genérico a base de Atomico. 
 7. Crear automáticamente wrapper para usar los webcomponents en react
 8. Mirificar el código. flag `--minify`.
-9. Centralizar workspace en un solo package de instalacion. flag `--workspace <spaces>`.
-10. Crear automáticamente los ficheros de visibilidad de CSS para los customElements encontrados en la exportación 
+9. Centralizar workspace en un solo package de instalación. flag `--workspace <spaces>`.
+10. Crear automáticamente los ficheros de visibilidad de CSS para los customElements encontrados en la exportación, ejemplo `my-component:not(:defined){ visibility: hidden }`
+
+## Instalación
+
+{% tabs %}
+{% tab title="NPM" %}
+```bash
+npm install -D @atomico/exports
+```
+{% endtab %}
+
+{% tab title="package.json\#scripts" %}
+```javascript
+{
+    /**
+     * El flag --types requiere la instalación de @typescript
+     */
+    "scripts": "exports src/components/*/*.js --exports --types"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Flags
 
@@ -29,7 +52,7 @@ Requiere la instalación de Typescript, creara los tipos y añadirá los archivo
 
 ### --workspace
 
-Buscara los subpackages que declaren dependencias y las añadirá en la propiedad dependencias del package.json 
+Buscara los subpackages que declaren dependencias y las añadirá en la propiedad dependencias del package.json
 
 ### --ignore-build
 
