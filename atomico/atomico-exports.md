@@ -32,7 +32,7 @@ npm install -D @atomico/exports
 ```javascript
 {
     /**
-     * El flag --types requiere la instalación de @typescript
+     * ⚠️ El flag --types requiere la instalación de @typescript
      */
     "scripts": "exports src/components/*/*.js --exports --types"
 }
