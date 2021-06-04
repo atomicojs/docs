@@ -1,5 +1,5 @@
 ---
-description: Really simple webcomponents export to NPM
+description: Distribución de webcomponents realmente fácil
 ---
 
 # @atomico/exports
