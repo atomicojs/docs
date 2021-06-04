@@ -1,5 +1,5 @@
 ---
-description: Distribución de webcomponents realmente fácil
+description: Facilita la distribución de webcomponents
 ---
 
 # @atomico/exports
@@ -15,7 +15,7 @@ Simplifica la generación de build, tipos y exports al distribuir webcomponents 
 5. Importar los assets mediante el uso de import.meta.url.
 6. Añadir soporte a módulos CSS genérico a base de Atomico. 
 7. Crear automáticamente wrapper para usar los webcomponents en react
-8. Mirificar el código. flag `--minify`.
+8. Minifica el código. flag `--minify`.
 9. Centralizar workspace en un solo package de instalación. flag `--workspace <spaces>`.
 10. Crear automáticamente los ficheros de visibilidad de CSS para los customElements encontrados en la exportación, ejemplo `my-component:not(:defined){ visibility: hidden }`
 
