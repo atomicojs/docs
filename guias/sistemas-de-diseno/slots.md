@@ -1,6 +1,6 @@
 # Slots
 
-El uso de slots mejora la composición permitiéndote reflejar el contenido expuesto en el lightDOM del componente en su shadowDOM, ejemplo:
+El uso de slots mejora la composición permitiéndote reflejar el contenido expuesto en el `lightDOM` del componente en el `shadowDOM` de este, ejemplo:
 
 ![](../../.gitbook/assets/web_1366_7.png)
 
