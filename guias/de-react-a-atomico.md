@@ -1,6 +1,6 @@
 ---
 description: >-
-  Atomico hereda parte dela sintaxis de React y la aplica a los webcomponents,
+  Atomico hereda parte de la sintaxis de React y la aplica a los webcomponents,
   con un enfoque mas cercano al estándar.
 ---
 
