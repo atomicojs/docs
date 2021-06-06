@@ -12,6 +12,7 @@ description: >-
 2. **Atomico solo pesa 3kB** que es el 7% de  React + React-dom.
 3. **Mejor abstracción de componentes**, por ejemplo el uso del ShadowDOM evitara la necesidad de usar css-in-js como styles-components o emotion, reduciendo dependencias.
 4. **Componentes Agnósticos**, lo que creas con React solo funciona dentro de React, lo que creas con Atomico funciona en la web, por lo que podrás tus componentes dentro de React, Vue, Svelte o Html.
+5. **Componente exclusivo para React**, el CLI @atomico/exports genera automáticamente un componente wrapper de tu webcomponent para React, mejorando la retrocompatibilidad con React.
 
 Los siguientes ejemplos muestran algunas diferencias entre React y Atomico.
 
