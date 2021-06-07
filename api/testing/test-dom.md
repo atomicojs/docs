@@ -2,9 +2,7 @@
 description: Observe y compruebe los cambios del DOM manualmente.
 ---
 
-# Test DOM
-
-## Ciclo de renderización
+# Ciclo de renderización
 
 Para leer el DOM del webcomponent generado con Atomico es necesario conocer el ciclo de renderización a base de promesas.
 

@@ -4,7 +4,7 @@ description: >-
   predecible
 ---
 
-# Test Hooks
+# atomico/test-hooks
 
 El submodulo "atomico/test-hooks" es parte directa del core de Atomico y le permitirá ejecutar el customHook de forma controlada sin la necesidad de usar webcomponents.
 
