@@ -49,7 +49,7 @@ customElements.define("router-case", RouterCase);
 
 Redirige todo evento `onclick` que declare la propiedad `href` en su target, ejemplo tag &lt;a&gt;.
 
-| Props | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
 
@@ -57,17 +57,25 @@ Redirige todo evento `onclick` que declare la propiedad `href` en su target, eje
 
 Controla la ruta a mostrar o montar según la expresión del path
 
-| Props | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | String | Define un `path` a concatenar a los `path` anidados, sea por redireccion o router-switch. |
 
 ### router-case
 
-| Props | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 | :--- | :--- | :--- |
 | path | `String` | Define el `path` en el que se debe mostrar el contenido. |
 | load | `String | ()=>Promise<any>`  | Contenido a importar al momento del match por `path`. |
 | for | String | Contenido a mostrar al momento del match por `path`, `for` debe apuntar a un slot dentro del padre. |
+
+### router-link
+
+Permite redireccionar en situaciones de shadowDOM, `router-link` heredara el `path` superior de `router-redirect` o `router-switch`. 
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| href | String | path a enviar a redirect |
 
 
 

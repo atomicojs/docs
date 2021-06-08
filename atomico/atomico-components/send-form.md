@@ -42,7 +42,7 @@ customElements.define("send-form", SendForm);
 
 ### Propiedades
 
-| Props | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 | :--- | :--- | :--- |
 | response | Any | Refleja la respuesta del fetch en la propiedad response. |
 | action | String | destino del request |
