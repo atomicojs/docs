@@ -156,5 +156,5 @@ await myElement.updated;
 myElement.myMethod();
 ```
 
-Para acceder al DOM de forma segura espere la resolución de la propiedad updated creada por el [ciclo de render de Atomico](testing/test-dom.md)
+Para acceder al DOM de forma segura espere la resolución de la propiedad updated creada por el [ciclo de render de Atomico](../testing/test-dom.md)
 
