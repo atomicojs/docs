@@ -1,3 +1,7 @@
+---
+description: Mejora la interacción con los formularios y accesibilidad de tus componentes.
+---
+
 # Formularios y ShadowDOM
 
 Es normal que usemos la técnica de  despachar eventos desde el componente para comunicar estados y más, pero al usar formularios esto cambia ya que los eventos dentro del shadowDOM no interactúan con el formulario fuera de este, ejemplo:
