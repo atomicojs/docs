@@ -28,6 +28,7 @@
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📜 Typescript](guias/typescript.md)
 * [⚛️ De React a Atomico](guias/de-react-a-atomico.md)
+* [Formularios y ShadowDOM](guias/formularios-y-shadowdom.md)
 
 ## @atomico
 
