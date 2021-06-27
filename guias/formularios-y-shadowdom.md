@@ -15,7 +15,7 @@ Es normal que usemos la técnica de  despachar eventos desde el componente para 
 </form>
 ```
 
-para resolver esto deberemos anidar un tag input en el lightDOM de nuestro componente, para así reflejar la lógica de nuestro componente al formulario. Atomico facilita esta interacción hibrida entre lightDOM y shadowDOM con el hook [**@atomico/hooks/use-render**](../atomico/atomico-hooks/use-render.md) que permite ejecutar un segundo render que trabaje desde el lightDOM, ejemplo:
+para resolver esto deberemos anidar un tag input en el lightDOM de nuestro componente, para así reflejar la lógica de de este al formulario. Atomico facilita esta interacción hibrida entre lightDOM y shadowDOM con el hook [**@atomico/hooks/use-render**](../atomico/atomico-hooks/use-render.md) que permite ejecutar un segundo render que trabaje desde el lightDOM, ejemplo:
 
 ```jsx
 import { useRender } from "@atomico/hooks/use-render";
