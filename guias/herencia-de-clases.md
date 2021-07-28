@@ -127,5 +127,5 @@ class MyNewButton extends MyButton {
 }
 ```
 
-
+El beneficio de esta herencia es simplificar la modificación de la apariencia de un componente creado con Atomico, ya que evita la rescritura del mismo. 
 
