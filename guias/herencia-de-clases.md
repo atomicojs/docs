@@ -91,14 +91,14 @@ Considere los siguientes efectos al usar este modelo de herencia:
 
 1. El render será rescrito.
 2. las props se hereda, Atomico reutilizara las props previamente declaradas.
-3. los styles se heredan. Atomico fusionará las horas de estilo. 
+3. los styles se heredan. Atomico fusionará las hojas de estilo. 
 
 ### Herencia fuera de Atomico
 
 La función `c` de Atomico crea un customElement estándar optimizado, el que puede ser extendido para modificar su comportamiento, sea: 
 
 1. Añadiendo métodos.
-2. Creando o remplazando las horas de estilo. 
+2. Creando o remplazando las hojas de estilo. 
 3. Creando nuevas propiedades.
 
 Supongamos de que poseemos un `MyButton` producto de la función `c`, nosotros podremos extender este componente para modificar su apariencia sin la necesidad de rescribirlo por completo, ejemplo:
