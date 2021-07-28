@@ -121,7 +121,7 @@ Del ejemplo destacaremos lo siguiente:
 1. `MyNewButton` heredara todo del componente anterior; propiedades y estilos.
 2. El css creado asocia la custom propertie `--button-background: teal`, creando una variación en el componente principal.
 
-**Esta herencia también es valida entre componentes de Atomico**, pero esta rescribirá el render, considérela si su busca referenciar variables de css o props\(Propiedades\).
+**Esta herencia también es valida entre componentes de Atomico**, pero esta rescribirá el render, considérela si su busca referenciar variables de css o props\(Propiedades\). Aprenda más de la herencia en la[ **guía herencia de clases**](../herencia-de-clases.md)**.**
 
 ### **Selector ::part**
 
