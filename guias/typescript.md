@@ -47,10 +47,14 @@ Si has usado el CLI de atomico  `npm init @atomico`, este ya cuenta con soporte 
 
 Permite recuperar los tipos del objeto `props` asociado a la función.
 
-```typescript
+```jsx
 import { Props, c } from "atomico";
 
-function component(props: Props<typeof component.props>) {}
+function component(props: Props<typeof component.props>) {
+  return <host shadowDom>
+    Atomico + Typescript
+  </host>
+}
 
 component.props = {
     propString: String,
