@@ -63,29 +63,6 @@ component.props = {
 customElements.define("my-component", c(component));
 ```
 
-### c\( component \)
-
-c evaluara si el componente posee un formato valido.
-
-```typescript
-// CASO 1
-function component(props) {}
-
-c(component); // ✔️
-
-// CASO 3
-function component(props) {}
-
-component.props = {
-    value: {
-        type: Number,
-        value: "...",
-    },
-};
-
-c(component); // ❌ -  la propiedad value debe ser del tipo declarado en type
-```
-
 ## Hooks
 
 La mayoría de los hooks infieren los tipos, pero otros requieren una declaración para mejorar la experiencia de tipado, ejemplo:
