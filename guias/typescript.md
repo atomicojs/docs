@@ -38,7 +38,7 @@ de la configuración se destaca:
 2. `noImplicitAny`, para completar el retorno de las props use el tipo `Props`. Es valido eliminar el uso de `noImplicityAny`,  ya que en ocasiones puede ser muy estricto ante situaciones de tipo variadas, hay que recordar que JS por naturaleza es dinámico.
 
 {% hint style="info" %}
-Atomico posee una construcción de tipo basa en mi experiencia\([@uppercod](https://twitter.com/uppercod)\), estoy atento a sus recomendaciones ya que busco dar soporte completo a Typescript.
+Si has usado el CLI de atomico  `npm init @atomico`, este ya cuenta con soporte para Typescript gracias a Vite.
 {% endhint %}
 
 ## Componente
