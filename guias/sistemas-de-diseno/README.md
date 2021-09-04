@@ -1,185 +1,211 @@
+---
+description: >-
+  Te mostrare una serie de técnicas útil para comenzar a programar tus sistemas
+  de diseño con Atomico, Analizando la estructura recomendada y sus archivos.
+---
+
 # ✨ Sistemas de diseño
 
-Uno de los objetivos de Atomico es facilitar el uso de webcomponents mediante un Api funcional, pero el resultado siempre es un webcomponent Estándar y Optimizado útil para representar sistemas de diseño.
+### Estructura recomendada
 
-Con Atomico podrás lograr los siguientes objetivos:
+Es recomendable que su sistema de diseño defina un componente por carpeta, ya que esto te facilitara la independencia de los archivos asociados al componente, ejemplo: 
 
-1. **Interfaces escalable y reutilizable**: con Atomico el código es más simple y podrás aplicar practicas que faciliten la reutilización de tu código.
-2. **Comunicación abierta**: su webcomponent podrá comunicar su estado sea por eventos, propiedades o métodos.
-3. **Agnóstico**: su webcomponent servirá en cualquier librería compatible con la web, ejemplo React, Vue o Svelte.
-4. **Performance**: Atomico posee un performance comparativo a niveles de Svelte, ganando la tercera posición en performance según [**webcomponents.dev**](https://twitter.com/atomicojs/status/1391775734641745929)  en una comparativa de 55 librerías entre las cuales esta React, Vue, Stencil y Lit.
-
-Hoy quiero mostrarte como se comporta Atomico al momento de ser usado para la creacion de DS\(Sistema de diseño\) comenzando con un botón.
-
-```jsx
-import { c, css } from "Atomico";
-
-// Lógica y plantilla
-function myButton() {
-  return (
-    <host shadowDom>
-      <slot>button</slot>
-    </host>
-  );
-}
-
-// Propiedades y atributos
-myButton.props = { small: { type: Boolean, reflect: true } };
-
-// Estilos estáticos
-myButton.styles = css`
-  :host {
-    font-size: var(--button-fontSize, 1rem);
-    padding: var(--button-padding, 0.5rem 1rem);
-    background: var(--button-background, #000);
-    color: var(--button-color, #fff);
-  }
-`;
-
-// CustomElement
-export const MyButton = c(myButton);
+```bash
+src/
+	# Importara, exporta y declara todos nuestros componentes
+	components.js 
+  # Agrupa todos los tokens de nuestro sistema
+	tokens.js
+	# Ejemplo de estructura para nuestro componente
+	/button
+		button.{js,jsx,ts,tsx}
+		button.md
+		button.test.js
 ```
 
-Del ejemplo destacaremos  las siguientes practicas:
+A continuación analizaremos los archivos expuesto.
 
-1. `myButton.styles`: nos permite asociar estilos de forma estática, esto es altamente eficiente, porque los estilos  procesan solo una vez y pueden ser heredados. 
-2. Usamos customProperties\(variables de css\) para referenciar propiedades del css que queremos mantener  variables.
-3. El contenido de button es referenciado mediante el uso del tag `slot`. 
-4. `MyButton` es un webcomponent, por lo que puede ser instanciado o extendido.
+### **src/components.js**
 
-Ahora supongamos que `MyButton` botón es parte de nuestro sistema de diseño y debemos modificar ante la llegada de un nuevo proyecto pero sin rescribirlo por completo.
+Archivo que importa, exporta y declara todo los componentes de nuestro sistema de diseño, ejemplo:
 
-## ¿Cómo modificar la apariencia un webcomponent creado con Atomico?
+```javascript
+import { Button } from "./button/button";
+export { Button } from "./button/button";
 
-Las técnicas que puedes aplicar con Atomico son:
-
-1. Custom properties\(Variables de css\)
-2. Herencia de clase
-3. Selector part
-
-### Custom properties\(Variables de css\)
-
-Estas nos permiten modificar aspectos ya referenciados mediante la declaraciones de custom properties. El mayor potencial de estas es la herencia descendente, ejemplo:
-
-```markup
-<style>
-  :root {
-    --theme-primary: black;
-    --button-background: var(--primary);
-    --button-padding: 0.5rem 1rem;
-  }
-
-  .theme-dark {
-    --theme-primary: #fff;
-  }
-
-  my-button[small] {
-    --button-padding: 0.25rem 0.5rem;
-    --button-fontSize: 0.75rem;
-  }
-</style>
-<body class="theme">
-  <my-button>content</my-button>
-  <my-button small>content</my-button>
-</body>
+customElements.define("my-button", Button);
 ```
 
-Del ejemplo destacaremos lo siguiente:
+Los beneficios de centralizar todo en components.js son:
 
-1. El selector `my-button[small]` activa las custom properties solo si declaramos la propiedad `small` en la instancia del webcomponent.
+1. Claridad de la definición del customElements en un solo archivo para todo nuestro sistema
+2. Exportación de todos los customElements para ser extendido o redefinido.
 
-### Herencia fuera de Atomico
+### src/tokens.js
 
-El webcomponent creado por atomico posee la propiedad `static get styles`, que ante una herencia permite modificar completamente la apariencia de su componente, ejemplo:
+Archivo que centraliza las custom-properties de nuestro sistema de diseño, ejemplo:
 
 ```javascript
 import { css } from "atomico";
-import { MyButton } from "./src/my-button/my-button.js";
 
-class MyNewButton extends MyButton {
-  static styles = [
-    /**
-     * super.styles permite cargar los estilos anteriores
-     * esta propiedad estática es creada internamente por atomico
-     */
-    ...super.styles,
-    /**
-     * De la siguiente manera estamos asociados a un nuevo
-     * styleSheet a nuestro webcomponent
-     */
-    css`
-      :host {
-        --button-background: teal;
-      }
-    `,
-  ];
-}
+export const tokensInput = css`
+  :host {
+    --background: var(--my-ds-input--background, #fff);
+    --border-width: var(--my-ds-input--border-width, 1px);
+    --border-color: var(--my-ds-input--border-color, black);
+    --radius: var(--my-ds-input--radius, 0.5rem);
+    --min-height: var(--my-ds-input--min-height, 40px);
+  }
+  .input-box {
+    background: var(--background);
+    min-height: var(--min-height);
+  }
+  .input-box--use-border {
+    border: var(--border-width) solid var(--border-color);
+  }
+`;
+
+export const tokenColors = css`
+  :host {
+    --primary: var(--my-ds--primary);
+    --secondary: var(--my-ds--secondary);
+    --success: var(--my-ds--warning);
+    --warning: var(--my-ds--warning);
+    --danger: var(--my-ds--warning);
+    --info: var(--my-ds--warning);
+  }
+`;
 ```
 
-Del ejemplo destacaremos lo siguiente:
+Del ejemplo anterior destaco:
 
-1. `MyNewButton` heredara todo del componente anterior; propiedades y estilos.
-2. El css creado asocia la custom propertie `--button-background: teal`, creando una variación en el componente principal.
+#### 1. Clases de utilidades en en tokensInput
 
-**Esta herencia también es valida entre componentes de Atomico**, pero esta rescribirá el render, considérela si su busca referenciar variables de css o props\(Propiedades\). Aprenda más de la herencia en la[ **guía herencia de clases**](../herencia-de-clases.md)**.**
-
-### **Selector ::part**
-
-Nos permite modificar la apariencia de los elementos dentro del shadowDOM que hagan uso del atributo `part="<identificador>"`,  ejemplo:
-
-```jsx
-import { c } from "atomico";
-
-function card() {
-  return (
-    <host shadowDom>
-      <header part="header">
-        <slot name="header" />
-      </header>
-    </host>
-  );
-}
-
-customElements.define("my-card", c(card));
-```
-
-Gracias al uso del atributo `part`, podremos modificar toda la apariencia del Elemento que referencie el atributo, ejemplo:
+#### 2. Patrón de declaración de las custom properties
 
 ```css
-my-card::part(header){
-    padding: 1rem;
-    font-size: 50px;
+:host {
+    --background: var(--my-ds-input--background, #fff);
 }
-
 ```
 
-Es probable de que su componente posea apariencias variables, ejemplo un modo dark y el problema es que `part` limita su efecto a solo a  [**pseudoclase**](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes), por lo que \`::part\(header\).dark\` no funcionara, para escapar de esta limitante puede usar en las props\(Propiedades\) de su componente la propiedad reflect , ejemplo
+`--background` será un token que se puede modificar a nivel de instancia y este hereda un token global de nuestro sistema llamado `--my-ds-input--background`, quiero que notes que el nombre global de nuestra custom property posee un patron, ejemplo:
 
-```jsx
-function card() {
-  return (
-    <host shadowDom>
-      <header>
-        <slot name="header" />
-      </header>
-    </host>
-  );
+```css
+---my-ds-input--background
+---<prefix>-<namespace>--<property>
+```
+
+Donde:
+
+1. Prefix : Prefijo de nuestro sistema de diseño a nivel global
+2. namespace: grupo independiente dentro de nuestro sistema   de diseño
+3. property: propiedad asociada al sistema, sea color, tamaño u otro valor.
+
+**¿Por que usar el patrón recomendado?**, para individualizar la configuración a nivel de grupos y separar de esta la definición de la propiedad gracias al uso de doble guion\(--\), internamente todo se simplifica ya que los tokens solo capturan la configuración global global para reflejarla a una variable mas simple accesible solo desde desde el nivel de instancia del componente.
+
+#### Nivel de instancia 
+
+Es la instancia del componente sea en el HTML o JS, ejemplo:
+
+{% tabs %}
+{% tab title="HTML" %}
+```markup
+<my-component style="--background: red;"></my-component>;
+```
+{% endtab %}
+
+{% tab title="JS" %}
+```javascript
+const component = document.createElement("my-component");
+
+component.style = "--background: red";
+```
+{% endtab %}
+{% endtabs %}
+
+### src/button.js
+
+{% tabs %}
+{% tab title="JS" %}
+```javascript
+import { c, html, css } from "atomico";
+import { tokensColor, tokensInput } from "../tokens";
+
+function button(props) {
+
+  return html`<host shadowDom>
+    <button ...${props} class="input-box input-box--use-border">
+      <slot name="icon"></slot>
+      <slot></slot>
+    </button>
+  </host>`;
 }
 
-card.props = {
-  dark: {type: Boolean, reflect: true},
+button.props = {
+  name: String,
+  value: String,
+  disabled: Boolean,
 };
 
+button.styles = [
+  tokensColor,
+  tokensInput,
+  css`
+    .input-box {
+      display: flex;
+      gap: 1rem;
+    }
+  `,
+];
 ```
+{% endtab %}
 
-```css
-my-card[dark]::part("header"){
-    background: black;
-    color: white;
+{% tab title="JSX" %}
+```jsx
+import { c, css } from "atomico";
+import { tokensColor, tokensInput } from "../tokens";
+
+function button(props) {
+  return (
+    <host shadowDom>
+      <button {...props} class="input-box input-box--use-border">
+        <slot name="icon"></slot>
+        <slot></slot>
+      </button>
+    </host>
+  );
 }
-```
 
-Atomico busca facilitar la creación de webcomponents útiles para sistemas de diseño, en la siguiente guía conocerás como estructurar y documentar Sistemas de diseño
+button.props = {
+  name: String,
+  value: String,
+  disabled: Boolean,
+};
+
+button.styles = [
+  tokensColor,
+  tokensInput,
+  css`
+    .input-box {
+      display: flex;
+      gap: 1rem;
+    }
+  `,
+];
+
+export const Button = c(button);
+
+```
+{% endtab %}
+{% endtabs %}
+
+Del código anterior destaco:
+
+1. **importación de "../tokens"** y  la desestructuración del modulo que declarar el uso de `tokensColor` y `tokensInput`.
+2. **Clases de utilidades:** Nuestro componente hace uso de las clases de utilidades del `tokensColor`.
+3. **button.styles:** Atomico permite asociar múltiples estilos mediante el uso de un array.
+4. **Exportación de Button.**
 
 
 
