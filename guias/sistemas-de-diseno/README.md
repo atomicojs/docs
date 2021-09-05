@@ -8,8 +8,6 @@ description: >-
 
 ### Estructura recomendada
 
-Es recomendable que su sistema de diseño defina un componente por carpeta, ya que esto te facilitara la independencia de los archivos asociados al componente, ejemplo: 
-
 ```bash
 src/
 	# Importara, exporta y declara todos nuestros componentes
