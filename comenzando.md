@@ -6,13 +6,13 @@ description: >-
 
 # 🚀 Comenzando
 
- Atomico es simple y te lo demostrare comenzando con desde un fichero HTML alojado en CodePen. Comenzaremos creando dentro de nuestro HTML el siguiente contenido:
+ Atomico es simple y te lo demostrare comenzando desde CodePen usando solo un tag script en nuestro HTML. Comenzaremos creando dentro de nuestro HTML el siguiente contenido:
 
 ```markup
 <script type="module"></script>
 ```
 
-Como notaras hemos añadido un `script[type=module]`, esto nos permitirá usar ESM\(módulos nativos\) y generar la siguiente importación
+Como notaras hemos añadido un tag `script[type=module]`, esto nos permitirá usar ESM\(módulos nativos\) y asociar  la siguiente importación:
 
 ```markup
 <script type="module">
@@ -25,7 +25,7 @@ Del código anterior destacare lo siguiente:
 1. Estoy consumiendo Atomico desde el **CDN Unpkg**, puedes usar cualquier otro que soporte ESM.
 2. he desestructurado la función `html` del modulo, esta nos permitirá declarar la plantilla de nuestro webcomponent.
 
-Ahora a crear nuestro primer componente con una funcion.
+Ahora a crear nuestro primer componente solo declarando una simple función:
 
 ```markup
 <script type="module">
@@ -37,11 +37,9 @@ Ahora a crear nuestro primer componente con una funcion.
 </script>
 ```
 
-Hemos declarado la función `component` que retorna algo realmente importante que es una regla en Atomico **Todo componente creado con Atomico debe retornar el tag host**.
+Quiero que notes el retorno de la función `component` esto es realmente importante ya que es una regla en Atomico **"Todo componente creado con Atomico debe retornar el tag host"**. El tag `<host>` representa el customElement y a través este tag podrás asociar eventos, propiedades, atributos y métodos a tu componente. 
 
-Ahora el tag `<host>` representa el customElement y a través este tag podrás asociar eventos, propiedades, atributos y métodos a tu componente. 
-
-Hemos retornado host pero no hemos añadido nada dentro del componente, ahora a añadir un pequeño hola mundo.
+Aun no hemos  añadido nada dentro del componente, agreguemos un "hola mundo":
 
 ```markup
 <script type="module">
@@ -55,7 +53,7 @@ Hemos retornado host pero no hemos añadido nada dentro del componente, ahora a 
 </script>
 ```
 
-Excelente, solo falta ver el resultado en el navegador, para ello deberás importar de Atomico la función `c` que transforma nuestra función `component` en un customElement estándar para ser registrado.
+Listo, solo falta ver el resultado en el navegador, para ello deberás importar de Atomico la función `c` que transforma nuestra función `component` en un customElement estándar para ser registrado:
 
 ```markup
 <script type="module">
@@ -71,9 +69,11 @@ Excelente, solo falta ver el resultado en el navegador, para ello deberás impor
 </script>
 ```
 
-Listo nuestro componente ya esta registrado y ya puede ser usado a través de la etiqueta `mi-component`
+Con nuestro componente registrado, ya puedes hacer uso este a través de la etiqueta  `<mi-componente>` en nuestro HTML:
 
 {% embed url="https://codepen.io/uppchile/pen/PojWpbb" %}
+
+Hemos creado un pequeño webcomponent con Atomico que te muestra los principios básicos para seguir avanzar con los siguientes tutoriales:
 
 1. Añadir nuestras primeras propiedades y Atributos
 2. Mejorar la apariencia usando el ShadowDOM.
