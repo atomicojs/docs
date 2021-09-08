@@ -1,6 +1,7 @@
 # Table of contents
 
 * [👋 Atomico](README.md)
+* [🚀 Comenzando](comenzando.md)
 
 ## Api
 
