@@ -23,7 +23,7 @@ Como notaras hemos añadido un tag `script[type=module]`, esto nos permitirá us
 Del código anterior destacare lo siguiente:
 
 1. Estoy consumiendo Atomico desde el **CDN Unpkg**, puedes usar cualquier otro que soporte ESM.
-2. he desestructurado la función `html` del modulo, esta nos permitirá declarar la plantilla de nuestro webcomponent.
+2. he desestructurado la función `html` del modulo, esta nos permitirá construir el HTML de nuestro webcomponent.
 
 Ahora a crear nuestro primer componente solo declarando una simple función:
 
@@ -39,7 +39,7 @@ Ahora a crear nuestro primer componente solo declarando una simple función:
 
 Quiero que notes el retorno de la función `component` esto es realmente importante ya que es una regla en Atomico **"Todo componente creado con Atomico debe retornar el tag host"**. El tag `<host>` representa el customElement y a través este tag podrás asociar eventos, propiedades, atributos y métodos a tu componente. 
 
-Aun no hemos  añadido nada dentro del componente, agreguemos un "hola mundo":
+Aun no hemos  añadido nada dentro del componente, que tal si añadimos un `<h1>hola mundo</h1>`:
 
 ```markup
 <script type="module">
