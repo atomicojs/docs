@@ -1,7 +1,8 @@
 # Table of contents
 
 * [👋 Atomico](README.md)
-* [🚀 Comenzando](comenzando.md)
+* [🚀 Comenzando con Webcomponents](comenzando/README.md)
+  * [¿Cómo asociar propiedades y Atributos a nuestro webcomponent?](comenzando/como-asociar-propiedades-y-atributos-a-nuestro-webcomponent.md)
 
 ## Api
 
