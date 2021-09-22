@@ -19,8 +19,8 @@ component.props = {
 
 A través de este objeto puedes definir la props\(Propiedades y Atributos\) de tu webcomponent y cada prop posee su declaración:
 
-1. **Declaraciones simples** permiten definir solo el tipo de la prop
-2. **Declaraciones estructuradas** permiten definir el tipo y efectos como: 
+1. \*\*\*\*[**Declaraciones simples**](../api/props.md#declaraciones-simple) permiten definir solo el tipo de la prop
+2. \*\*\*\*[**Declaraciones estructuradas**](../api/props.md#declaraciones-estructuradas) permiten definir el tipo y efectos como: 
    1. Reflejar el valor como atributo. 
    2. Emitir un evento ante el cambio del valor.
    3. Poseer un valor de inicio. 
