@@ -26,3 +26,11 @@ A través de este objeto puedes definir la props\(Propiedades y Atributos\) de t
    3. Poseer un valor de inicio. 
    4. Redefinir el atributo.
 
+
+
+### 
+
+
+
+
+
