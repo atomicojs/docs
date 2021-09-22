@@ -20,6 +20,15 @@ const [value, setValue] = useProp(myProp);
 const [value, setValue] = useProp<PropType>(myProp);
 ```
 {% endtab %}
+
+{% tab title="JSDOC" %}
+```javascript
+/**
+ * @type {import("atomico").UseProp<MyType>}
+ */
+const [value, setValue] = useProp(myProp);
+```
+{% endtab %}
 {% endtabs %}
 
 Donde : 
