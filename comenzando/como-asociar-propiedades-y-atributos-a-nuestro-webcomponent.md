@@ -26,6 +26,14 @@ A través de este objeto puedes definir la props\(Propiedades y Atributos\) de t
    3. Poseer un valor de inicio. 
    4. Redefinir el atributo.
 
+Todo valor  capturado desde la instancia del webcomponent será entregado al componente funcional mediante el primer parámetro props, internamente el componente puede actualizar los estados de las props mediante el hook **useProp** o el tag **host**.
+
+### useProp\(&lt;myProp&gt;\)
+
+```javascript
+const [myProp,setMyProp] = useProp("count");
+```
+
 
 
 ### 
