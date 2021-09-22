@@ -17,7 +17,7 @@ const [value, setValue] = useProp(myProp);
 
 {% tab title="TS" %}
 ```typescript
-const [value, setValue] = useProp<PropType>(myProp);
+const [value, setValue] = useProp<MyType>(myProp);
 ```
 {% endtab %}
 
@@ -33,10 +33,10 @@ const [value, setValue] = useProp(myProp);
 
 Donde : 
 
-* value: Valor actual de la prop.
-* setValue: Callback que actualizar el valor de la prop.
-* myProp: string, define el nombre de la prop a usar por el hook.
-* PropType: Solo para Typescript, permite definir la regla de tipo para value y setValue.
+* `value`: Valor actual de la prop.
+* `setValue`: Callback que actualizar el valor de la prop.
+* `myProp`: string, define el nombre de la prop a usar por el hook.
+* `MyType`: Solo para TS y JSDOC, permite definir la regla de tipo para value y setValue.
 
 ### Ejemplo
 

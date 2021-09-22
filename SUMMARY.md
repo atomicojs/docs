@@ -2,7 +2,7 @@
 
 * [👋 Atomico](README.md)
 * [🚀 Comenzando con Webcomponents](comenzando/README.md)
-  * [Propiedades y atributos](comenzando/como-asociar-propiedades-y-atributos-a-nuestro-webcomponent.md)
+  * [¿Cómo asociar propiedades y Atributos a nuestro webcomponent?](comenzando/como-asociar-propiedades-y-atributos-a-nuestro-webcomponent.md)
 
 ## Api
 

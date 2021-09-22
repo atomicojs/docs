@@ -1,6 +1,6 @@
-# Propiedades y atributos
+# ¿Cómo asociar propiedades y Atributos a nuestro webcomponent?
 
-Atomico agiliza la creación de propiedades y atributos para tus webcomponents mediante la configuración del objeto props.
+Atomico agiliza la creación de propiedades y atributos para tus webcomponents mediante la asociación del objeto props.
 
 ```javascript
 function component(props){
