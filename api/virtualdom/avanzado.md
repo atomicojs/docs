@@ -14,7 +14,7 @@ const Component = c(component);
 // 2️⃣ Registramos el custom element
 customElements.define("my-component", Component);
 
-function App(){
+function app(){
     return <host>
         <Component/>
     </host>
