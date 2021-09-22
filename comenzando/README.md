@@ -67,8 +67,8 @@ Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) d
 
 Atomico detecta las prop del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
 
-1. **índice**: Nombre del la propiedad y atributo.
-2. **Valor**: tipo del la prop.
+1. **índice**: Nombre de la propiedad y atributo.
+2. **Valor**: tipo de la prop.
 
 ```javascript
 components.props = {
@@ -76,11 +76,11 @@ components.props = {
 };
 ```
 
-Del ejemplo podemos inferir que Atomico creará en nuestro componente una propiedad y atributo llamada mensaje y esta solo puede ser del tipo String.
+Del ejemplo podemos inferir que Atomico creará en nuestro webcomponente una propiedad y atributo llamada mensaje y esta solo puede recibir valores del tipo String.
 
 ### Apariencia del webcomponent.
 
-Atomico detecta los estilos estáticos de tu componente gracias a la asociación del la propiedad styles:
+Atomico detecta los estilos estáticos de tu componente gracias a la asociación de la propiedad `styles`:
 
 ```javascript
 component.styles = css`
@@ -98,9 +98,7 @@ component.styles = css`
 customElements.define("my-component", c(component));
 ```
 
-Todo componente creado con Atomico antes de ser definido o extendido debe ser entregado antes a la función `c` del modulo Atomico, esta transforma tu función en un customElement estándar.
-
-
+Para crear nuestro customElement estándar deberemos entregar nuestro componente funcional a la función c del modulo de Atomico, la función `c` generara como retorno un customElement que puede ser definido o extendido.
 
 1. ¿Cómo asociar propiedades y Atributos a nuestro webcomponent?
 2. Mejorar la apariencia usando el ShadowDOM.
