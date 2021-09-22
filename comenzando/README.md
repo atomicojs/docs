@@ -1,61 +1,106 @@
 ---
 description: >-
-  Gracias por estar aquí e iniciarte con Atomico en esta guía conocerás lo
-  esencial para comenzar a desarrollar webcomponents con Atomico
+  Esta guía conocerás lo esencial para comenzar a desarrollar webcomponents con
+  Atomico
 ---
 
 # 🚀 Comenzando con Webcomponents
 
- Atomico es simple y puedes  comenzar a practicar con el desde un fichero HTML añadiendo el siguiente código:
+Gracias por estar aquí e iniciarte con Atomico. Hablemos un poco de lo que hoy ofrece atomico:
 
-```markup
-<script type="module">
-  import { html } from "https://unpkg.com/atomico";
-</script>
-```
+1. **Agilidad de desarrollo**, el enfoque funcional de Atomico simplifica el código en todas las etapas de desarrollo.
+2. **Ligero por dentro y por fuera**, Atomico te permite crear un componente con menos código y con un bajo impacto de dependencias 3kb Aproximadamente.
+3. **Realmente rapido**, Atomico posee un buen performance en el browser y una experiencia de desarrollo ágil.
 
-Del código anterior destacaré lo siguiente:
+Ahora fuera de todo el marketing entendamos el como luce un webcomponent creado con Atomico:
 
-1. Estamos consumiendo Atomico desde el **CDN Unpkg**, puedes usar cualquier otro que soporte ESM.
-2. Estamos desestructurado la función `html` del módulo,  esta nos permitirá construir la plantilla HTML de nuestro webcomponent.
+```javascript
+// IMPORTACIÓN
+import { c, html, css } from "atomico";
 
-Ahora a crear nuestro primer componente declarando nuestra función que llamaremos `component`:
+// WEBCOMPONENT
+function component({ message }) {
+  return html`<host shadowDom>${message}</host>`;
+}
 
-```markup
-<script type="module">
-  import { html } from "https://unpkg.com/atomico";
+// PROPIEDADES Y ATRIBUTOS DEL WEBCOMPONENTE
+components.props = {
+  message: String,
+};
 
-  function component() {
-    return html`<host>
-      <h1>hola mundo</h1>
-    </host>`;
+// APARIENCIA DEL WEBCOMPONENTE
+component.styles = css`
+  :host {
+    font-size: 30px;
   }
-</script>
+`;
+
+// DEFINICION DEL WEBCOMPONENT COMO ETIQUETA
+customElements.define("my-component", c(component));
 ```
 
-Quiero que notes el retorno de la función `component` esto es realmente importante ya que es una regla en Atomico **"Todo componente creado con Atomico debe retornar siempre el tag host".** El tag `<host>` representa la instancia del customElement y a través este tag podrás asociar eventos, propiedades, atributos y métodos a tu componente.
+Analicemos el código por partes...
 
-Ahora solo falta ver el resultado en el navegador, para ello deberás importar de Atomico la función `c` del módulo Atomico, esta transformará nuestra función `component` en un customElement estándar para ser registrado:
+### Importación
 
-```markup
-<script type="module">
-  import { c, html } from "https://cdn.skypack.dev/atomico";
+```javascript
+import { c, html, css } from "atomico";
+```
 
-  function component() {
-    return html`<host>
-      <h1>hola mundo</h1>
-    </host>`;
+¿Qué hemos importado?
+
+1. `c`: Función que transforma el componente funcional en un customElement estándar. 
+2. `html`: Función que declarar la plantilla de nuestro componente, también puedes usar JSX.
+3. `css`: Función que permite crear el CSSStyleSheet\(CSS\) para nuestro componente siempre y cuando este declare el shadowDom.
+
+### Webcomponent
+
+```javascript
+function component({ message }) {
+  return html`<host shadowDom>${message}</host>`;
+}
+```
+
+Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) declaradas en `component.props`, la función `component` declarar toda la lógica y plantilla del webcomponent.  Una regla importante dentro de Atomico es "**todo componente creado con Atomico debe siempre retornar el tag `<host>`**".
+
+### Propiedades y atributos del webcomponent
+
+Atomico detecta las prop del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
+
+1. **índice**: Nombre del la propiedad y atributo.
+2. **Valor**: tipo del la prop.
+
+```javascript
+components.props = {
+  message: String,
+};
+```
+
+Del ejemplo podemos inferir que Atomico creará en nuestro componente una propiedad y atributo llamada mensaje y esta solo puede ser del tipo String.
+
+### Apariencia del webcomponent.
+
+Atomico detecta los estilos estáticos de tu componente gracias a la asociación del la propiedad styles:
+
+```javascript
+component.styles = css`
+  :host {
+    font-size: 30px;
   }
-
-  customElements.define("mi-componente", c(component));
-</script>
+`;
 ```
 
-Con nuestro componente ya registrado podrás hacer uso`<mi-componente>` en tu HTML para instanciarlo:
+`styles` acepta valores CSSStyleSheet\(CSS\)  individual o en lista, el retorno de la función `css` es un CSSStyleSheet estándar, por lo que puede ser compartido fuera de Atomico.
 
-{% embed url="https://codepen.io/uppchile/pen/PojWpbb" %}
+### Definición de tu webcomponent
 
-Listo, hemos creado un pequeño webcomponent con Atomico que te muestra los principios básicos para seguir avanzando con los siguientes tutoriales:
+```javascript
+customElements.define("my-component", c(component));
+```
+
+Todo componente creado con Atomico antes de ser definido o extendido debe ser entregado antes a la función `c` del modulo Atomico, esta transforma tu función en un customElement estándar.
+
+
 
 1. ¿Cómo asociar propiedades y Atributos a nuestro webcomponent?
 2. Mejorar la apariencia usando el ShadowDOM.
