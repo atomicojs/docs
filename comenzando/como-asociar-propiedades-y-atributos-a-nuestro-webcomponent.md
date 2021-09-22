@@ -30,9 +30,9 @@ Las declaraciones pueden trabajar de forma conjunta y su uso depende de la neces
 
 
 
-Todo valor  capturado desde la instancia del webcomponent será entregado al componente funcional mediante el primer parámetro props, internamente el componente puede actualizar los estados de las props mediante el hook **useProp** o el tag **host**.
+Todo valor  capturado desde la instancia del webcomponent será entregado al componente funcional mediante el primer parámetro props, internamente el componente puede actualizar los estados de las props mediante el  ****el tag **host** o el ****hook **useProp**.
 
-### useProp\(&lt;myProp&gt;\)
+### prop y useProp
 
 ```javascript
 const [myProp,setMyProp] = useProp("count");
