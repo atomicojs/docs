@@ -128,7 +128,7 @@ Las propiedades especiales del evento son las conocidas `EventInit` , puede cono
 
 ### Prop.value
 
-Atomico permite la definición de valores por defectos de las props.
+Atomico permite la definición de valores  de inicio por defectos de las props.
 
 ```javascript
 WebComponents.props = {
