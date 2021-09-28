@@ -21,7 +21,7 @@ import { useDisabled } from "@atomico/hooks/use-disabled";
 const disabled:boolean = useDisabled(matches?: string = "fieldset");
 ```
 
-### Parámetros
+Donde:
 
 1. `matches`: string opcional, permite cambiar la búsqueda del tag padre `fieldset` por otro tag o selector compatible con `Element.matches` .
 
