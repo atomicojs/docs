@@ -25,3 +25,28 @@ const disabled:boolean = useDisabled();
 
 1. `matches`: string, permite cambiar la búsqueda del padre `fieldset` por otro tag o selector. 
 
+### Ejemplo
+
+```jsx
+import { c, css } from "atomico";
+
+function component(){
+    const disabled = useDisabled();
+    return <host>
+        <button disabled={disabled}><slot/></button>
+    </host>;
+}
+
+component.props = { disabled: Boolean };
+
+component.styles = css`
+    :host([disabled]){
+        pointer-events: none;
+    }
+`;
+
+customElements.define("my-component", c(component));
+```
+
+
+
