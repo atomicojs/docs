@@ -36,6 +36,8 @@
 ## @atomico
 
 * [@atomico/hooks](atomico/atomico-hooks/README.md)
+  * [use-debounce-state](atomico/atomico-hooks/use-debounce-state.md)
+  * [use-copy](atomico/atomico-hooks/use-copy.md)
   * [use-channel](atomico/atomico-hooks/use-channel.md)
   * [use-force-render](atomico/atomico-hooks/use-force-render.md)
   * [use-child-nodes](atomico/atomico-hooks/use-child-nodes.md)
