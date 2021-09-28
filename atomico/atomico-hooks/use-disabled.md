@@ -4,10 +4,10 @@ description: Sincroniza el estado de la prop disabled con el tag fieldset
 
 # use-disabled
 
-Heredar el estado deshabilitado de una etiqueta de conjunto de campos, bajo ciertas reglas:
+Heredar el estado  `disabled` de una etiqueta padre tipo `fieldset` , bajo ciertas reglas:
 
 1. La etiqueta debe estar en el lightDOM.
-2. El componente que usa este gancho debe declarar la propiedad deshabilitada.
+2. El componente que usa este hook debe declarar la prop \`{ disabled: Boolean}\`.
 
 ### Import
 
@@ -18,12 +18,12 @@ import { useDisabled } from "@atomico/hooks/use-disabled";
 ### Sintaxis 
 
 ```typescript
-const disabled:boolean = useDisabled();
+const disabled:boolean = useDisabled(matches?: string = "fieldset");
 ```
 
 ### Parámetros
 
-1. `matches`: string, permite cambiar la búsqueda del padre `fieldset` por otro tag o selector. 
+1. `matches`: string opcional, permite cambiar la búsqueda del tag padre `fieldset` por otro tag o selector compatible con `Element.matches` .
 
 ### Ejemplo
 
