@@ -28,7 +28,8 @@
 * [✨ Sistemas de diseño](guias/sistemas-de-diseno/README.md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📜 Typescript](guias/typescript.md)
-* [⚛️ De React a Atomico](guias/de-react-a-atomico.md)
+* [⚛️ De React a Atomico](guias/de-react-a-atomico/README.md)
+  * [Diferencias api virtualDOM](guias/de-react-a-atomico/diferencias-api-virtualdom.md)
 * [Formularios y ShadowDOM](guias/formularios-y-shadowdom.md)
 * [Herencia de clases](guias/herencia-de-clases.md)
 
