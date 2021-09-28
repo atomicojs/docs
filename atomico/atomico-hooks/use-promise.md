@@ -19,10 +19,10 @@ import { usePromise } from "@atomico/hooks/use-promise";
 ### Sintaxis
 
 ```jsx
-const [result, status] = usePromise(
-  asyncFunction,
-  runFunction,
-  optionalArguments
+const [result, status: "pending"|"fulfilled"|"rejected"] = usePromise(
+  asyncFunction: ()=>Promise<any>,
+  runFunction: boolean,
+  optionalArguments?: any[]
 );
 ```
 
