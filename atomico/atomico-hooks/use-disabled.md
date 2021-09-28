@@ -7,7 +7,7 @@ description: Sincroniza el estado de la prop disabled con el tag fieldset
 Heredar el estado  `disabled` de una etiqueta padre tipo `fieldset` , bajo ciertas reglas:
 
 1. La etiqueta debe estar en el lightDOM.
-2. El componente que usa este hook debe declarar la prop \`{ disabled: Boolean}\`.
+2. El componente que usa este hook debe declarar la prop `{ disabled: Boolean}`.
 
 ### Import
 
