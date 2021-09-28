@@ -18,6 +18,7 @@
   * [useRef](api/hooks/useref.md)
   * [useEffect y useLayoutEffect](api/hooks/useeffect-y-uselayouteffect.md)
   * [useMemo y useCallback](api/hooks/usememo-y-usecallback.md)
+  * [useUpdate](api/hooks/useupdate.md)
 * [🔬 Testing](api/testing/README.md)
   * [Ciclo de renderización](api/testing/test-dom.md)
   * [atomico/test-dom](api/testing/atomico-test-dom.md)
