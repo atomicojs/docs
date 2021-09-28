@@ -1,5 +1,5 @@
 ---
-description: 'Forzar una actualización, ideal para trabajar con referencias'
+description: 'Fuerza una actualización, ideal para trabajar con referencias'
 ---
 
 # useUpdate
