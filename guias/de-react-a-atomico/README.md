@@ -158,7 +158,7 @@ En Atomico encontraras los hooks mas utilitarios de React como:
 5. useEffect
 6. useMemo
 7. useCallback
-8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](../../atomico/atomico-hooks/use-channel.md), basado en el api de eventos.
+8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](), basado en el api de eventos.
 
 ### CSS-in-JS
 

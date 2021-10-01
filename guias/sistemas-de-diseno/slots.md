@@ -37,7 +37,7 @@ Considere esto practico solo si la composición esta apalancada al contenedor, e
 
 ### Slot condicional.
 
-Atomico ofrece un hook dentro del package [**@atomico/hooks/use-slot**](../../atomico/atomico-hooks/use-slot.md) ****que anexa el evento [**slotchange**](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) a una referencia, este le permitirá ocultar slots si estos no declaran contenido, ejemplo:
+Atomico ofrece un hook dentro del package [**@atomico/hooks/use-slot**]() ****que anexa el evento [**slotchange**](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) a una referencia, este le permitirá ocultar slots si estos no declaran contenido, ejemplo:
 
 ```jsx
 import { useRef } from "atomico";
