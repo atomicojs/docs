@@ -1,83 +1,106 @@
 ---
 description: >-
-  Gracias por estar aquí e iniciarte con Atomico en esta guía conocerás lo
-  esencial para comenzar a desarrollar con Atomico
+  Esta guía conocerás lo esencial para comenzar a desarrollar webcomponents con
+  Atomico
 ---
 
-# 🚀 Comenzando
+# 🚀 Comenzando con Webcomponents
 
- Atomico es simple y te lo demostrare comenzando desde CodePen usando solo un tag script en nuestro HTML. Comenzaremos creando dentro de nuestro HTML el siguiente contenido:
+Gracias por estar aquí e iniciarte con Atomico. Hablemos un poco de lo que hoy ofrece atomico:
 
-```markup
-<script type="module"></script>
-```
+1. **Agilidad de desarrollo**, el enfoque funcional de Atomico simplifica el código en todas las etapas de desarrollo.
+2. **Ligero por dentro y por fuera**, Atomico te permite crear un componente con menos código y con un bajo impacto de dependencias 3kb Aproximadamente.
+3. **Realmente rapido**, Atomico posee un buen performance en el browser y una experiencia de desarrollo ágil.
 
-Como notaras hemos añadido un tag `script[type=module]`, esto nos permitirá usar ESM\(módulos nativos\) y asociar  la siguiente importación:
+Ahora  entendamos el como luce un webcomponent creado con Atomico:
 
-```markup
-<script type="module">
-  import { html } from "https://unpkg.com/atomico";
-</script>
-```
+```javascript
+// IMPORTACIÓN
+import { c, html, css } from "atomico";
 
-Del código anterior destacare lo siguiente:
+// WEBCOMPONENT
+function component({ message }) {
+  return html`<host shadowDom>${message}</host>`;
+}
 
-1. Estoy consumiendo Atomico desde el **CDN Unpkg**, puedes usar cualquier otro que soporte ESM.
-2. he desestructurado la función `html` del modulo, esta nos permitirá construir el HTML de nuestro webcomponent.
+// PROPIEDADES Y ATRIBUTOS DEL WEBCOMPONENTE
+components.props = {
+  message: String,
+};
 
-Ahora a crear nuestro primer componente solo declarando una simple función:
-
-```markup
-<script type="module">
-  import { html } from "https://unpkg.com/atomico";
-
-  function component() {
-    return html`<host></host>`;
+// APARIENCIA DEL WEBCOMPONENTE
+component.styles = css`
+  :host {
+    font-size: 30px;
   }
-</script>
+`;
+
+// DEFINICION DEL WEBCOMPONENT COMO ETIQUETA
+customElements.define("my-component", c(component));
 ```
 
-Quiero que notes el retorno de la función `component` esto es realmente importante ya que es una regla en Atomico **"Todo componente creado con Atomico debe retornar el tag host"**. El tag `<host>` representa el customElement y a través este tag podrás asociar eventos, propiedades, atributos y métodos a tu componente. 
+Analicemos el código por partes...
 
-Aun no hemos  añadido nada dentro del componente, que tal si añadimos un `<h1>hola mundo</h1>`:
+### Importación
 
-```markup
-<script type="module">
-  import { html } from "https://cdn.skypack.dev/atomico";
+```javascript
+import { c, html, css } from "atomico";
+```
 
-  function component() {
-    return html`<host>
-      <h1>hola mundo</h1>
-    </host>`;
+¿Qué hemos importado?
+
+1. `c`: Función que transforma el componente funcional en un customElement estándar. 
+2. `html`: Función que declarar la plantilla de nuestro componente, también puedes usar JSX.
+3. `css`: Función que permite crear el CSSStyleSheet\(CSS\) para nuestro componente siempre y cuando este declare el shadowDom.
+
+### Webcomponent
+
+```javascript
+function component({ message }) {
+  return html`<host shadowDom>${message}</host>`;
+}
+```
+
+Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) declaradas en `component.props`, la función `component` declarar toda la lógica y plantilla del webcomponent.  Una regla importante dentro de Atomico es "**todo componente creado con Atomico debe siempre retornar el tag `<host>`**".
+
+### Propiedades y atributos reactivos del webcomponent
+
+Atomico detecta las prop\(Propiedades y Atributos\) del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
+
+1. **índice**: Nombre de la propiedad y atributo.
+2. **Valor**: tipo de la prop.
+
+```javascript
+components.props = {
+  message: String,
+};
+```
+
+Del ejemplo podemos inferir que Atomico creará en nuestro webcomponente una propiedad y atributo llamada mensaje y esta solo puede recibir valores del tipo String.
+
+### Apariencia del webcomponent.
+
+Atomico detecta los estilos estáticos de tu componente gracias a la asociación de la propiedad `styles`:
+
+```javascript
+component.styles = css`
+  :host {
+    font-size: 30px;
   }
-</script>
+`;
 ```
 
-Listo, solo falta ver el resultado en el navegador, para ello deberás importar de Atomico la función `c` que transforma nuestra función `component` en un customElement estándar para ser registrado:
+`styles` acepta valores CSSStyleSheet\(CSS\)  individual o en lista, el retorno de la función `css` es un CSSStyleSheet estándar, por lo que puede ser compartido fuera de Atomico.
 
-```markup
-<script type="module">
-  import { c, html } from "https://cdn.skypack.dev/atomico";
+### Definición de tu webcomponent
 
-  function component() {
-    return html`<host>
-      <h1>hola mundo</h1>
-    </host>`;
-  }
-
-  customElements.define("mi-componente", c(component));
-</script>
+```javascript
+customElements.define("my-component", c(component));
 ```
 
-Con nuestro componente registrado, ya puedes hacer uso este a través de la etiqueta  `<mi-componente>` en nuestro HTML:
+Para crear nuestro customElement estándar deberemos entregar nuestro componente funcional a la función c del modulo de Atomico, la función `c` generara como retorno un customElement que puede ser definido o extendido.
 
-{% embed url="https://codepen.io/uppchile/pen/PojWpbb" %}
+### Ejemplo
 
-Hemos creado un pequeño webcomponent con Atomico que te muestra los principios básicos para seguir avanzar con los siguientes tutoriales:
-
-1. Añadir nuestras primeras propiedades y Atributos
-2. Mejorar la apariencia usando el ShadowDOM.
-3. bienvenido a los hooks y di hola a useProp.
-4. ciclo de vida con useEffect.
-5. Emitir eventos con useEvent.
+{% embed url="https://webcomponents.dev/edit/7dNVyEXrCpmpKF9NXAAY/src/index.jsx" %}
 
