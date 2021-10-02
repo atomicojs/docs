@@ -10,9 +10,9 @@ Gracias por estar aquí e iniciarte con Atomico. Hablemos un poco de lo que hoy 
 
 1. **Agilidad de desarrollo**, el enfoque funcional de Atomico simplifica el código en todas las etapas de desarrollo.
 2. **Ligero por dentro y por fuera**, Atomico te permite crear un componente con menos código y con un bajo impacto de dependencias 3kb Aproximadamente.
-3. **Realmente rapido**, Atomico posee un buen performance en el browser y una experiencia de desarrollo ágil.
+3. **Realmente rapido**, Atomico posee un [buen performance](https://twitter.com/atomicojs/status/1391775734641745929) en el browser y una experiencia de desarrollo ágil.
 
-Ahora  entendamos el como luce un webcomponent creado con Atomico:
+Entendamos el como luce un webcomponent creado con Atomico:
 
 ```javascript
 // IMPORTACIÓN
