@@ -102,5 +102,7 @@ Para crear nuestro customElement estándar deberemos entregar nuestro componente
 
 ### Ejemplo
 
-{% embed url="https://webcomponents.dev/edit/7dNVyEXrCpmpKF9NXAAY/src/index.jsx" %}
+{% embed url="https://webcomponents.dev/edit/collection/wuKH7azM3kT3jqKv9ZV9/7dNVyEXrCpmpKF9NXAAY/src/index.jsx" %}
+
+
 
