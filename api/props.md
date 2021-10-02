@@ -126,6 +126,21 @@ Donde :
 
 Las propiedades especiales del evento son las conocidas `EventInit` , puede conocer mas detalle en la [documentación adjunta](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event)
 
+### Prop.attr
+
+Permite modificar el atributo que por defecto genera atomico, ejemplo:
+
+```javascript
+component.props = {
+    value: {
+        type: String,
+        attr: "my-value"
+    }
+}
+```
+
+la declaración anterior define que el atributo "my-value" refleja su estado en la prop "value".
+
 ### Prop.value
 
 Atomico permite la definición de valores  de inicio por defectos de las props.

@@ -24,7 +24,7 @@ function component({ message }) {
 }
 
 // PROPIEDADES Y ATRIBUTOS DEL WEBCOMPONENTE
-components.props = {
+component.props = {
   message: String,
 };
 
@@ -71,7 +71,7 @@ Atomico detecta las prop\(Propiedades y Atributos\) del componente gracias a la 
 2. **Valor**: tipo de la prop.
 
 ```javascript
-components.props = {
+component.props = {
   message: String,
 };
 ```
