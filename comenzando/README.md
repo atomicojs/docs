@@ -12,7 +12,9 @@ Gracias por estar aquí e iniciarte con Atomico. Hablemos un poco de lo que hoy 
 2. **Ligero por dentro y por fuera**, Atomico te permite crear un componente con menos código y con un bajo impacto de dependencias 3kb Aproximadamente.
 3. **Realmente rapido**, Atomico posee un buen performance en el browser y una experiencia de desarrollo ágil.
 
-Ahora fuera de todo el marketing entendamos el como luce un webcomponent creado con Atomico:
+Ahora  entendamos el como luce un webcomponent creado con Atomico:
+
+### Sintaxis 
 
 ```javascript
 // IMPORTACIÓN
@@ -65,7 +67,7 @@ Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) d
 
 ### Propiedades y atributos del webcomponent
 
-Atomico detecta las prop del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
+Atomico detecta las prop\(Propiedades y Atributos\) del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
 
 1. **índice**: Nombre de la propiedad y atributo.
 2. **Valor**: tipo de la prop.
