@@ -1,5 +1,13 @@
 # Avanzado
 
+### Propiedades especiales
+
+| Propiedad | Tipo | Efecto |
+| :--- | :--- | :--- |
+| shadowDom | Boolean | Habilita el uso del shadowDOM en el nodo |
+| renderOnce | Boolean | Renderiza el nodo solo una vez, esto optimiza el proceso de actualización ya que el nodo es ignorado entre actualizaciones.  |
+| $&lt;name&gt; | any | el prefijo $ permite definir en todos los casos &lt;name&gt;  como atributo |
+
 ### Constructor con custom element
 
 Esta técnica te permite usar cualquier custom element registrado sin la necesidad de conocer su `tag-name` para su uso, ejemplo:
