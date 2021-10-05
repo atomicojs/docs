@@ -8,6 +8,58 @@
 | renderOnce | Boolean | Renderiza el nodo solo una vez, esto optimiza el proceso de actualización ya que el nodo es ignorado entre actualizaciones.  |
 | $&lt;name&gt; | any | el prefijo $ permite definir en todos los casos &lt;name&gt;  como atributo |
 
+### render
+
+Por defecto el render viene configurado para ser usado dentro del webcomponent leyendo el retorno de la función, pero este puede ser usado fuera de Atomico, ejemplo:
+
+{% tabs %}
+{% tab title="function h" %}
+```javascript
+import { h, render } from "atomico";
+
+
+render(
+    h("host",{ style: {background:"red"} }
+        h("h1",null,"Text content...")
+    ),
+    document.querySelector("#app")
+);
+```
+{% endtab %}
+
+{% tab title="JSX" %}
+```jsx
+import { h, render } from "atomico";
+
+
+render(
+    <host style={{background:"red"}}>
+        <h1>Text content...</h1>
+    </host>,
+    document.querySelector("#app")
+);
+```
+{% endtab %}
+
+{% tab title="Template string\(html\)" %}
+```javascript
+import { html, render } from "atomico";
+
+
+render(
+    html`<host style=${background:"red"}>
+        <h1>Text content...</h1>
+    </host>`,
+    document.querySelector("#app")
+);
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="warning" %}
+El primer nodo del render siempre debe ser el tag host.
+{% endhint %}
+
 ### Constructor con custom element
 
 Esta técnica te permite usar cualquier custom element registrado sin la necesidad de conocer su `tag-name` para su uso, ejemplo:
