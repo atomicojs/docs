@@ -22,7 +22,7 @@ Esto evitara confusiones al momento de deducir cual es el constructor de la inst
 
 utilice preferentemente useProp en los siguientes casos:
 
-1. Al modificar la prop desde el interior del componente.
+* Al modificar la prop desde el interior del componente.
 
 ```jsx
 function component() {
@@ -40,7 +40,7 @@ component.props = {
 };
 ```
 
-1. Al asilar la logica de la prop en un customHook.
+* Al asilar la logica de la prop en un customHook.
 
 ```jsx
 function useCounter(prop) {
