@@ -5,7 +5,7 @@
 
 ## Api
 
-* [🧬 Props\(Propiedades\)](api/props.md)
+* [🧬 Props(Propiedades)](api/props.md)
 * [🧩 VirtualDOM](api/virtualdom/README.md)
   * [Avanzado](api/virtualdom/avanzado.md)
 * [🎣 Hooks](api/hooks/README.md)
@@ -25,6 +25,7 @@
 
 ## guías
 
+* [🎯 Tips](guias/tips.md)
 * [✨ Sistemas de diseño](guias/sistemas-de-diseno/README.md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📜 Typescript](guias/typescript.md)
@@ -44,4 +45,3 @@
 * [Discord](https://discord.gg/7z3rNhmkNE)
 * [Github](https://github.com/atomicojs/atomico)
 * [Twitter](https://twitter.com/atomicojs)
-
