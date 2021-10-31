@@ -12,7 +12,7 @@ Permite recuperar los tipos del objeto `props` asociado a la función.
 
 {% tabs %}
 {% tab title="Typescript" %}
-```tsx
+```typescript
 import { Props, c } from "atomico";
 
 function component(props: Props<typeof component.props>) {
@@ -62,7 +62,7 @@ customElements.define("my-component", c(component));
 
 {% tabs %}
 {% tab title="Typescript" %}
-```tsx
+```typescript
 import { c, Component } from "atomico";
 
 const component: Component<{ value: string }> = (props) => {
