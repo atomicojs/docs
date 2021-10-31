@@ -8,8 +8,8 @@ description: >-
 
 #### Si ya eres desarrollador de React y conoces el api de Hooks tendrás el 80% del camino recorrido de Atomico, el 20% restante es un Atomico facilitando el api webcomponents... ahora **¿por que usar Atomico?**:
 
-1. **Atomico no limitara tu curva de aprendizaje de React**, lo aprendido en Atomico es aplicable en React, ejemplo los hooks y virtualDOM. 
-2. **Atomico solo pesa 3kB** que es el 7% de  React + React-dom.
+1. **Atomico no limitara tu curva de aprendizaje de React**, lo aprendido en Atomico es aplicable en React, ejemplo los hooks y virtualDOM.&#x20;
+2. **Atomico solo pesa 3kB **que es el 7% de  React + React-dom.
 3. **Mejor abstracción de componentes**, por ejemplo el uso del ShadowDOM evitara la necesidad de usar css-in-js como styles-components o emotion, reduciendo dependencias.
 4. **Componentes Agnósticos**, lo que creas con React solo funciona dentro de React, lo que creas con Atomico funciona en la web, por lo que podrás tus componentes dentro de React, Vue, Svelte o Html.
 5. **Componente exclusivo para React**, el CLI @atomico/exports genera automáticamente un componente wrapper de tu webcomponent para React, mejorando la retrocompatibilidad con React.
@@ -149,7 +149,7 @@ Del ejemplo destacaremos las siguientes diferencias:
 
 #### Hooks soportados
 
-En Atomico encontraras los hooks mas utilitarios de React como: 
+En Atomico encontraras los hooks mas utilitarios de React como:&#x20;
 
 1. useRef
 2. useState
@@ -158,7 +158,7 @@ En Atomico encontraras los hooks mas utilitarios de React como:
 5. useEffect
 6. useMemo
 7. useCallback
-8. ~~useContext~~ : **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](), basado en el api de eventos.
+8. ~~useContext ~~: **No soportado**, el api de eventos es mejor practica que contexto al usar webcomponents, si buscas un homologo puedes usar [**useChannel**](broken-reference), basado en el api de eventos.
 
 ### CSS-in-JS
 
@@ -240,7 +240,7 @@ export const Button = c(button);
 
 En Atomico para declarar css es recomendable que asocies la propiedad styles a tu function, esta permite asociar CSS estándar si buscas aprender mas de esto te recomendamos ver la guía de sistemas de diseño
 
-{% page-ref page="../sistemas-de-diseno/" %}
-
-
+{% content-ref url="../sistemas-de-diseno/" %}
+[sistemas-de-diseno](../sistemas-de-diseno/)
+{% endcontent-ref %}
 

@@ -25,7 +25,7 @@ const hooks = createHooks(opcionalRender, opcionalHost);
 Donde:
 
 * **optionalRender**: Callback que permite reiniciar el ciclo de vida del hook, este callback será ejecutado cada vez que un hook como [useState ](../hooks/usestate.md)o [useReducer ](../hooks/usereducer.md)soliciten la actualización del scope. Atomico lo usa para renderizar nuevamente el webcomponent.
-* **opcionalHost**: ****permite compartir un objeto para el hook [useHost](../hooks/usehost.md). Atomico lo usa para compartir la instancia del webcomponent.
+* **opcionalHost**:** **permite compartir un objeto para el hook [useHost](../hooks/usehost.md). Atomico lo usa para compartir la instancia del webcomponent.
 
 #### Retorno de la instancia
 
@@ -38,14 +38,14 @@ interface Hooks {
 
 Donde
 
-* **load**:  Función que asocia permite asociar el scope del callback a un habito de contexto global temporal. 
-* **clearEffect:** Función que activa el colector de useLayoutEffect, al ejecutar clearEffect se retornara un callback que permite finalizar la el colector para useEffect cerrando el ciclo de efectos secundarios.
+* **load**:  Función que asocia permite asociar el scope del callback a un habito de contexto global temporal.&#x20;
+*   **clearEffect: **Función que activa el colector de useLayoutEffect, al ejecutar clearEffect se retornara un callback que permite finalizar la el colector para useEffect cerrando el ciclo de efectos secundarios.
 
-  Si clearEffect recibe como parámetro true comunica el desmontaje.
+    Si clearEffect recibe como parámetro true comunica el desmontaje.
 
 ### Ejemplo:
 
-**./use-counter.js:** customHook a testear.
+**./use-counter.js: **customHook a testear.
 
 ```typescript
 import { useState } from "atomico";
@@ -60,7 +60,7 @@ export function useCounter(initialValue) {
 }
 ```
 
-**./use-counter.test.js:** el  ejemplo se basa en el entorno de test de [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/).
+**./use-counter.test.js: **el  ejemplo se basa en el entorno de test de [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/).
 
 ```javascript
 import { expect } from "@esm-bundle/chai";
@@ -78,5 +78,4 @@ it("Check return", () => {
 });
 ```
 
-\*\*\*\*
-
+****

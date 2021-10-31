@@ -2,9 +2,9 @@
 
 El uso de slots mejora la composición permitiéndote reflejar el contenido expuesto en el `lightDOM` del componente en el `shadowDOM` de este, ejemplo:
 
-![](../../.gitbook/assets/web_1366_7.png)
+![](../../.gitbook/assets/web\_1366\_7.png)
 
-### ::slotted\(&lt;selector&gt;\)
+### ::slotted(\<selector>)
 
 El selector `slotted`  permite la manipulación del contenido expuesto como slot del lightDOM desde el shadowDOM, ejemplo:
 
@@ -37,7 +37,7 @@ Considere esto practico solo si la composición esta apalancada al contenedor, e
 
 ### Slot condicional.
 
-Atomico ofrece un hook dentro del package [**@atomico/hooks/use-slot**]() ****que anexa el evento [**slotchange**](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) a una referencia, este le permitirá ocultar slots si estos no declaran contenido, ejemplo:
+Atomico ofrece un hook dentro del package [**@atomico/hooks/use-slot**](broken-reference)** **que anexa el evento [**slotchange**](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange\_event) a una referencia, este le permitirá ocultar slots si estos no declaran contenido, ejemplo:
 
 ```jsx
 import { useRef } from "atomico";
@@ -55,8 +55,6 @@ function component(){
     </host>
 }
 ```
-
-
 
 
 

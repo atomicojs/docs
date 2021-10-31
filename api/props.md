@@ -4,7 +4,7 @@ description: >-
   atributos reactivos que detonan la lógica o interfaz del webcomponent.
 ---
 
-# 🧬 Props\(Propiedades\)
+# 🧬 Props(Propiedades)
 
 ## Sintaxis
 
@@ -60,7 +60,7 @@ component.props = {
 
 ## Declaraciones estructuradas
 
-Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo reflejar el valor de la propiedad como atributos, emitir automáticamente eventos o asociar valores por defecto. **Recuerde este tipo de declaraciones requieren mínimamente el uso de la propiedad type.**
+Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo reflejar el valor de la propiedad como atributos, emitir automáticamente eventos o asociar valores por defecto.** Recuerde este tipo de declaraciones requieren mínimamente el uso de la propiedad type.**
 
 ### Prop.type
 
@@ -71,16 +71,16 @@ component.props = { myName: String };
 component.props = { myName: { type: String } };
 ```
 
-| Tipo | Soporta la propiedad "reflect" |
-| :--- | :--- |
-| **String** | ✔️ |
-| **Number** | ✔️ |
-| **Boolean** | ✔️ |
-| **Object** | ✔️ |
-| **Array** | ✔️ |
-| **Promise** | ❌ |
-| **Symbol** | ❌ |
-| **Function** | ❌ |
+| Tipo         | Soporta la propiedad "reflect" |
+| ------------ | ------------------------------ |
+| **String**   | ✔️                             |
+| **Number**   | ✔️                             |
+| **Boolean**  | ✔️                             |
+| **Object**   | ✔️                             |
+| **Array**    | ✔️                             |
+| **Promise**  | ❌                              |
+| **Symbol**   | ❌                              |
+| **Function** | ❌                              |
 
 ### Prop.reflect
 
@@ -177,4 +177,3 @@ function component() {
 
 component.props = { message: String };
 ```
-

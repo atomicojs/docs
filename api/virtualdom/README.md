@@ -122,7 +122,7 @@ const ref = useRef();
 <input ref={ref}/>; // La referencia será el input
 ```
 
-Las referencias deben ser objetos inmutables, para crearlo existe el **hook** [**useRef** ]()que crea una referencia para cada instancia del webcomponent.
+Las referencias deben ser objetos inmutables, para crearlo existe el **hook **[**useRef** ](broken-reference)que crea una referencia para cada instancia del webcomponent.
 
 ### Propiedad shadowDom
 
@@ -157,4 +157,3 @@ myElement.myMethod();
 ```
 
 Para acceder al DOM de forma segura espere la resolución de la propiedad updated creada por el [ciclo de render de Atomico](../testing/test-dom.md)
-

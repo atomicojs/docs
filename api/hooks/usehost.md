@@ -29,5 +29,4 @@ function useListener(type: string, callback: (ev: Event) => void) {
 }
 ```
 
-Del ejemplo podemos destacar que **useListener es un customHook** que permite escuchar un evento del webcomponent sin la necesidad de vincular dicho evento al virtual-dom.
-
+Del ejemplo podemos destacar que **useListener es un customHook **que permite escuchar un evento del webcomponent sin la necesidad de vincular dicho evento al virtual-dom.

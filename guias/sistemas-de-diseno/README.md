@@ -100,9 +100,9 @@ Donde:
 2. namespace: grupo independiente dentro de nuestro sistema   de diseño
 3. property: propiedad asociada al sistema, sea color, tamaño u otro valor.
 
-**¿Por que usar el patrón recomendado?**, para individualizar la configuración a nivel de grupos y separar de esta la definición de la propiedad gracias al uso de doble guion\(--\), internamente todo se simplifica ya que los tokens solo capturan la configuración global global para reflejarla a una variable mas simple accesible solo desde desde el nivel de instancia del componente.
+**¿Por que usar el patrón recomendado?**, para individualizar la configuración a nivel de grupos y separar de esta la definición de la propiedad gracias al uso de doble guion(--), internamente todo se simplifica ya que los tokens solo capturan la configuración global global para reflejarla a una variable mas simple accesible solo desde desde el nivel de instancia del componente.
 
-#### Nivel de instancia 
+#### Nivel de instancia&#x20;
 
 Es la instancia del componente sea en el HTML o JS, ejemplo:
 
@@ -201,9 +201,7 @@ export const Button = c(button);
 Del código anterior destaco:
 
 1. **importación de "../tokens"** y  la desestructuración del modulo que declarar el uso de `tokensColor` y `tokensInput`.
-2. **Clases de utilidades:** Nuestro componente hace uso de las clases de utilidades del `tokensColor`.
-3. **button.styles:** Atomico permite asociar múltiples estilos mediante el uso de un array.
+2. **Clases de utilidades: **Nuestro componente hace uso de las clases de utilidades del `tokensColor`.
+3. **button.styles: **Atomico permite asociar múltiples estilos mediante el uso de un array.
 4. **Exportación de Button.**
-
-
 

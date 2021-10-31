@@ -12,7 +12,7 @@ const dispatchEvent = useEvent(myEvent, eventInit);
 
 Donde:
 
-* dispatchEvent: **callback,** despacha el evento desde el webcomponent.
+* dispatchEvent: **callback, **despacha el evento desde el webcomponent.
 * myEvent: **string**, nombre del evento a emitir.
 * eventInit: **objeto opcional**, configuración del evento.
 
@@ -51,4 +51,3 @@ interface EventInit {
 * **composed**: permite que el evento atraviese la captura de eventos del shadowDOM.
 * **cancelable**:  permite que el evento sea cancelado.
 * **base**: permite personalizar el constructor del evento, ideal para comunicación basada en instancia de eventos.
-
