@@ -50,7 +50,7 @@ import { c, html, css } from "atomico";
 ¿Qué hemos importado?
 
 1. `c`: Función que transforma el componente funcional en un customElement estándar. 
-2. `html`: Función que declarar la plantilla de nuestro componente, también puedes usar JSX.
+2. `html`: Función para declarar la plantilla de nuestro componente, también puedes usar JSX.
 3. `css`: Función que permite crear el CSSStyleSheet\(CSS\) para nuestro componente siempre y cuando este declare el shadowDom.
 
 ### Webcomponent
@@ -61,11 +61,11 @@ function component({ message }) {
 }
 ```
 
-Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) declaradas en `component.props`, la función `component` declarar toda la lógica y plantilla del webcomponent.  Una regla importante dentro de Atomico es "**todo componente creado con Atomico debe siempre retornar el tag `<host>`**".
+Nuestra función `component` recibe todas las props\(Propiedades y Atributos\) declaradas en `component.props`, la función `component` declara toda la lógica y plantilla del webcomponent.  Una regla importante dentro de Atomico es "**todo componente creado con Atomico debe siempre retornar el tag `<host>`**".
 
 ### Propiedades y atributos reactivos del webcomponent
 
-Atomico detecta las prop\(Propiedades y Atributos\) del componente gracias a la asociación del objeto props, este mediante el uso de índice y valor te permite definir:
+Atomico detecta las prop\(Propiedades y Atributos\) del componente gracias a la asociación del objeto props, esto mediante el uso de índices y valores te permite definir:
 
 1. **índice**: Nombre de la propiedad y atributo.
 2. **Valor**: tipo de la prop.
@@ -90,7 +90,7 @@ component.styles = css`
 `;
 ```
 
-`styles` acepta valores CSSStyleSheet\(CSS\)  individual o en lista, el retorno de la función `css` es un CSSStyleSheet estándar, por lo que puede ser compartido fuera de Atomico.
+`styles` acepta valores CSSStyleSheet\(CSS\)  de forma individual o en lista, el retorno de la función `css` es un CSSStyleSheet estándar, por lo que puede ser compartido fuera de Atomico.
 
 ### Definición de tu webcomponent
 
@@ -98,7 +98,7 @@ component.styles = css`
 customElements.define("my-component", c(component));
 ```
 
-Para crear nuestro customElement estándar deberemos entregar nuestro componente funcional a la función c del modulo de Atomico, la función `c` generara como retorno un customElement que puede ser definido o extendido.
+Para crear nuestro customElement estándar deberemos entregar nuestro componente funcional a la función `c` del módulo de Atomico, la función `c` generará como retorno un customElement que puede ser definido o extendido.
 
 ### Ejemplo
 
