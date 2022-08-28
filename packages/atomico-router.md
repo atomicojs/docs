@@ -31,7 +31,7 @@ render(
         <h1 slot="config">home</h1>
     </RouterSwitch>,
     document.body
-)jsx
+)
 ```
 {% endtab %}
 
