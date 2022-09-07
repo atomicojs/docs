@@ -51,5 +51,9 @@ function myExample() {
 ```
 
 {% embed url="https://webcomponents.dev/edit/collection/n2tZyzx4LMKqk1jNE0e9/odaNplBxuGgwsqkbHiLu/src/index.jsx" %}
+Basic
+{% endembed %}
 
-***
+{% embed url="https://studio.webcomponents.dev/edit/pNfePKlFPn16B2bMXfEI/src/index.jsx?p=stories" %}
+Counter
+{% endembed %}
