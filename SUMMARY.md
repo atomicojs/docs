@@ -27,6 +27,7 @@
 
 ## Guides
 
+* [📖 Atomico and Storybook](guides/atomico-and-storybook.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
   * [♻ Webcomponents with hybrid rendering](guides/atomico-design-patterns/webcomponents-with-hybrid-rendering.md)
   * [🔗 Slot as templates](guides/atomico-design-patterns/slot-as-templates.md)
