@@ -8,11 +8,11 @@ description: Facilitates the distribution of webcomponents
 
 ## Flags
 
-### --exports
+### --wrappers
 
 You will add the build files to the exports property inside the package.json.
 
-### --types
+### --worksapce
 
 It requires the installation of Typescript, it will create the types and add the files to the typesVersion property inside package.json
 
