@@ -10,8 +10,6 @@ Atomico export is a solution that parses the output of compilers like vite, esbu
 
 Atomico export is also compatible with uncompiled code (standard Javascript).
 
-
-
 ### The objective of Atomico/exports
 
 1. Achieve aesthetic imports at the package level, example:&#x20;
@@ -27,7 +25,7 @@ import { Button } from "components/button"; // ✅
 import { Button } from "components/button/react"; 
 ```
 
-## Installation
+### Installation
 
 {% tabs %}
 {% tab title="NPM" %}
