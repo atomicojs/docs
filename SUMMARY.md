@@ -20,6 +20,7 @@
   * [useMemo and useCallback](api/hooks/usememo-y-usecallback.md)
   * [useUpdate](api/hooks/useupdate.md)
   * [useContext](api/hooks/usecontext.md)
+  * [usePromise](api/hooks/usepromise.md)
 * [🔬 Testing](api/testing/README.md)
   * [Render cycle](api/testing/test-dom.md)
   * [atomico/test-hooks](api/testing/test-hooks.md)
@@ -58,6 +59,7 @@
 
 ## packages
 
+* [@atomico/vite](packages/atomico-vite.md)
 * [@atomico/exports](packages/introduction/README.md)
   * [CLI and Flags](packages/introduction/atomico-exports.md)
   * [Wrapper for React](packages/introduction/wrapper-for-react.md)
@@ -106,14 +108,14 @@
   * [Examples](packages/atomico-store/examples/README.md)
     * [Cart](packages/atomico-store/examples/cart.md)
 * [@atomico/router](packages/atomico-router.md)
-* [@atomico/magic-form](packages/atomico-magic-form/README.md)
-  * [MagicFormProvider | \<magic-form-provider>](packages/atomico-magic-form/magicformprovider-or-less-than-magic-form-provider-greater-than.md)
-  * [MagicForm | \<magic-form>](packages/atomico-magic-form/magicform-or-less-than-magic-form-greater-than.md)
-  * [MagicForm Hooks](packages/atomico-magic-form/magicform-hooks.md)
-  * [MagicForm in React and Preact](packages/atomico-magic-form/magicform-in-react-and-preact.md)
-  * [MagicForm in Microfrontend](packages/atomico-magic-form/magicform-in-microfrontend.md)
-  * [MagicForm Patterns](packages/atomico-magic-form/magicform-patterns.md)
 * [🚫 Deprecated](packages/deprecated/README.md)
+  * [@atomico/magic-form](packages/deprecated/atomico-magic-form/README.md)
+    * [MagicFormProvider | \<magic-form-provider>](packages/deprecated/atomico-magic-form/magicformprovider-or-less-than-magic-form-provider-greater-than.md)
+    * [MagicForm | \<magic-form>](packages/deprecated/atomico-magic-form/magicform-or-less-than-magic-form-greater-than.md)
+    * [MagicForm Hooks](packages/deprecated/atomico-magic-form/magicform-hooks.md)
+    * [MagicForm in React and Preact](packages/deprecated/atomico-magic-form/magicform-in-react-and-preact.md)
+    * [MagicForm in Microfrontend](packages/deprecated/atomico-magic-form/magicform-in-microfrontend.md)
+    * [MagicForm Patterns](packages/deprecated/atomico-magic-form/magicform-patterns.md)
   * [@atomico/design-tokens](packages/deprecated/atomico-design-tokens/README.md)
     * [@atomico/design-tokens api](packages/deprecated/atomico-design-tokens/atomico-design-tokens-api.md)
 
