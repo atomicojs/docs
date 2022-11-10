@@ -9,7 +9,8 @@ import { useSlot } from "@atomico/hooks/use-slot";
 ### Syntax
 
 ```javascript
-const childNodes = useSlot(ref);
+const optionalFilter = (element)=> element instanceof MyCustomElement;
+const childNodes = useSlot(ref, optionalFilter);
 ```
 
 Where:

@@ -69,7 +69,9 @@ Rendering will be suspended until the promise is resolved or rejected, the resol
 
 ## useSuspense
 
-allows to listen to all useAsync executions nested in the component, example:
+allows to listen to all useAsync executions nested in the component.
+
+### Syntax
 
 ```tsx
 function component() {
