@@ -32,16 +32,16 @@ Where:
 ```typescript
 interface Hooks {
   load<T>(callback: () => T): T;
-  clearEffect(unmounted?: boolean): () => void;
+  clearEffect(unmounted?: boolean): () => ()=> void;
 }
 ```
 
 Where:
 
 * **load**: Function that allows to load the hooks to the temporary global context of Atomico.
-* **clearEffect:** Function that activates the collector of useLayoutEffect, when executing clear Effect a callback will be returned that allows ending the collector for useEffect, closing the cycle of secondary effects.
+*   **clearEffect:** Function that activates the collector of useLayoutEffect, when executing clear Effect a callback will be returned that allows ending the collector for useEffect, closing the cycle of secondary effects.
 
-  If clear Effect receives true as parameter, it communicates the unmounted.
+    If clear Effect receives true as parameter, it communicates the unmounted.
 
 ## Example:
 
@@ -77,4 +77,3 @@ it("Check return", () => {
   expect(counter.decrement).to.be.an.instanceOf(Function);
 });
 ```
-
