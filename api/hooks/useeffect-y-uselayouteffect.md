@@ -2,7 +2,7 @@
 description: Allows to run side effects after rendering
 ---
 
-# useEffect, useLayoutEffect and useInsertionEffect
+# useEffect and useLayoutEffect
 
 ## Syntax
 
@@ -36,8 +36,5 @@ useEffect(listenerClickWindow, []);
 
 ## useLayoutEffect
 
-useLayoutEffect replicates the logic of useEffect but with synchronous execution after rendering.
+useLayoutEffect replicates the logic of useEffect but with synchronous execution to the render.
 
-## useInsertionEffect
-
-useLayoutEffect replicates the logic of useEffect but with synchronous execution before rendering.

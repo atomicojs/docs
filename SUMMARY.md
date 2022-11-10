@@ -22,6 +22,7 @@
   * [useId](api/hooks/useid.md)
   * [useContext](api/hooks/usecontext.md)
   * [usePromise](api/hooks/usepromise.md)
+  * [useAsync and useSuspense](api/hooks/useasync-and-usesuspense.md)
 * [🔬 Testing](api/testing/README.md)
   * [Render cycle](api/testing/test-dom.md)
   * [atomico/test-hooks](api/testing/test-hooks.md)
