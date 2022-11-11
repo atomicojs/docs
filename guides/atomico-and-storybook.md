@@ -30,9 +30,10 @@ It facilitates the creation of stories, analyzing the components created with At
 import { define } from "@atomico/storybook";
 import { ColorPicker } from "./color-picker";
 
-export default define(ColorPicker, {
+export default {
   title: "components/brand",
-});
+  ...define(ColorPicker)
+};
 
 export const Default = (props: any) => <ColorPicker {...props}></ColorPicker>;
 ```
