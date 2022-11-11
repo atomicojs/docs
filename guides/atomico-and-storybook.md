@@ -49,7 +49,7 @@ define also improves the declaration of stories by improving the autocompletion 
 ### Config storybook 7
 
 {% tabs %}
-{% tab title=".storybook/main.js" %}
+{% tab title=".storybook/main.mjs" %}
 ```javascript
 import { mergeConfig } from "vite";
 
