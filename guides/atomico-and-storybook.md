@@ -4,24 +4,117 @@
 
 * [x] **Decorator,** Atomico's decorator extends atomico's rendering capabilities to storybook.
 * [x] **Monorepo,** We invite you to use the recipe through the CLI `npm init atomico`, you can also find this [configuration on Github](https://github.com/atomicojs/base/tree/storybook-monorepo)
+* [x] Decorator for Storybook, Easily render webcomponents created with Atomico inside storytbook stories.&#x20;
+* [x] storybook 7 and storybook + Vite
 * [ ] **MDX**, in progress investigation...
 
-## Frequent questions
+## @Atomico/storybook
 
-### How to render a webcomponent in Storybook with React
+### decorador
 
-The following error is the most common when using Atomico in Storybook with React.
+Easily render webcomponents created with Atomico inside storytbook stories.&#x20;
 
-```bash
-localhost/:1 Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': this constructor has already been used with this registry
+**.storybook/preview.js**
+
+```typescript
+import { decorator } from "@atomico/storybook";
+
+export const decorators = [decorator];
 ```
 
-We recommend using [@atomico/react](../packages/atomico-react.md), this package creates a friendly wrapper for React.
+### define
 
-{% hint style="info" %}
-Using [@atomico/react](../packages/atomico-react.md) requires the following script to be imported into the .storybook/preview.js file
-{% endhint %}
+It facilitates the creation of stories, analyzing the components created with Atomico to automatically define the `argTypes` and `args`.
 
+```tsx
+import { define } from "@atomico/storybook";
+import { ColorPicker } from "./color-picker";
+
+export default define(ColorPicker, {
+  title: "components/brand",
+});
+
+export const Default = (props: any) => <ColorPicker {...props}></ColorPicker>;
+```
+
+define also improves the declaration of stories by improving the autocompletion of these.
+
+
+
+## @atomico/vite
+
+`@atomico/vite` has exclusive storybook utilities, with these it seeks to facilitate the use of Atomico's JSX /TSX and live reload.
+
+### Config storybook 7
+
+{% tabs %}
+{% tab title=".storybook/main.js" %}
 ```javascript
-import "@atomico/react/proxy";
+import { mergeConfig } from "vite";
+
+export default {
+    stories: [
+        // 📌 remember to define the path according to your configuration
+        "../../components/**/*.stories.mdx",
+        "../../components/**/*.stories.@(js|jsx|ts|tsx)",
+        "../../components/*.stories.mdx",
+        "../../components/*.stories.@(js|jsx|ts|tsx)",
+    ],
+    addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+    framework: {
+        name: "@storybook/web-components-vite",
+        options: {},
+    },
+    async viteFinal(config, { configType }) {
+        // 📌 return the customized config
+        return mergeConfig(config, {
+            plugins: [
+                ...(await import("@atomico/vite")).default({
+                    // 📌 needed to define files that use JSX/TSX
+                    storybook: ["components/**/*"],
+                }),
+            ],
+        });
+    },
+};
+v
 ```
+{% endtab %}
+
+{% tab title="package.json" %}
+```json
+{
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "atomico": "^1.68.0"
+  },
+  "devDependencies": {
+    "@atomico/storybook": "^1.5.0",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.3.2",
+    "@storybook/addon-actions": "^7.0.0-alpha.47",
+    "@storybook/addon-essentials": "^7.0.0-alpha.47",
+    "@storybook/addon-links": "^7.0.0-alpha.47",
+    "@storybook/web-components": "^7.0.0-alpha.47",
+    "@storybook/web-components-vite": "^7.0.0-alpha.47",
+    "lit-html": "^2.4.0",
+    "storybook": "^7.0.0-alpha.47",
+    "vite": "^3.2.2"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% content-ref url="frequent-questions.md" %}
+[frequent-questions.md](frequent-questions.md)
+{% endcontent-ref %}
+
+
+
+
+
