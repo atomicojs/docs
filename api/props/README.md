@@ -43,7 +43,7 @@ component.props = {
 customElement.define("web-component", c(component));
 ```
 
-Consider that:
+#### Consider that:
 
 1. The prop names in Camel Case format will be translated to for use as an attribute to the Kebab Case format, this behavior can be modified through the "attr" property when using a structured declaration.
 2. Structured declarations require the "type" property minimally.
@@ -78,17 +78,17 @@ component.props = { myName: String };
 component.props = { myName: { type: String } };
 ```
 
-| Type                                                                                                                    | Supports reflect |
-| ----------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| **String**                                                                                                              | ✔️               |
-| **Number**                                                                                                              | ✔️               |
-| **Boolean**                                                                                                             | ✔️               |
-| **Object**                                                                                                              | ✔️               |
-| **Array**                                                                                                               | ✔️               |
-| **Promise**                                                                                                             | ❌                |
-| **Symbol**                                                                                                              | ❌                |
-| **Function**                                                                                                            | ❌                |
-| **All references to existing types in the browser(HTMLElement, Element, Node, Date, File... more than 500** 😎\*\*)\*\* | ❌                |
+| Type                                                                                                            | Supports reflect |
+| --------------------------------------------------------------------------------------------------------------- | ---------------- |
+| **String**                                                                                                      | ✔️               |
+| **Number**                                                                                                      | ✔️               |
+| **Boolean**                                                                                                     | ✔️               |
+| **Object**                                                                                                      | ✔️               |
+| **Array**                                                                                                       | ✔️               |
+| **Promise**                                                                                                     | ❌                |
+| **Symbol**                                                                                                      | ❌                |
+| **Function**                                                                                                    | ❌                |
+| **All references to existing types in the browser(HTMLElement, Element, Node, Date, File... more than 300** 😎) | ❌                |
 
 ### Prop.reflect
 
