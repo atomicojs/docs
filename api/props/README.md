@@ -124,7 +124,7 @@ component.props = {
 nodeComponent.addEventListener("change", handler);
 ```
 
-Donde :
+Where:
 
 * `event.type`: String - optional, name of the event to be emitted when the prop is changed
 * `event.bubbles`: Boolean - optional, indicates that the event can be listened to by containers.
