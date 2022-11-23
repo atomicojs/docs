@@ -30,8 +30,8 @@
 
 ## Guides
 
-* [Frequent questions](guides/frequent-questions.md)
-* [📖 Atomico and Storybook](guides/atomico-and-storybook.md)
+* [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
+  * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
   * [♻ Webcomponents with hybrid rendering](guides/atomico-design-patterns/webcomponents-with-hybrid-rendering.md)
   * [🔗 Slot as templates](guides/atomico-design-patterns/slot-as-templates.md)

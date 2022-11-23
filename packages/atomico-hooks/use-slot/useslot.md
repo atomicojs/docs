@@ -9,13 +9,15 @@ import { useSlot } from "@atomico/hooks/use-slot";
 ### Syntax
 
 ```javascript
-const childNodes = useSlot(ref);
+const optionalFilter = (element)=> element instanceof MyCustomElement;
+const childNodes = useSlot(ref, optionalFilter);
 ```
 
 Where:
 
 1. `ref`: Reference of the slot to observe.
 2. `childNodes`: List of nodes assigned to the observed slot.
+3. `optionalFilter`: allows to filter nodes assign to childNodes
 
 ### Live example
 
