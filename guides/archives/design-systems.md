@@ -182,7 +182,6 @@ button.styles = [
 ];
 
 export const Button = c(button);
-
 ```
 {% endtab %}
 {% endtabs %}

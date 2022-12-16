@@ -6,7 +6,7 @@ description: >-
 
 # VirtualDOM api differences
 
-Atomico's virtualDOM is: 
+Atomico's virtualDOM is:
 
 1. Close to standard DOM .
 2. Additional coverage to webcomponents.
@@ -49,7 +49,6 @@ function app(){
 
 {% tab title="✔️ Supported" %}
 ```jsx
-
 function app(){
     const Div = document.createElement("div");
     return <host>
@@ -91,6 +90,3 @@ the `key` property in Atomicoo can be of type String, Number, Symbol or other im
 ```jsx
 <div innerHTML={`<h1>html!</h1>`}/>
 ```
-
-
-

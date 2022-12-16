@@ -40,7 +40,7 @@ class VanillaElement extends HTMLElement {
 const Component = c( component,  VanillaElement );
 ```
 
-`component`: function that declares the webcomponent for Atomico.&#x20;
+`component`: function that declares the webcomponent for Atomico.
 
 `VanillaElement`: class that will be extended by Atomico to create Component, Atomico will not break the life cycle of the component, allowing them to interact freely.
 
@@ -78,13 +78,12 @@ const Component1 = c(component1);
 const Component2 = c(component2, Component1);
 
 customElements.define("component-2", Component2);
-
 ```
 
 Consider the following effects when using this inheritance model:
 
-1. The `render` will be rewritten.&#x20;
-2. The `props` are inherited, Atomico will reuse the previously declared props.&#x20;
+1. The `render` will be rewritten.
+2. The `props` are inherited, Atomico will reuse the previously declared props.
 3. `Styles` are inherited. Atomico will merge the stylesheets.
 
 ### Inheritance outside of Atomico
