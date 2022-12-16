@@ -86,3 +86,10 @@ export default {
 
 ```
 
+{% hint style="danger" %}
+You can use the spread operator according to the storybook configuration.&#x20;
+
+* **Storybook webpack 4 + Vite**, does not support the spread operator in the default export of your story.&#x20;
+* **Storybook 7 + Vite**, if it supports the spread operator in its story.
+{% endhint %}
+
