@@ -111,6 +111,7 @@
   * [Examples](packages/atomico-store/examples/README.md)
     * [Cart](packages/atomico-store/examples/cart.md)
 * [@atomico/router](packages/atomico-router.md)
+* [@atomico/storybook](packages/atomico-storybook.md)
 * [🚫 Deprecated](packages/deprecated/README.md)
   * [@atomico/magic-form](packages/deprecated/atomico-magic-form/README.md)
     * [MagicFormProvider | \<magic-form-provider>](packages/deprecated/atomico-magic-form/magicformprovider-or-less-than-magic-form-provider-greater-than.md)

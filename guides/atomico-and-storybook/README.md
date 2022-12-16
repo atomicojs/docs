@@ -6,7 +6,7 @@
 * [x] **Monorepo,** We invite you to use the recipe through the CLI `npm init atomico`, you can also find this [configuration on Github](https://github.com/atomicojs/base/tree/storybook-monorepo)
 * [x] Decorator for Storybook, Easily render webcomponents created with Atomico inside storytbook stories.&#x20;
 * [x] storybook 7 and storybook + Vite
-* [ ] **MDX**, in progress investigation...
+* [x] **MDX.**&#x20;
 
 ## @Atomico/storybook
 

@@ -1,0 +1,68 @@
+---
+description: Improves the generation of stories in Storybook.
+---
+
+# @atomico/storybook
+
+This package has 2 main objectives:
+
+1. Render as stories webcomponents created with Atomico using JSX/TSX within Storybook.
+2. Facilitate and automate the generation of stories.
+
+## Render as stories webcomponents created with Atomico using JSX/TSX within Storybook.
+
+`@atomico/storybook` has a decorator that allows Storybook to render the JSX/TSX of webcomponents created with Atomico.
+
+### **Config**
+
+The following configuration can be added per story or in the `.storybook/preview.js` file:
+
+```javascript
+import { decorator } from "@atomico/storybook";
+
+export const decorators = [decorator];
+```
+
+## Facilitate and automate the generation of stories.
+
+`@atomico/storybook` has the define function to infer from its webcomponent created with Atomico the configuration of the `argTypes` and `args` for Storybook, example:
+
+{% tabs %}
+{% tab title="my-component.stories.tsx" %}
+```typescript
+import { define } from "@atomico/storybook";
+import { MyComponent } from "./my-component";
+
+export default {
+    title: "Components/Card",
+    ...define(MyComponent),
+};
+```
+{% endtab %}
+
+{% tab title="my-component.tsx" %}
+```javascript
+import { c } from "atomico";
+
+function myComponent() {
+  return <host></host>;
+}
+
+myComponent.props = {
+  checked: Boolean,
+  message: String,
+};
+
+export const MyComponent = c(myComponent);
+
+customElements.define("my-component", MyComponent);
+```
+{% endtab %}
+{% endtabs %}
+
+```javascript
+```
+
+@atomico/storybook transforms its component's props into argTypes valid for Storybook.
+
+You can also rewrite all or part of the configuration created by Atomico.
