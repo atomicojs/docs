@@ -37,6 +37,8 @@ export default {
     title: "Components/Card",
     ...define(MyComponent),
 };
+
+export const Default = (props)=><MyComponent {...props}/>
 ```
 {% endtab %}
 
@@ -60,9 +62,27 @@ customElements.define("my-component", MyComponent);
 {% endtab %}
 {% endtabs %}
 
-```javascript
+`@atomico/storybook` transforms its component's props into argTypes valid for Storybook.
+
+You can also rewrite all or part of the configuration created by `@atomico/storybook` by giving the function `define` a second argument, example:
+
+```typescript
+export default {
+  title: "Components/Card",
+  ...define(MyComponent, {
+    argTypes: {
+      message: {
+        // Opcional, define la categoria para la tabla.
+        category: "Internals",
+        description: "Define un mensaje para el componente",
+      },
+      checked: {
+        control: "radio",
+        options: ["Show", "Hide"],
+      },
+    },
+  }),
+};
+
 ```
 
-@atomico/storybook transforms its component's props into argTypes valid for Storybook.
-
-You can also rewrite all or part of the configuration created by Atomico.
