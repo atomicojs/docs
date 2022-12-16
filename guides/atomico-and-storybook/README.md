@@ -10,6 +10,10 @@
 
 ## @Atomico/storybook
 
+{% content-ref url="../../packages/atomico-storybook.md" %}
+[atomico-storybook.md](../../packages/atomico-storybook.md)
+{% endcontent-ref %}
+
 ### decorador
 
 Easily render webcomponents created with Atomico inside storytbook stories.&#x20;
