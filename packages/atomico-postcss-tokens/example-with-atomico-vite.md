@@ -21,3 +21,11 @@ atomico({
         }
 }
 ```
+
+3\. ready to use
+
+```javascript
+export const GenericTokens = css`
+    @tokens "./tokens.yaml" (import: generic);
+`
+```
