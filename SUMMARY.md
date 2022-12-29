@@ -30,6 +30,7 @@
 
 ## Guides
 
+* [Design System](guides/design-system.md)
 * [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
   * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
@@ -62,6 +63,8 @@
 
 ## packages
 
+* [@atomico/postcss-tokens](packages/atomico-postcss-tokens/README.md)
+  * [Example with @atomico/vite](packages/atomico-postcss-tokens/example-with-atomico-vite.md)
 * [@atomico/vite](packages/atomico-vite.md)
 * [@atomico/exports](packages/introduction/README.md)
   * [CLI and Flags](packages/introduction/atomico-exports.md)
