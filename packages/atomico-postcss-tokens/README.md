@@ -6,7 +6,16 @@ description: >-
 
 # @atomico/postcss-tokens
 
-## Syntax
+`@atomico/postcss-tokens` works through yaml or json files that declare tokens to be later imported from CSS files using the [@tokens](./#atrule-tokens) atRule. Through @tokens you can define if the resource to be generated should be global in scope **(:root)** or at the webcomponent level **(:host)**
+
+## Token syntax
+
+Tokens are declared using YAML to JSON files, token declarations can be:
+
+1. simple: object declaring only token property and value
+2. variations by attributes: object that declares the tokens according to the assignment of an attribute at the webcomponent level
+
+### Example of simple tokens
 
 {% tabs %}
 {% tab title="Yaml" %}
@@ -45,7 +54,28 @@ color:
 {% endtab %}
 {% endtabs %}
 
-### atRule @tokens
+### Example of variations by attributes
+
+This type of declaration allows assigning tokens according to the attribute of a webcomponent
+
+{% tabs %}
+{% tab title="Yaml" %}
+```yaml
+space:
+  around: 1rem
+  between: 1rem
+  safe: .5rem
+  [size=small]:
+    around: .8rem
+    between: .8rem
+    safe: .4rem
+```
+{% endtab %}
+{% endtabs %}
+
+Thanks to this type of declaration you will be able to manage the variations directly from the token file.
+
+## AtRule @tokens
 
 This atRule allows importing yaml or json files to be used as custom properties, example:
 
