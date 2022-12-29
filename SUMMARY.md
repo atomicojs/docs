@@ -63,8 +63,6 @@
 
 ## packages
 
-* [@atomico/postcss-tokens](packages/atomico-postcss-tokens/README.md)
-  * [Example with @atomico/vite](packages/atomico-postcss-tokens/example-with-atomico-vite.md)
 * [@atomico/vite](packages/atomico-vite.md)
 * [@atomico/exports](packages/introduction/README.md)
   * [CLI and Flags](packages/introduction/atomico-exports.md)
@@ -115,6 +113,8 @@
     * [Cart](packages/atomico-store/examples/cart.md)
 * [@atomico/router](packages/atomico-router.md)
 * [@atomico/storybook](packages/atomico-storybook.md)
+* [@atomico/postcss-tokens](packages/atomico-postcss-tokens/README.md)
+  * [Example with @atomico/vite](packages/atomico-postcss-tokens/example-with-atomico-vite.md)
 * [🚫 Deprecated](packages/deprecated/README.md)
   * [@atomico/magic-form](packages/deprecated/atomico-magic-form/README.md)
     * [MagicFormProvider | \<magic-form-provider>](packages/deprecated/atomico-magic-form/magicformprovider-or-less-than-magic-form-provider-greater-than.md)
