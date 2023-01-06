@@ -1,21 +1,14 @@
 ---
 description: >-
-  Trata de un repositorio que posee componentes versionados a nivel del
-  componente, esto quiere decir que cualquier cambio a nivel de componente
-  generara una nueva versión del componente.
+  Trata de un repositorio que posee componentes versionados como paquetes
+  individuales.
 ---
 
 # Monorepositorio versionado a nivel de componente
 
-Esta es la estrategia más habitual al momento de crear sistemas de diseño, ya que permite individualizar los cambios a nivel de componente, gracias a que cada componente posee su package.json con los siguientes objetivos:
-
-* **Versionamiento**: Trata de cada package estará versionado, ejemplo `@ds/button@1.0.0`, esto permite que podamos agregar mejoras o corregir problemas apuntando solo a la versión del componente afectado.
-* **Mantenimiento**: Al ser un package, podemos individualizar sus dependencias y pruebas, lo que facilita el mantenimiento.
-*   **Abstracción**: Trata de que cada componente aislara en su package los slots de composición(Subcomponentes que únicamente dependen del componente principal, ejemplo el tag option depende del tag select) y alguna otra utilidad especifica del componente.
 
 
-
-### Ejemplo de estructura
+### Ejemplo
 
 ```
 packages
@@ -30,14 +23,14 @@ packages
    └─ package.json
 ```
 
-### Ejemplo de importacion individual
+la idea de este monorepositorio es individualizar cada componente como  package, esto con los siguientes objetivos:
 
-```javascript
-import { Button } from "@ds/my-button";
-```
+1. **Versionamiento**: Trata de cada package estará versionado, ejemplo `@ds/button@1.0.0`, esto permite que podamos agregar mejoras o corregir problemas apuntando solo a la versión del componente afectado.
+2.  **Mantenimiento**: Al ser un package, podemos individualizar sus dependencias, es ideal que definamos correctamente:
 
-### Ejemplo de importación a nivel de sistema
+    1. [dependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#dependencies): dependencias requeridas, es natural que los componentes dependerán entre si, una definición incorrecta  puede generar duplicación de packages en node\_modules, procure identificar bien entre dependencies y peerDependecies.
+    2. [peerDependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#peerdependencies): dependencias requeridas pero en función del entorno y otras dependencias.
+    3. [devDependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#devdependencies): dependencias solo para el desarrollo sea empaquetado o testing.
 
-```javascript
-import { Button } from "@ds/components";
-```
+
+3. **Abstracción**: Es ideal que nuestro package distribuya el componente en si y los slots de composición(Subcomponentes que únicamente dependen del componente principal, ejemplo el tag options del tag select) y alguna otra utilidad especifica del componente.
