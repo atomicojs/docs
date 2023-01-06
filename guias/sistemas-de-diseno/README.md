@@ -6,6 +6,10 @@ description: >-
 
 # ✨ Sistemas de diseño con Atomico
 
+{% hint style="danger" %}
+La siguiente guía está en desarrollo&#x20;
+{% endhint %}
+
 1. [estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno.](estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./ "mention")
 2. Recomendación en la creacion de Tokens (Custom properties) para tus webcomponents.
 3. Abstracción de componentes.
