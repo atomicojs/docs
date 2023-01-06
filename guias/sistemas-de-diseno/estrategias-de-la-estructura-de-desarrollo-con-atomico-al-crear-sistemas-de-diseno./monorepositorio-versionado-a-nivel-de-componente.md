@@ -1,8 +1,12 @@
 ---
-description: Trata de un repositorio que posee componentes aislados como paquetes.
+description: >-
+  Trata de un repositorio que posee componentes versionados como paquetes
+  individuales.
 ---
 
-# Monorepositorio multi package
+# Monorepositorio versionado a nivel de componente
+
+
 
 ### Ejemplo
 
