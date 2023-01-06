@@ -18,10 +18,14 @@ Gracias a que cada componente posee su package.json se lograra:
 
 ### Desventajas
 
-Las siguientes desventajas son practicas:
+Las siguientes desventajas son prácticas:
 
-1. Mayor lentitud ya que cada componente requerirá ser un nuevo package.
-2. Mayor dificultad de centralización de componentes en un solo package.
+1. Mayor lentitud al crear nuevos componentes, ya que cada componente requerirá ser un nuevo package.
+2. Mayor dificultad de centralización de componentes en un solo package, ya que cada cambio requerirá actualizar el package principal y adjuntar la nueva exportación.
+
+{% hint style="info" %}
+Las desventajas prácticas pueden ser reparadas mediante herramientas de CLI que automatizan la generación de archivos y centralización de packages
+{% endhint %}
 
 ### Ejemplo de estructura
 
