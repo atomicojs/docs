@@ -11,7 +11,7 @@ Puede ser confuso abordar a el desarrollo de un sistema de diseño sin saber com
 1. [monorepositorio-versionado-a-nivel-de-componente.md](monorepositorio-versionado-a-nivel-de-componente.md "mention")
 2. [monorepositorio-versionado-a-nivel-de-sistema-de-diseno.md](monorepositorio-versionado-a-nivel-de-sistema-de-diseno.md "mention")
 
-## ¿Por qué monorepositorio para sistemas de  diseño?
+## ¿Por qué monorepositorio para su sistemas de  diseño?
 
 Es la forma más eficiente de asilar las herramientas que gira  entorno a nuestro sistema de diseño.
 
@@ -19,7 +19,13 @@ Es la forma más eficiente de asilar las herramientas que gira  entorno a nuestr
 
 #### 1. Aislé su Storybook como package.
 
-Esto mantendrá limpio el workspaces.
+Esto mantendrá limpio el workspaces, ejemplo:
+
+```bash
+packages
+├─ components
+└─ storybook 
+```
 
 #### 2. Adjunte las historias para Storybook en a nivel de componente.
 
@@ -31,7 +37,6 @@ packages
 │  └─ my-button
 │     └─ src
 │        └─ define.stories.tsx
-│
 └─ storybook 
 ```
 
