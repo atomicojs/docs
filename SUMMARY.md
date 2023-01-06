@@ -26,7 +26,8 @@
 ## guías
 
 * [🎯 Tips](guias/tips.md)
-* [✨ Sistemas de diseño](guias/sistemas-de-diseno/README.md)
+* [✨ Sistemas de diseño con Atomico](guias/sistemas-de-diseno/README.md)
+  * [Estrategias de desarrollo con Atomico al crear sistemas de diseño.](guias/sistemas-de-diseno/estrategias-de-desarrollo-con-atomico-al-crear-sistemas-de-diseno..md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📜 Typescript & JSDOC](guias/typescript/README.md)
   * [tsconfig.json](guias/typescript/tsconfig.json.md)
