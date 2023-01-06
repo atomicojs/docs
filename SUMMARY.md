@@ -30,7 +30,6 @@
 
 ## Guides
 
-* [Design System](guides/design-system.md)
 * [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
   * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
