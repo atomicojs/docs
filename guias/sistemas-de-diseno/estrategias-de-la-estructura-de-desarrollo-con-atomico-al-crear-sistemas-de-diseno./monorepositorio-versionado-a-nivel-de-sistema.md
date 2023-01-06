@@ -1,12 +1,8 @@
----
-description: Trata de un repositorio que posee componentes versionados a nivel de sistema.
----
-
 # Monorepositorio versionado a nivel de sistema
 
+Trata de un repositorio que posee componentes versionados a nivel de sistema, esto quiere decir que cualquier cambio a nivel de componente generara una nueva versión del sistema de diseño.
 
-
-### Ejemplo:
+### Ejemplo de estructura:&#x20;
 
 ```
 packages
