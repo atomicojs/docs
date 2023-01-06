@@ -6,7 +6,7 @@ description: >-
 
 # ✨ Sistemas de diseño con Atomico
 
-1. [estrategias-de-la-estructura-de-desarrollo-con-atomico-al-crear-sistemas-de-diseno..md](estrategias-de-la-estructura-de-desarrollo-con-atomico-al-crear-sistemas-de-diseno..md "mention")
+1. [estrategias-de-la-estructura-de-desarrollo-con-atomico-al-crear-sistemas-de-diseno.](estrategias-de-la-estructura-de-desarrollo-con-atomico-al-crear-sistemas-de-diseno./ "mention")
 2. Recomendación en la creacion de Tokens (Custom properties) para tus webcomponents.
 3. Abstracción de componentes.
 4. Composición. (Slots)
