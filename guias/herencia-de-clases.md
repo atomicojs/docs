@@ -84,21 +84,20 @@ const Component1 = c(component1);
 const Component2 = c(component2, Component1);
 
 customElements.define("component-2", Component2);
-
 ```
 
 Considere los siguientes efectos al usar este modelo de herencia:
 
 1. El render será rescrito.
 2. las props se hereda, Atomico reutilizara las props previamente declaradas.
-3. los styles se heredan. Atomico fusionará las hojas de estilo. 
+3. los styles se heredan. Atomico fusionará las hojas de estilo.
 
 ### Herencia fuera de Atomico
 
-La función `c` de Atomico crea un customElement estándar optimizado, el que puede ser extendido para modificar su comportamiento, sea: 
+La función `c` de Atomico crea un customElement estándar optimizado, el que puede ser extendido para modificar su comportamiento, sea:
 
 1. Añadiendo métodos.
-2. Creando o remplazando las hojas de estilo. 
+2. Creando o remplazando las hojas de estilo.
 3. Creando nuevas propiedades.
 
 Supongamos de que poseemos un `MyButton` producto de la función `c`, nosotros podremos extender este componente para modificar su apariencia sin la necesidad de rescribirlo por completo, ejemplo:
@@ -127,5 +126,4 @@ class MyNewButton extends MyButton {
 }
 ```
 
-El beneficio de esta herencia es simplificar la modificación de la apariencia de un componente creado con Atomico, ya que evita la rescritura del mismo. 
-
+El beneficio de esta herencia es simplificar la modificación de la apariencia de un componente creado con Atomico, ya que evita la rescritura del mismo.

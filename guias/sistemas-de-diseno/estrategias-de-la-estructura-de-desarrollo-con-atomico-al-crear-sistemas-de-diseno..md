@@ -4,7 +4,7 @@ description: >-
   UpperCod para el desarrollo de sistemas de diseño.
 ---
 
-# Estrategias de desarrollo con Atomico al crear sistemas de diseño.
+# Estrategias de la estructura de desarrollo con Atomico al crear sistemas de diseño.
 
 Puede ser confuso abordar a el desarrollo de un sistema de diseño sin saber como estructurar nuestro proyecto, la estructura de nuestro repositorio definirá en gran medida la publicación de nuestro package sea:
 

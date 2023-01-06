@@ -36,10 +36,8 @@ function component() {
     </host>
   );
 }
-
 ```
 
 ### Observación
 
 El objeto de referencia es útil para referenciar nodos entre customHooks.
-

@@ -8,12 +8,12 @@ description: >-
 
 El virtualDOM de Atomico es:
 
-1.  Cercano al DOM estándar
+1. Cercano al DOM estándar
 2. Cobertura adicional a los webcomponents.
 
 ### Componentes como constructores
 
-Atomico no soporta el uso de funciones para construir el componente como tradicionalmente lo hacemos en React, para que el  componente pueda ser instanciado como constructor debe ser un webcomponent o un Nodo real
+Atomico no soporta el uso de funciones para construir el componente como tradicionalmente lo hacemos en React, para que el componente pueda ser instanciado como constructor debe ser un webcomponent o un Nodo real
 
 {% tabs %}
 {% tab title="❌ No soportado" %}
@@ -49,7 +49,6 @@ function app(){
 
 {% tab title="✔️ Soportado" %}
 ```jsx
-
 function app(){
     const Div = document.createElement("div");
     return <host>
@@ -63,7 +62,7 @@ function app(){
 
 ### Asociación de eventos.
 
-Atomico al igual que React necesita el uso del prefijo `on` para anunciar un evento, pero existe una diferencia  **Atomico no manipula el nombre del evento por lo que `onClick` es distinto a `onclick`**,  el objetivo de esta diferencia es dar soporte a los eventos personalizados.
+Atomico al igual que React necesita el uso del prefijo `on` para anunciar un evento, pero existe una diferencia **Atomico no manipula el nombre del evento por lo que `onClick` es distinto a `onclick`**, el objetivo de esta diferencia es dar soporte a los eventos personalizados.
 
 ```jsx
 <div>
@@ -91,16 +90,3 @@ la propiedad key en Atomico puede ser del tipo String, Number, Symbol u otra ref
 ```jsx
 <div innerHTML={`<h1>html!</h1>`}/>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
