@@ -30,6 +30,7 @@
   * [Estrategias de estructuración de repositorio con Atomico al crear sistemas de diseño.](guias/sistemas-de-diseno/estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./README.md)
     * [Monorepositorio versionado a nivel de componente](guias/sistemas-de-diseno/estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./monorepositorio-versionado-a-nivel-de-componente.md)
     * [Monorepositorio versionado a nivel de sistema de diseño](guias/sistemas-de-diseno/estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./monorepositorio-versionado-a-nivel-de-sistema-de-diseno.md)
+  * [Tokens (CSS custom properties)](guias/sistemas-de-diseno/tokens-css-custom-properties.md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📜 Typescript & JSDOC](guias/typescript/README.md)
   * [tsconfig.json](guias/typescript/tsconfig.json.md)
