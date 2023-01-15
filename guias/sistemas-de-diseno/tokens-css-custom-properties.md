@@ -1,6 +1,6 @@
 # Tokens (CSS custom properties)
 
-Los tokens son valores configurables de nuestro sistema de diseño representados usando css custom properties, en esta guía encontraras recomendaciones de uso para que tu proyecto escale y sea configurable sin complicaciones&#x20;
+Los tokens son valores configurables de nuestro sistema de diseño representados usando css custom properties, en esta guía encontraras recomendaciones de uso para que tu proyecto sea más escale y configurable sin complicaciones&#x20;
 
 ## CSS custom properties
 
