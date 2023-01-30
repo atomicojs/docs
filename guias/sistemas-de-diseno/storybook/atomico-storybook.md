@@ -26,7 +26,7 @@ import { decorador } from "@atomico/storybook";
 {% hint style="warning" %}
 La serialización del JSX ocurre solo si se define`parameters.docs.source = 'jsx'` por historia o global en `.storybook/preview.js.`
 
-Esta funcionalidad solo es compatible con versiones >= atomico@1.70.0 introduce nombres automáticos segun definición del componente
+Esta funcionalidad solo es compatible con versiones >= atomico@1.70.0 gracias a la [característica de nombres automáticos según definición del componente](https://atomico.gitbook.io/doc/api/virtualdom/advanced#class-name-inheritance)
 {% endhint %}
 
 ### Ejemplo de renderización y serialización del HTML
