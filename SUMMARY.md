@@ -33,6 +33,10 @@
 * [@atomico/hooks](https://atomico.gitbook.io/doc/atomico/atomico-hooks)
 * [@atomico/components](https://atomico.gitbook.io/doc/atomico/atomico-components)
 * [@atomico/exports](https://atomico.gitbook.io/doc/atomico/atomico-exports)
+* [@atomico/react](https://atomico.gitbook.io/doc/packages/atomico-react)
+* [@atomico/router](https://atomico.gitbook.io/doc/packages/atomico-router)
+* [@atomico/store](https://atomico.gitbook.io/doc/packages/atomico-store)
+* [@atomico/storybook](https://atomico.gitbook.io/doc/packages/atomico-storybook)
 
 ## Soporte
 
