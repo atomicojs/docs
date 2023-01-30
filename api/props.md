@@ -60,7 +60,7 @@ component.props = {
 
 ## Declaraciones estructuradas
 
-Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo reflejar el valor de la propiedad como atributos, emitir automáticamente eventos o asociar valores por defecto.** Recuerde este tipo de declaraciones requieren mínimamente el uso de la propiedad type.**
+Mejora la definición añadiendo declaraciones utilitarias, permitiendo por ejemplo reflejar el valor de la propiedad como atributos, emitir automáticamente eventos o asociar valores por defecto.\*\* Recuerde este tipo de declaraciones requieren mínimamente el uso de la propiedad type.\*\*
 
 ### Prop.type
 
@@ -143,7 +143,7 @@ la declaración anterior define que el atributo "my-value" refleja su estado en 
 
 ### Prop.value
 
-Atomico permite la definición de valores  de inicio por defectos de las props.
+Atomico permite la definición de valores de inicio por defectos de las props.
 
 ```javascript
 WebComponents.props = {
@@ -162,7 +162,7 @@ La asociación de callback como value permiten generar valores únicos para cada
 
 ## Reactividad en el scope del webcomponent
 
-Atomico elimina el uso de "this" dado su enfoque funcional, pero añade el hook [useProp ](hooks/useprop.md)el que permite referenciar una prop para su uso con una sintaxis es similar a useState, ejemplo:
+Atomico elimina el uso de "this" dado su enfoque funcional, pero añade el hook [useProp ](broken-reference)el que permite referenciar una prop para su uso con una sintaxis es similar a useState, ejemplo:
 
 ```jsx
 function component() {

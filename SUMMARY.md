@@ -6,26 +6,12 @@
 ## Api
 
 * [🧬 Props(Propiedades)](api/props.md)
-* [🧩 VirtualDOM](api/virtualdom/README.md)
-  * [Avanzado](api/virtualdom/avanzado.md)
-* [🎣 Hooks](api/hooks/README.md)
-  * [useProp](api/hooks/useprop.md)
-  * [useEvent](api/hooks/useevent.md)
-  * [useHost](api/hooks/usehost.md)
-  * [useState](api/hooks/usestate.md)
-  * [useReducer](api/hooks/usereducer.md)
-  * [useRef](api/hooks/useref.md)
-  * [useEffect y useLayoutEffect](api/hooks/useeffect-y-uselayouteffect.md)
-  * [useMemo y useCallback](api/hooks/usememo-y-usecallback.md)
-  * [useUpdate](api/hooks/useupdate.md)
-* [🔬 Testing](api/testing/README.md)
-  * [Ciclo de renderización](api/testing/test-dom.md)
-  * [atomico/test-dom](api/testing/atomico-test-dom.md)
-  * [atomico/test-hooks](api/testing/test-hooks.md)
+* [🧩 Virtual DOM](https://atomico.gitbook.io/doc/api/virtualdom)
+* [🎣 Hooks](https://atomico.gitbook.io/doc/api/hooks)
+* [🔬 Testing](https://atomico.gitbook.io/doc/api/testing)
 
 ## guías
 
-* [🎯 Tips](guias/tips.md)
 * [✨ Sistemas de diseño con Atomico](guias/sistemas-de-diseno/README.md)
   * [Estrategias de estructuración de repositorio con Atomico al crear sistemas de diseño.](guias/sistemas-de-diseno/estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./README.md)
     * [Monorepositorio versionado a nivel de componente](guias/sistemas-de-diseno/estrategias-de-estructuracion-de-repositorio-con-atomico-al-crear-sistemas-de-diseno./monorepositorio-versionado-a-nivel-de-componente.md)
@@ -34,12 +20,13 @@
     * [@atomico/storybook](guias/sistemas-de-diseno/storybook/atomico-storybook.md)
   * [Tokens (CSS custom properties)](guias/sistemas-de-diseno/tokens-css-custom-properties.md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
-* [📜 Typescript & JSDOC](guias/typescript/README.md)
-  * [tsconfig.json](guias/typescript/tsconfig.json.md)
-* [⚛️ De React a Atomico](guias/de-react-a-atomico/README.md)
-  * [Diferencias api virtualDOM](guias/de-react-a-atomico/diferencias-api-virtualdom.md)
-* [Formularios y ShadowDOM](guias/formularios-y-shadowdom.md)
-* [Herencia de clases](guias/herencia-de-clases.md)
+* [📖 Atomico + Storybook](https://atomico.gitbook.io/doc/guides/atomico-and-storybook)
+* [🛡 Atomico + Typescript](https://atomico.gitbook.io/doc/guides/atomico-with-typescript)
+* [⚛ Atomico + React](https://atomico.gitbook.io/doc/guides/atomico-and-react)
+* [💧 Atomico + SSR/SSG](https://atomico.gitbook.io/doc/guides/ssr-ssg)
+* [🧠 Patrones de diseño](https://atomico.gitbook.io/doc/guides/atomico-design-patterns)
+* [🗺 Guía de estilo (Estructuras)](https://atomico.gitbook.io/doc/guides/atomico-style-guide)
+* [🔀 Slot](https://atomico.gitbook.io/doc/guides/slot)
 
 ## @atomico
 
