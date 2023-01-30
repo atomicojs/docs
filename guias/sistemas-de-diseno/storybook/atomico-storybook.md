@@ -23,8 +23,10 @@ import { decorador } from "@atomico/storybook";
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
+{% hint style="warning" %}
 La serialización del JSX ocurre solo si se define`parameters.docs.source = 'jsx'` por historia o global en `.storybook/preview.js.`
+
+Esta funcionalidad solo es compatible con versiones >= atomico@1.70.0 introduce nombres automáticos segun definición del componente
 {% endhint %}
 
 ### Ejemplo de renderización y serialización del HTML
