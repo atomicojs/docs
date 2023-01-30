@@ -7,7 +7,7 @@
 | shadowDom  | Boolean | Enables the use of the shadowDOM on the node.                                                        |
 | staticNode | Boolean | Render the node only once, this optimizes the update process as the node is ignored between updates. |
 | cloneNode  | Boolean | clone a node of type Element                                                                         |
-| $\<name>   | any     | the $ prefix allows defining  as an attribute in all cases.                                          |
+| $\<name>   | any     | the $ prefix allows defining as an attribute in all cases.                                           |
 
 ### render
 
@@ -82,9 +82,9 @@ function App(){
 }
 ```
 
-Advantage :&#x20;
+Advantage :
 
-1. Remove leverage from tag-name&#x20;
+1. Remove leverage from tag-name
 2. Infer the types of the props and autocomplete only if you use JSX and Atomico.
 
 ### Constructor with DOM
@@ -182,5 +182,19 @@ El shadowDOM también puede ser hidratado ejemplo:
 ```
 
 {% hint style="info" %}
-El código expuesto aun no es parte del estándar, es una propuesta impulsada por el **Google Chrome** [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/), para ser usada en todos los browser debe hacer uso de polyfills.&#x20;
+El código expuesto aun no es parte del estándar, es una propuesta impulsada por el **Google Chrome** [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/), para ser usada en todos los browser debe hacer uso de polyfills.
 {% endhint %}
+
+## Class name inheritance
+
+Atomic creates a customElement from a function, Atomico will take the name of the function and associate it as the name of the CustomElement in CamelCase format, example:
+
+```javascript
+function button(){
+    return <host/>
+}
+
+const Button = c(button);
+```
+
+This results in the class name being equal to Button. This feature is useful for tools like Storybook, when serializing the JSX.
