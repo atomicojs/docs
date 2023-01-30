@@ -30,6 +30,7 @@
 
 ## @atomico
 
+* [@atomico/vite](https://atomico.gitbook.io/doc/packages/atomico-vite)
 * [@atomico/hooks](https://atomico.gitbook.io/doc/atomico/atomico-hooks)
 * [@atomico/components](https://atomico.gitbook.io/doc/atomico/atomico-components)
 * [@atomico/exports](https://atomico.gitbook.io/doc/atomico/atomico-exports)
