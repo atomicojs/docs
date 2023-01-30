@@ -6,7 +6,7 @@ description: >-
 
 # Storybook
 
-1. @atomico/storybook: Decorador y  Generador y herramienta de documentación para los argType/args
+1. [atomico-storybook.md](atomico-storybook.md "mention")
 2. @atomico/vite
 3. @atomico/postcss-tokens
 
