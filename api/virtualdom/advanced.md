@@ -1,6 +1,6 @@
 # Advanced
 
-### Special properties
+## Special properties
 
 | Property   | Type    | Effect                                                                                               |
 | ---------- | ------- | ---------------------------------------------------------------------------------------------------- |
@@ -9,7 +9,7 @@
 | cloneNode  | Boolean | clone a node of type Element                                                                         |
 | $\<name>   | any     | the $ prefix allows defining as an attribute in all cases.                                           |
 
-### render
+## render
 
 By default, the render is configured to be used within the webcomponent by reading the return of the function, but it can be used outside of Atomico, example:
 
@@ -158,7 +158,7 @@ function component() {
 
 The objective of this feature is to retrieve slot and use it as a template from the webcomponent.
 
-### Hidratación desde SSR
+## Hidratación desde SSR
 
 Atomico permite la reutilización del DOM ya existente en el documento, esto se realiza al momento de la instancia del webcomponent definiendo una propiedad especial sobre la etiqueta a hidratar
 
