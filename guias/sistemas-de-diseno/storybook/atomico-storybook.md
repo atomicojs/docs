@@ -1,7 +1,7 @@
 ---
 description: >-
-  Mejora la experiencia de desarrollo y documentación de webcomponents creados
-  con Atomico en Storybook
+  Mejora la experiencia de desarrollo y documentación en Storybook de los
+  webcomponents creados con Atomico
 ---
 
 # @atomico/storybook
@@ -31,9 +31,7 @@ La serialización del JSX ocurre solo si se define`parameters.docs.source = 'jsx
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-
-
-## Generador de argTypes/args segun el componente dado
+## Generador de argTypes/args según el componente dado
 
 ```javascript
 import { define } from "@atomico/storybook";
@@ -44,6 +42,10 @@ export default {
     ...define(Button) 
 }
 ```
+
+### Ejemplo&#x20;
+
+<figure><img src="../../../.gitbook/assets/localhost_6006__path=_story_components-button--with-icon-prefix.png" alt=""><figcaption></figcaption></figure>
 
 
 
