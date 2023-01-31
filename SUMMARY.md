@@ -30,7 +30,6 @@
 
 ## Guides
 
-* [Atomico and Asynchrony](guides/atomico-and-asynchrony.md)
 * [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
   * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
@@ -55,6 +54,7 @@
     * [VirtualDOM api differences](guides/atomico-and-react/from-react-to-atomico/virtualdom-api-differences.md)
 * [💧 SSR / SSG](guides/ssr-ssg.md)
 * [🔀 Slot](guides/slot.md)
+* [⏳ Atomico and Asynchrony](guides/atomico-and-asynchrony.md)
 * [🗃 Archives](guides/archives/README.md)
   * [Class inheritance](guides/class-inheritance.md)
   * [Forms and shadowDOM](guides/forms-and-shadowdom.md)

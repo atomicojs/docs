@@ -5,7 +5,7 @@ description: >-
   component.
 ---
 
-# Atomico and Asynchrony
+# ⏳ Atomico and Asynchrony
 
 Atomico has 3 great hooks to solve asynchronous tasks:
 
