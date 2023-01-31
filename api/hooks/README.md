@@ -24,6 +24,14 @@ description: >-
 [useupdate.md](useupdate.md)
 {% endcontent-ref %}
 
+{% content-ref url="usepromise.md" %}
+[usepromise.md](usepromise.md)
+{% endcontent-ref %}
+
+{% content-ref url="useasync-and-usesuspense.md" %}
+[useasync-and-usesuspense.md](useasync-and-usesuspense.md)
+{% endcontent-ref %}
+
 ## Hooks homogolates of React
 
 {% content-ref url="usestate.md" %}
@@ -44,6 +52,14 @@ description: >-
 
 {% content-ref url="usememo-y-usecallback.md" %}
 [usememo-y-usecallback.md](usememo-y-usecallback.md)
+{% endcontent-ref %}
+
+{% content-ref url="usecontext.md" %}
+[usecontext.md](usecontext.md)
+{% endcontent-ref %}
+
+{% content-ref url="useid.md" %}
+[useid.md](useid.md)
 {% endcontent-ref %}
 
 ## @atomico/hooks
