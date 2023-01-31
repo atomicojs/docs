@@ -4,7 +4,7 @@ description: Reactivity in the scope of the webcomponent without the use of cont
 
 # useProp
 
-useProp allows you to work with a prop\(property\) of the webcomponent in a similar way to useState.
+useProp allows you to work with a prop(property) of the webcomponent in a similar way to useState.
 
 ## Syntax
 
@@ -20,7 +20,9 @@ Where :
 
 ## Example
 
-```jsx
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
 import { useProp } from "atomico";
 
 function useCounter(prop) {
@@ -47,10 +49,41 @@ component.props = {
   value: { type: Number, value: 0 },
 };
 ```
+{% endtab %}
+
+{% tab title="Typescript" %}
+```typescript
+import { useProp } from "atomico";
+
+function useCounter(prop) {
+  const [value, setValue] = useProp<number>(prop);
+  return {
+    value,
+    increment: () => setValue((value) => value + 1),
+    decrement: () => setValue((value) => value - 1),
+  };
+}
+
+function component() {
+  const counter = useCounter("value");
+  return (
+    <host>
+      <button onClick={counter.increment}>+</button>
+      <strong>{counter.value}</strong>
+      <button onClick={counter.decrement}>-</button>
+    </host>
+  );
+}
+
+component.props = {
+  value: { type: Number, value: 0 },
+};
+```
+{% endtab %}
+{% endtabs %}
 
 Where:
 
 1. **useCounter is a customHook** and that it can work with any property of the webcomponent of type Number.
 2. useCounter returns 2 methods increment and decrement that modify the value of the prop.
 3. **useCounter can be instantiated multiple times** for different properties.
-
