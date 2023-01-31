@@ -56,6 +56,7 @@ component.props = {
 import { useProp } from "atomico";
 
 function useCounter(prop) {
+  //                                 👇 type for prop
   const [value, setValue] = useProp<number>(prop);
   return {
     value,
