@@ -30,6 +30,7 @@
 
 ## Guides
 
+* [Atomico and Asynchrony](guides/atomico-and-asynchrony.md)
 * [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
   * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
 * [🧠 Atomico design patterns](guides/atomico-design-patterns/README.md)
