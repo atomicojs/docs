@@ -18,7 +18,7 @@ With Atomico and Typescript you will be able to:
 
 1. JSX runtime, Typescript will automatically import Atomico upon detecting the use of TSX.
 2. Autocompletion and validation of attributes, properties and events of tags and webcomponents.
-3. Validacion de instancia de webcomponents usando constructores.
+3. Webcomponent instance validation using constructors.
 
 ## Construct the props parameter of your functional component.
 

@@ -52,7 +52,7 @@ customElement.define("web-component", c(component));
 
 ## Simple statements
 
-Las declaraciones simples permiten asociar solo la validación de tipo.
+Simple statements allow setting just type validations.
 
 ```javascript
 component.props = {

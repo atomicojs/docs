@@ -158,9 +158,11 @@ function component() {
 
 The objective of this feature is to retrieve slot and use it as a template from the webcomponent.
 
-## Hidratación desde SSR
+## SSR hydration
 
-Atomico permite la reutilización del DOM ya existente en el documento, esto se realiza al momento de la instancia del webcomponent definiendo una propiedad especial sobre la etiqueta a hidratar
+Atomico allows reusing existing DOM in the document. This is done during the
+webcomponent instatiation, by setting a special property in the tag to mark it
+for hydration.
 
 ```markup
 <my-webcomponent data-hydrate>
@@ -168,7 +170,7 @@ Atomico permite la reutilización del DOM ya existente en el documento, esto se 
 </my-webcomponent>
 ```
 
-El shadowDOM también puede ser hidratado ejemplo:
+This can be done for shadowDom too:
 
 ```markup
 <my-webcomponent data-hydrate>
@@ -182,7 +184,9 @@ El shadowDOM también puede ser hidratado ejemplo:
 ```
 
 {% hint style="info" %}
-El código expuesto aun no es parte del estándar, es una propuesta impulsada por el **Google Chrome** [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/), para ser usada en todos los browser debe hacer uso de polyfills.
+These code samples are not part of the standard yet, so polyfills must be used to
+ensure that it works in all browsers.
+Read more about **Google Chrome**'s proposal here [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/).
 {% endhint %}
 
 ## Class name inheritance
