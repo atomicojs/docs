@@ -11,7 +11,7 @@ description: >-
 1. **Atomico will not limit your React learning curve**, what you learned in Atomico is applicable in React, for example hooks and virtualDOM.
 2. **Atomico is 3kB** in size which is 7% of React + React-dom.
 3. **Better component abstraction**, for example the use of the ShadowDOM will avoid the need to use css-in-js like styles-components or emotion, reducing dependencies.
-4. **Agnostic Components**, what you create with React only works within React, what you create with Atomico works on the web, so you can your components within React, Vue, Svelte or Html.
+4. **Agnostic Components**, what you create with React only works within React, what you create with Atomico works on the web, so you can use your components within React, Vue, Svelte or Html.
 5. **Exclusive component for React**, the CLI @ atomico / exports automatically generates a wrapper component of your webcomponent for React, improving backward compatibility with React.
 
 The following examples show some differences between React and Atomico.

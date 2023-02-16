@@ -1,7 +1,6 @@
 ---
 description: >-
-  La siguiente guía define algunos Tips a considerar al momento de crear
-  webcomponents con Atomico
+  Here are some tips you can take into account when creating webcomponents with Atomico
 ---
 
 # Tips
