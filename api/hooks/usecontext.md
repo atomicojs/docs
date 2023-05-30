@@ -44,6 +44,10 @@ function card(){
 
 In this way useContext captures the value of the parent component or reuses the value given by default to createContext.
 
+{% hint style="info" %}
+It is highly recommended to always use custom properties to expose the appearance configuration of your component at the static CSS level, since useContext is designed to share information between components in a unidirectional way.
+{% endhint %}
+
 ### When to use the Context API?
 
 It is ideal to always prioritize a conversation between parent and child through events or props api, but sometimes the depth of the DOM makes this process difficult, for this the context api has been introduced. To remove DOM depth limitations and ensure synchronization based on a unique identifier, some ideal cases to solve with the context api are:
