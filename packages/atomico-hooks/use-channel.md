@@ -4,7 +4,14 @@ description: create connection between components to share internal states
 
 # use-channel
 
-Este hook implementa [**@atomico/channel**](https://github.com/atomicojs/channel) una alternativa a React.Context, pero basada en eventos y agnóstica.
+Now, Atomico includes a context API as part of its core. We recommend implementing it as an alternative to using `useChannel`.
+
+{% content-ref url="../../api/hooks/usecontext.md" %}
+[usecontext.md](../../api/hooks/usecontext.md)
+{% endcontent-ref %}
+
+\
+An alternative to React's context but solely based on hooks.
 
 ### Modulo
 
