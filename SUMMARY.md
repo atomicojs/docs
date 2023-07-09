@@ -115,6 +115,7 @@
 * [@atomico/storybook](packages/atomico-storybook.md)
 * [@atomico/postcss-tokens](packages/atomico-postcss-tokens/README.md)
   * [Example with @atomico/vite](packages/atomico-postcss-tokens/example-with-atomico-vite.md)
+* [@atomico/wrapper](packages/atomico-wrapper.md)
 * [🚫 Deprecated](packages/deprecated/README.md)
   * [@atomico/magic-form](packages/deprecated/atomico-magic-form/README.md)
     * [MagicFormProvider | \<magic-form-provider>](packages/deprecated/atomico-magic-form/magicformprovider-or-less-than-magic-form-provider-greater-than.md)
