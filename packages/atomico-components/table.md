@@ -47,27 +47,11 @@ import { Table, Tr, Td } from "@atomico/table/preact";
 
 ### Custom properties
 
-| Global                         | Description                                                 |
-| ------------------------------ | ----------------------------------------------------------- |
-| --table--radius                | table borde-radius                                          |
-| --table--background            | table background                                            |
-| --table--border                | table borde                                                 |
-| --table--border-split          | border dividing cells                                       |
-| --table--row-gap               | row spacing                                                 |
-| --table--row-radius            | row border-radius                                           |
-| --table--row-shadow            | row box-shadow                                              |
-| --table--row-background        | row background                                              |
-| --table--row-header-radius     | border-radius of the row declared as slot="header"          |
-| --table--row-header-shadow     | box-shadow of the row declared as slot="header"             |
-| --table--row-header-background | background of the row declared as slot="header"             |
-| --table--row-last-radius       | borde-radius de la ultima fila                              |
-| --table--cell-align            | cell alignment, default middle                              |
-| --table--cell-padding          | cell padding                                                |
-| --table--cell-header-padding   | padding of the cell inside the Tr declared as slot="header" |
+<table><thead><tr><th width="359.8875855909497">Global</th><th>Description</th></tr></thead><tbody><tr><td>--table--radius</td><td>table borde-radius</td></tr><tr><td>--table--background</td><td>table background </td></tr><tr><td>--table--border</td><td>table borde </td></tr><tr><td>--table--border-split</td><td>border dividing cells</td></tr><tr><td>--table--row-gap</td><td>row spacing</td></tr><tr><td>--table--row-radius</td><td>row border-radius</td></tr><tr><td>--table--row-shadow</td><td>row box-shadow</td></tr><tr><td>--table--row-background</td><td>row background </td></tr><tr><td>--table--row-header-radius</td><td>border-radius of the row declared as slot="header"</td></tr><tr><td>--table--row-header-shadow</td><td>box-shadow of the row declared as slot="header"</td></tr><tr><td>--table--row-header-background</td><td>background of the row declared as slot="header"</td></tr><tr><td>--table--row-last-radius</td><td>borde-radius de la ultima fila</td></tr><tr><td>--table--cell-align</td><td>cell alignment, default middle</td></tr><tr><td>--table--cell-padding</td><td>cell padding</td></tr><tr><td>--table--cell-header-padding</td><td>padding of the cell inside the Tr declared as slot="header"</td></tr></tbody></table>
 
 ### Properties Table
 
-**collapse**: **** `boolean`, **** collapses the rows of the table, if breakpoint is defined the component will automatically define this props when detecting the match with breakpoint.
+**collapse**: `boolean`, collapses the rows of the table, if breakpoint is defined the component will automatically define this props when detecting the match with breakpoint.
 
 **breakpoint**: `string`, media query to observe to copal the table.
 

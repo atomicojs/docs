@@ -44,7 +44,7 @@ Where:
 1. `requestData`: function that dispatches the action.
 2. `status`: `"" | "pending" | "fulfilled" | "rejected"` dispatched action status.
 
-``
+
 
 
 

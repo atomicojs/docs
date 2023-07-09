@@ -53,9 +53,7 @@ render(
 
 #### Properties
 
-| Props | Description                                          | Type               | Event |
-| ----- | ---------------------------------------------------- | ------------------ | ----- |
-| case  | slot to associate at the time of the match with path | String - read only | match |
+<table><thead><tr><th>Props</th><th width="358">Description</th><th width="184">Type</th><th>Event</th></tr></thead><tbody><tr><td>case</td><td>slot to associate at the time of the match with path</td><td>String - read only</td><td>match</td></tr></tbody></table>
 
 #### Events
 

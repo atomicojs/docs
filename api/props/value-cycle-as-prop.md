@@ -6,7 +6,7 @@ description: >-
 
 # Value cycle as prop
 
-![](../../.gitbook/assets/prop-en.png)
+![](<../../.gitbook/assets/prop-en (1).png>)
 
 ### **Cycle as attribute**:
 

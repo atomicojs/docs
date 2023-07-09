@@ -102,4 +102,3 @@ prev slide
 
 {% embed url="https://stackblitz.com/edit/atomico-keen-slider-react?file=src/App.tsx" %}
 
-****
