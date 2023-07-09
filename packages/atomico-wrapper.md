@@ -12,6 +12,11 @@ Additionally, this package offers other utilities.
 
 This is an optional import module that allows coexistence of multiple versions of web components in JSX-based environments (Atomico, React, or Preact) and Vue, specifically when using @atomico/vue. For example:&#x20;
 
+```mermaid
+flowchart LR
+    id
+```
+
 1. Component `A` depends on `B@1`.&#x20;
 2. Component `C` depends on `B@2`.&#x20;
 
