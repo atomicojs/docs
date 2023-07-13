@@ -6,28 +6,57 @@ description: Wrapper to use web components in React
 
 {% embed url="https://github.com/atomicojs/react" %}
 
-This module provides 2 ways to create a wrapper for react, the generated wrapper fixes the following react problems when using webcomponents
+### ¿What is @atomico/react?
 
-1. fixes the association of events, any property that starts with the prefix `in` and its value is of the function type will be associated as an event of the component.
-2. Children are always transmitted as nodes of the component.
-3. references are always transmitted to the webcomponent
+It is a Wrapper to eliminate React's own problems when rendering webcomponents, with @atomico/react you can:
 
-### Example wrapper
+1. Using your webcomponent's type declarations in React/Preact
+2. Synchronize the events of your webcomponents with React
+3. Composition from React using children and slots
+4. Use SSR of your webcomponents in React/Preact based environments for example Next.js
 
-Manual wrapping this requires knowing the tagName, Element and options
+### When to use @atomico/react?
 
-```jsx
-import { wrapper } from "@atomico/react";
-import { HTMLMyComponent } from "./my-component.js";
+We recommend using Atomico/react when looking to support React or Preact from your webcomponents built with Atomico.
 
-export const MyComponent = wrapper("my-element", HTMLMyComponent );
+{% hint style="success" %}
+We also support vue with @atomico/vue
+{% endhint %}
+
+### @atomico/react vs other solutions?
+
+With Atomico/react it's really easy to use, example:&#x20;
+
+{% tabs %}
+{% tab title="@atomico/react" %}
+```tsx
+import { auto } from "@atomico/react";
+import { MyComponent as _MyComponent } from "./my-component.js";
+
+export const MyComponent = auto( _MyComponent );
 ```
+{% endtab %}
 
-The second parameter for `wrapper` is optional, but will allow react to infer Atomico types, improving the Autocomplete and Typescript experience.
+{% tab title="@lit-labs/react" %}
+```tsx
+import * as React from 'react';
+import { createComponent } from '@lit-labs/react';
+import { MyComponent as _MyComponent } from './my-component.js';
 
-### Example auto
+export const MyComponent = createComponent({
+  tagName: 'my-component', //⚠️ requires the tagName
+  elementClass: _MyComponent, 
+  react: React, //⚠️ requires react module
+  events: { //⚠️ requires events
+    onactivate: 'activate',
+    onchange: 'change',
+  },
+});
+```
+{% endtab %}
+{% endtabs %}
 
-Auto captures the parameters associated with the use of customElements.define to retrieve the tagName or generate an id as tagName, to instantiate the webcomponent.
+### Example
 
 ```jsx
 import { auto } from "@atomico/react";
@@ -40,17 +69,7 @@ export const MyComponent = auto( HTMLMyComponent );
 
 ### @atomico/exports
 
-Another way to export your **webcomponents to React** is using `@atomico/exports` which will automatically detect the webcomponents and create the wrappers using `@atomico/react`.
-
-Some benefits of @atomico/exports are:
-
-1. export via expressions, example `./src/**.tsx`
-2. create the `package.json#exports` automatically
-3. create the types and associate the export paths for Typescript.
-4. group the sub dependencies of the workspace
-5. minimize the JS code.
-
-We invite you to review in detail the @atomico/exports package for its use
+We invite you to meet [@atomico/exports](atomico-react.md#atomico-exports) to automate the generation of wrappers for your webcomponents
 
 {% content-ref url="introduction/" %}
 [introduction](introduction/)
