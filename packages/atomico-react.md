@@ -1,5 +1,5 @@
 ---
-description: Wrapper to use web components in React
+description: Wrapper to use webcomponents in React
 ---
 
 # @atomico/react
