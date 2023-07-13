@@ -17,7 +17,6 @@ This module provides 2 ways to create a wrapper for react, the generated wrapper
 Manual wrapping this requires knowing the tagName, Element and options
 
 ```jsx
-import "@atomico/react/proxy";
 import { wrapper } from "@atomico/react";
 import { HTMLMyComponent } from "./my-component.js";
 
@@ -31,7 +30,6 @@ The second parameter for `wrapper` is optional, but will allow react to infer At
 Auto captures the parameters associated with the use of customElements.define to retrieve the tagName or generate an id as tagName, to instantiate the webcomponent.
 
 ```jsx
-import "@atomico/react/proxy";
 import { auto } from "@atomico/react";
 import { HTMLMyComponent } from "./my-component.js";
 
