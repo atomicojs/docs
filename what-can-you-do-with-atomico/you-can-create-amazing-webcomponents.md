@@ -24,7 +24,7 @@ This is thanks to a functional orientation inherited from React hooks plus some 
 
 This is thanks to Atomico's reliance on React hooks syntax plus the ability to completely eliminate the need for this when using webcomponents.
 
-### Create friendly webcomponents with React, Vue and other libraries
+### Create friendly webcomponents for React, Vue and other libraries
 
 Atomic offers additional coverage for native behavior for React and Vue, allowing your component to be more embed-friendly, example React:
 
