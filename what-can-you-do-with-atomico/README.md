@@ -1,5 +1,5 @@
 ---
-description: All this you can do with Atomico
+description: With Atomico you can do this and more
 ---
 
 # 💡 What can you do with Atomico?
