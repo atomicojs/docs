@@ -2,6 +2,7 @@
 
 * [👋 Atomico](README.md)
 * [🚀 Getting started with Atomico](getting-started-with-atomico.md)
+* [⚛ Getting started with Atomico for React users](getting-started-with-atomico-for-react-users.md)
 * [💡 What can you do with Atomico?](what-can-you-do-with-atomico/README.md)
   * [You can create amazing webcomponents](what-can-you-do-with-atomico/you-can-create-amazing-webcomponents.md)
   * [You can create design systems](what-can-you-do-with-atomico/you-can-create-design-systems.md)
