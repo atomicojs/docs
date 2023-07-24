@@ -2,6 +2,8 @@
 
 * [👋 Atomico](README.md)
 * [🚀 Getting started with Atomico](getting-started-with-atomico.md)
+* [¿Que puedo hacer con Atomico?](que-puedo-hacer-con-atomico/README.md)
+  * [You can create amazing webcomponents](que-puedo-hacer-con-atomico/you-can-create-amazing-webcomponents.md)
 
 ## Api
 
