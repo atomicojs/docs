@@ -4,6 +4,7 @@
 * [🚀 Getting started with Atomico](getting-started-with-atomico.md)
 * [What can you do with Atomico?](what-can-you-do-with-atomico/README.md)
   * [You can create amazing webcomponents](what-can-you-do-with-atomico/you-can-create-amazing-webcomponents.md)
+  * [You can create design systems](what-can-you-do-with-atomico/you-can-create-design-systems.md)
 
 ## Api
 

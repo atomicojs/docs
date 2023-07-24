@@ -32,7 +32,7 @@ flowchart TB
 
 According to the graph above the menu, header and form components depend on the version 1 button which exists in the root dependencies (/node\_modules) but the chat component depends on the version 2 button, NPM will resolve this correctly, but still the webcomponents will point to the same tagName and that will generate an error at registration time:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Solution
 
