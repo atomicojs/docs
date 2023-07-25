@@ -8,6 +8,7 @@
   * [You can create design systems](what-can-you-do-with-atomico/you-can-create-design-systems.md)
   * [You can create websites](what-can-you-do-with-atomico/you-can-create-websites.md)
   * [You can create mobile applications](what-can-you-do-with-atomico/you-can-create-mobile-applications.md)
+  * [You can create web applications](what-can-you-do-with-atomico/you-can-create-web-applications.md)
 
 ## Api
 
