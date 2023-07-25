@@ -1,7 +1,7 @@
 ---
 description: >-
   Hi, I'm Atomico js and I bring you the React syntax for webcomponents, I think
-  you and I get along great 😊.
+  you and I get along very well 😊.
 ---
 
 # ⚛ Getting started with Atomico for React users
