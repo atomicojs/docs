@@ -11,3 +11,15 @@ description: With Atomico you can do this and more
 {% content-ref url="you-can-create-design-systems.md" %}
 [you-can-create-design-systems.md](you-can-create-design-systems.md)
 {% endcontent-ref %}
+
+{% content-ref url="you-can-create-web-applications.md" %}
+[you-can-create-web-applications.md](you-can-create-web-applications.md)
+{% endcontent-ref %}
+
+{% content-ref url="you-can-create-mobile-applications.md" %}
+[you-can-create-mobile-applications.md](you-can-create-mobile-applications.md)
+{% endcontent-ref %}
+
+{% content-ref url="you-can-create-websites.md" %}
+[you-can-create-websites.md](you-can-create-websites.md)
+{% endcontent-ref %}
