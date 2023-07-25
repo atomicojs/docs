@@ -189,3 +189,12 @@ function Main(){
 
 with Atomico there are certain differences... (working on this documentation)
 
+
+
+{% content-ref url="guides/atomico-and-react/from-react-to-atomico/" %}
+[from-react-to-atomico](guides/atomico-and-react/from-react-to-atomico/)
+{% endcontent-ref %}
+
+{% content-ref url="guides/atomico-and-react/from-react-to-atomico/virtualdom-api-differences.md" %}
+[virtualdom-api-differences.md](guides/atomico-and-react/from-react-to-atomico/virtualdom-api-differences.md)
+{% endcontent-ref %}
