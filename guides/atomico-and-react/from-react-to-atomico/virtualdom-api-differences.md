@@ -19,6 +19,22 @@ Atomico does not support the use of functions to instantiate the component as we
 {% tab title="❌ Not supported" %}
 ```jsx
 function Component(){
+    const [ state, setState ] = useState();
+    return <host></host>
+}
+
+function App(){
+    return <host>
+        <Component/>
+    </host>
+}
+```
+{% endtab %}
+
+{% tab title="✔️ Spported" %}
+```jsx
+// ⚠️ stateless component
+function Component(){ 
     return <host></host>
 }
 
