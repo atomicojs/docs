@@ -7,6 +7,7 @@
   * [You can create amazing webcomponents](what-can-you-do-with-atomico/you-can-create-amazing-webcomponents.md)
   * [You can create design systems](what-can-you-do-with-atomico/you-can-create-design-systems.md)
   * [You can create websites](what-can-you-do-with-atomico/you-can-create-websites.md)
+  * [You can create mobile applications](what-can-you-do-with-atomico/you-can-create-mobile-applications.md)
 
 ## Api
 
