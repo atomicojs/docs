@@ -6,7 +6,7 @@ description: >-
 
 # ⚛ Getting started with Atomico for React users
 
-First let's say that Atomico is light since it has a size close to 3kB vs React + ReactDOM that have a size close to 60kB, now if your project is already written in React I can integrate Atomico progressively since a component created can be instantiated as a component for React thanks to @atomico/react, example:
+First let's say that Atomico is light since it has a size close to 3kB vs React + ReactDOM that have a size close to 60kB, now if your project is already written in React I can integrate Atomico progressively since a component created can be instantiated as a component for React thanks to [@atomico/react](packages/atomico-react.md), example:
 
 ```tsx
 import { Button } from "@formas/button/react";
