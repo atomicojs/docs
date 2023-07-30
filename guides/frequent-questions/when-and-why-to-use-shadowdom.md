@@ -34,3 +34,9 @@ The shadowDOM allows you to do something fantastic, protect your CSS from global
 
 We invite you to learn more about handling styles in atomic through the following guide:
 
+
+
+{% content-ref url="../component/css-styles-with-shadow-dom.md" %}
+[css-styles-with-shadow-dom.md](../component/css-styles-with-shadow-dom.md)
+{% endcontent-ref %}
+

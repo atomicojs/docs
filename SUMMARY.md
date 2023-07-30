@@ -39,6 +39,7 @@
 
 * [🤩 Component](guides/atomico-style-guide/component.md)
   * [Naming](guides/component/naming.md)
+  * [CSS Styles with Shadow DOM](guides/component/css-styles-with-shadow-dom.md)
 * [🤔 Frequent questions](guides/frequent-questions/README.md)
   * [When and why to use shadowDom?](guides/frequent-questions/when-and-why-to-use-shadowdom.md)
 * [🛡 Atomico with Typescript](guides/atomico-with-typescript/README.md)
