@@ -1,32 +1,36 @@
 # When and why to use shadowDom?
 
-Cuando usar el shadowDom
+## When to use the shadow Dom?
 
-El shadowDom es la mejor forma de protejer nuestro contenido si este reprecenta 2 tipos de logica:
 
-1. Manejo de slots
-2. Menejos de estilos propios del webcomponent.
 
-## Manejo de slots
+## Why use shadowDOM?
 
-Los slots nos permiten reflejar nodos existentes en el lightDOM dentro del shadowDOM, ejemplo:
+To protect our component at the DOM manipulation level and take advantage of some of the benefits of the shadowDOM such as:
+
+1. Slot management
+2. CSS appearance of web component.
+
+### Slot management
+
+Slots allow us to reflect existing nodes in the lightDOM into the shadowDOM, example:
 
 <figure><img src="../../.gitbook/assets/web_1366_7.png" alt=""><figcaption></figcaption></figure>
 
-Esto es realmente util, ya que podemos agrupar slots segun su name en  un lugar espesifico del webcomponent
+This is really useful, since we can group slots according to their name in a specific place of the webcomponent.
 
-Te invitamos a aprender mas de los slots a través de la siguiente guia
+We invite you to learn more about slots through the following guide:
 
 {% content-ref url="../atomico-design-patterns/slot.md" %}
 [slot.md](../atomico-design-patterns/slot.md)
 {% endcontent-ref %}
 
-## Manejos de estilos
+### CSS appearance of web component.
 
-El shadowDOM te permite algo fantástico, proteger tu CSS de estilos globales, esto tiene 2 grandes ventajas:
+The shadowDOM allows you to do something fantastic, protect your CSS from global styles, this has 2 great advantages:
 
-1. La apariencia de nuestro componente no se vera afectada por declaraciones globales de CSS.
-2. Las customProperties serán la forma de configurar nuestro componente.
+1. The appearance of our component will not be affected by global CSS declarations.
+2. Customization protected by CSS custom Properties
 
-Te invitamos a aprender mas de manejo de estilos en atomico a travez de la siguiente guia:
+We invite you to learn more about handling styles in atomic through the following guide:
 
