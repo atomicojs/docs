@@ -37,6 +37,10 @@
 
 ## Guides
 
+* [🤩 Component](guides/component/README.md)
+  * [Naming](guides/component/naming.md)
+* [🤔 Frequent questions](guides/frequent-questions/README.md)
+  * [When and why to use shadowDom?](guides/frequent-questions/when-and-why-to-use-shadowdom.md)
 * [🛡 Atomico with Typescript](guides/atomico-with-typescript/README.md)
   * [Props](guides/atomico-with-typescript/props.md)
   * [Component](guides/typescript.md)
@@ -56,17 +60,16 @@
   * [🔀 Slot](guides/atomico-design-patterns/slot.md)
 * [📖 Atomico and Storybook](guides/atomico-and-storybook/README.md)
   * [Frequent questions](guides/atomico-and-storybook/frequent-questions.md)
-* [🗺 Atomico style guide](guides/atomico-style-guide.md)
-  * [Component](guides/atomico-style-guide/component.md)
-  * [File structure](guides/atomico-style-guide/file-structure/README.md)
-    * [Monorepo](guides/atomico-style-guide/file-structure/monorepo.md)
-    * [Design systems](guides/atomico-style-guide/file-structure/design-systems.md)
 * [💧 SSR / SSG](guides/ssr-ssg.md)
 * [🗃 Archives](guides/archives/README.md)
   * [Class inheritance](guides/class-inheritance.md)
   * [Forms and shadowDOM](guides/forms-and-shadowdom.md)
   * [Tips](guides/tips.md)
   * [Design systems](guides/archives/design-systems.md)
+  * [Atomico style guide](guides/archives/atomico-style-guide/README.md)
+    * [File structure](guides/archives/atomico-style-guide/file-structure/README.md)
+      * [Monorepo](guides/archives/atomico-style-guide/file-structure/monorepo.md)
+      * [Design systems](guides/archives/atomico-style-guide/file-structure/design-systems.md)
 
 ## packages
 

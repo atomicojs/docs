@@ -5,5 +5,5 @@ description: >-
   are sustainable and scalable over time.
 ---
 
-# 🗺 Atomico style guide
+# Atomico style guide
 

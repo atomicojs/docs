@@ -1,4 +1,4 @@
-# Component
+# 🤩 Component
 
 ### &#x20;Component name as function.
 
