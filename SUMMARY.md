@@ -52,7 +52,7 @@
   * [Check the correct use of hooks](guides/atomico-with-typescript/check-the-correct-use-of-hooks.md)
 * [🤝 Atomico and React](guides/atomico-and-react/README.md)
   * [Integrating Atomico in React](guides/atomico-and-react/integrating-atomico-in-react.md)
-  * [⚛ From React to Atomico](guides/atomico-and-react/from-react-to-atomico/README.md)
+  * [From React to Atomico](guides/atomico-and-react/from-react-to-atomico/README.md)
     * [Rendering Differences](guides/atomico-and-react/from-react-to-atomico/rendering-differences.md)
     * [VirtualDOM api differences](guides/atomico-and-react/from-react-to-atomico/virtualdom-api-differences.md)
 * [⏳ Atomico and Asynchrony](guides/atomico-and-asynchrony.md)
