@@ -4,10 +4,12 @@ Atomico allows distributing webcomponnets with extended react support, automatic
 
 For this to be possible you must follow the following rules.
 
+## Rules
+
 ### 1. The file that declares the customElement must export the customElement.
 
 {% tabs %}
-{% tab title="Ejemplo 1" %}
+{% tab title="Example 1" %}
 ```javascript
 import {Component} from "./component";
 export {Component} from "./component";
@@ -16,7 +18,7 @@ customElements.define("my-component", MyComponent);
 ```
 {% endtab %}
 
-{% tab title="Ejemplo 2" %}
+{% tab title="Example 2" %}
 ```javascript
 import {c} from "./my-component";
 
@@ -43,3 +45,7 @@ The result of this process will be:
 
 1. The association of exports for React inside the package.json
 2. The creation of the files of use for React, if the component is created with Atomico adds support to types.
+
+## Example
+
+{% embed url="https://stackblitz.com/edit/atomico-exports-in-a-monorepo-with-atomico-and-react?file=packages%2Fmy-component%2Fsrc%2Felement.tsx,src%2FApp.tsx" %}
