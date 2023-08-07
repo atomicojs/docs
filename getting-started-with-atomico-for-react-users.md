@@ -23,7 +23,7 @@ function App(){
 
 Magical :magic\_wand:, isn't it?... well now let's speed up your Atomico learning path:
 
-### How to declare a component?
+## How to declare a component?
 
 Atomico, like React, allows a declaration of components using only functions, example:
 
@@ -91,7 +91,7 @@ From the example we will highlight the following differences:
 
 Ahora quiero invitarte a que conoscas como declaras un estilo usando Atomico.
 
-### How do you declare styles using Atomico?
+## How do you declare styles using Atomico?
 
 It is common to see the use of libraries such as Emotion or styled-components to encapsulate styles in React, but these add an additional cost, be it for performance or bundle, in Atomico there is no such cost.
 
@@ -169,7 +169,7 @@ export const Button = c(button);
 {% endtab %}
 {% endtabs %}
 
-### Instances, children and slots
+## Instances, children and slots
 
 It is normal for React to create components that you then instantiate within other components, for example:
 
@@ -187,9 +187,59 @@ function Main(){
 }
 ```
 
-with Atomico there are certain differences... (working on this documentation)
+with Atomico there are certain differences:
 
+### 1. With Atomico you can instantiate CustomElements using its constructor
 
+The constructor in Atomic is the product of the c function and is the one you will use to register your webcomponent, example:
+
+<pre class="language-tsx"><code class="lang-tsx"><strong>import { c } from "atomico";
+</strong>
+function myComponent(){
+    return &#x3C;host>
+    
+    &#x3C;/host>
+}
+
+export const MyComponent = c(myComponent); // Constructor
+
+customElements.define("my-component", MyComponent);
+</code></pre>
+
+According to the previous example, you can instantiate MyComponent as a JSX Component, example:
+
+```tsx
+import { c } from "atomico";
+import { MyComponent } from "./my-component";
+
+function myApp(){
+    return <host>
+        <MyComponent/>
+    </host>;
+}
+
+export const MyApp = c(myApp);
+
+customElements.define("my-app", MyApp);
+```
+
+This instance type allows autocompletion at the JSX level and type validation at the Typescript level.
+
+### 2. With Atomico you can instantiate components as functions as long as these are only stateless functions
+
+```tsx
+function MyStatelessTemplateBlock(){
+
+}
+
+function MyComponent(){
+    return <host>
+        <MyStatelessTemplateBlock/>
+    </host>
+}
+```
+
+This will be useful for reusing templates, but always remember stateless.
 
 {% content-ref url="guides/atomico-and-react/from-react-to-atomico/" %}
 [from-react-to-atomico](guides/atomico-and-react/from-react-to-atomico/)
