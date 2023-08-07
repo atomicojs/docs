@@ -197,7 +197,7 @@ The constructor in Atomic is the product of the c function and is the one you wi
 </strong>
 function myComponent(){
     return &#x3C;host>
-    
+        ...
     &#x3C;/host>
 }
 
