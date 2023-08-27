@@ -4,7 +4,7 @@ description: >-
   with a closer to standard approach.
 ---
 
-# ⚛ From React to Atomico
+# From React to Atomico
 
 ### If you develop with React, you will know 80% Atomico ... now why use Atomico?:
 
@@ -237,3 +237,4 @@ export const Button = c(button);
 ```
 {% endtab %}
 {% endtabs %}
+

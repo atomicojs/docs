@@ -41,7 +41,7 @@
   * [Naming](guides/component/naming.md)
   * [CSS Styles with Shadow DOM](guides/component/css-styles-with-shadow-dom.md)
 * [🤔 Frequent questions](guides/frequent-questions/README.md)
-  * [Page](guides/frequent-questions/page.md)
+  * [Can I use Atomico in browsers without ESM support?](guides/frequent-questions/can-i-use-atomico-in-browsers-without-esm-support.md)
   * [When and why to use shadowDom?](guides/frequent-questions/when-and-why-to-use-shadowdom.md)
 * [🛡 Atomico with Typescript](guides/atomico-with-typescript/README.md)
   * [Props](guides/atomico-with-typescript/props.md)
