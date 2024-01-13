@@ -65,7 +65,7 @@ space:
   around: 1rem
   between: 1rem
   safe: .5rem
-  [size=small]:
+  (size=small):
     around: .8rem
     between: .8rem
     safe: .4rem
@@ -95,7 +95,7 @@ color:
 **Importing the tokens.yaml file**
 
 ```css
-@tokens "./tokens.yaml" (root: ":root");
+@tokens "./tokens.yaml" scope(:root);
 ```
 
 **Output**
@@ -131,7 +131,7 @@ color:
 Defines the type of root that will use the tokens, by default `":host"`, example:
 
 ```
-@tokens "./tokens.yaml" (root: ":root");
+@tokens "./tokens.yaml" scope(:root);
 ```
 
 Consider the following behaviors:
@@ -148,7 +148,7 @@ It will only take the tokens assigned in the filter to create the custom propert
 {% tab title="Input CSS" %}
 ```css
 export const GenericStateTokens = css`
-    @tokens "./tokens.yaml" (filter: color);
+    @tokens "./tokens.yaml" filter(color);
 `;
 ```
 {% endtab %}
@@ -176,15 +176,15 @@ color:
 
 From the previous example `@atomic/postcss-tokens` will only take the tokens from the color property.
 
-### import: string
+### use: string
 
-It behaves similarly to filter, but with the big difference that **filter** preserves the scope structure vs **import** that shortens it, example:&#x20;
+It behaves similarly to filter, but with the big difference that **filter** preserves the scope structure vs **use** that shortens it, example:&#x20;
 
 {% tabs %}
 {% tab title="Input CSS" %}
 ```css
 export const GenericStateTokens = css`
-    @tokens "./tokens.yaml" (import: color);
+    @tokens "./tokens.yaml" use(color);
 `;
 ```
 {% endtab %}
