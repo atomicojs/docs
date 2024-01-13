@@ -8,10 +8,26 @@ description: >-
 
 With Atomico Vite, you will be able to:
 
-1. [process-css-tag-template-blocks-with-postcss..md](process-css-tag-template-blocks-with-postcss..md "mention")
-2. [compile-your-code-to-be-distributed-optimally-as-a-package..md](compile-your-code-to-be-distributed-optimally-as-a-package..md "mention")
-3. [use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md](use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md "mention")
-4. [automatically-create-customelements.define.md](automatically-create-customelements.define.md "mention")
-5. [support-for-vitest-for-atomico..md](support-for-vitest-for-atomico..md "mention")
-6. [server-actions.md](server-actions.md "mention")
+{% content-ref url="process-css-tag-template-blocks-with-postcss..md" %}
+[process-css-tag-template-blocks-with-postcss..md](process-css-tag-template-blocks-with-postcss..md)
+{% endcontent-ref %}
 
+{% content-ref url="compile-your-code-to-be-distributed-optimally-as-a-package..md" %}
+[compile-your-code-to-be-distributed-optimally-as-a-package..md](compile-your-code-to-be-distributed-optimally-as-a-package..md)
+{% endcontent-ref %}
+
+{% content-ref url="use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md" %}
+[use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md](use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md)
+{% endcontent-ref %}
+
+{% content-ref url="automatically-create-customelements.define.md" %}
+[automatically-create-customelements.define.md](automatically-create-customelements.define.md)
+{% endcontent-ref %}
+
+{% content-ref url="support-for-vitest-for-atomico..md" %}
+[support-for-vitest-for-atomico..md](support-for-vitest-for-atomico..md)
+{% endcontent-ref %}
+
+{% content-ref url="server-actions.md" %}
+[server-actions.md](server-actions.md)
+{% endcontent-ref %}
