@@ -15,7 +15,7 @@ Atomico export is also compatible with uncompiled code (standard Javascript).
 
 ### The objective of Atomico/exports
 
-1. Achieve aesthetic imports at the package level, example:&#x20;
+1. Make your package look elegant when imported by other applications, example:
 
 ```typescript
 import { Button } from "components/dist/button.js"; // ❌
@@ -54,3 +54,11 @@ npm install -D @atomico/exports
 {% hint style="info" %}
 `@atomico/exports` is distributed as ESM, so your `package.json` must define the property `"type":"module"` for its use.
 {% endhint %}
+
+{% content-ref url="atomico-exports.md" %}
+[atomico-exports.md](atomico-exports.md)
+{% endcontent-ref %}
+
+{% content-ref url="wrapper-for-react.md" %}
+[wrapper-for-react.md](wrapper-for-react.md)
+{% endcontent-ref %}
