@@ -76,7 +76,13 @@
 
 ## packages
 
-* [@atomico/vite](packages/atomico-vite.md)
+* [@atomico/vite](packages/atomico-vite/README.md)
+  * [⚙ Process CSS tag template blocks with PostCSS.](packages/atomico-vite/process-css-tag-template-blocks-with-postcss..md)
+  * [🏗 Compile your code to be distributed optimally as a package.](packages/atomico-vite/compile-your-code-to-be-distributed-optimally-as-a-package..md)
+  * [📕 Use the JSX/TSX syntax of Atomico when using Storybook.](packages/atomico-vite/use-the-jsx-tsx-syntax-of-atomico-when-using-storybook..md)
+  * [🤖 Automatically create customElements.define](packages/atomico-vite/automatically-create-customelements.define.md)
+  * [☑ Support for Vitest for Atomico.](packages/atomico-vite/support-for-vitest-for-atomico..md)
+  * [🧙♂ Server actions](packages/atomico-vite/server-actions.md)
 * [@atomico/exports](packages/introduction/README.md)
   * [CLI and Flags](packages/introduction/atomico-exports.md)
   * [Wrapper for React](packages/introduction/wrapper-for-react.md)

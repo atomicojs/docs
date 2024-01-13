@@ -1,6 +1,6 @@
 # Example with @atomico/vite
 
-With [atomico-vite.md](../atomico-vite.md "mention") you can use @atomico/postcss-tokens in your cssLiterals with the following configuration:
+With [atomico-vite](../atomico-vite/ "mention") you can use @atomico/postcss-tokens in your cssLiterals with the following configuration:
 
 1. Enable the use of postcss for cssLiterals in the `vite.config.js` file
 

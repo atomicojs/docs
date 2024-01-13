@@ -6,8 +6,8 @@ Yes, but Atomico doesn't only depend on ESM, it also depends on the following ap
 2. CustomElements: [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements) - [caniuse](https://caniuse.com/mdn-api\_window\_customelements)
 3. ShadowRoot: [documentation](https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot) - [caniuse](https://caniuse.com/mdn-api\_shadowroot)
 4. Map: [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Map) - [caniuse](https://caniuse.com/mdn-html\_elements\_map)
-5. Symbol y Symbol.for: [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Symbol/for) - [caniuse](https://caniuse.com/mdn-api\_element\_prepend)
-6. append y prepend: [documentation ](https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend)- [caniuse](https://caniuse.com/mdn-api\_element\_prepend)
+5. Symbol and Symbol.for: [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Symbol/for) - [caniuse](https://caniuse.com/mdn-api\_element\_prepend)
+6. append and prepend: [documentation ](https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend)- [caniuse](https://caniuse.com/mdn-api\_element\_prepend)
 7. Declarative Shadow DOM: **Only for using SSR with webcomponents that use shadowDOM**. [documentation](https://developer.chrome.com/es/articles/declarative-shadow-dom/)
 
 Let's understand that today Atomico covers 94% of existing browsers without the need for polyfills or packers, the 6% not covered are usually browsers like ie11 or others.
