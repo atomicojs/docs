@@ -1,7 +1,8 @@
 ---
 description: >-
-  Improves the export of libraries and components, through the automatic
-  definition of exports, typesVersions and wrappers for your package.json
+  @atomico/exports aims to be the solution to facilitate the construction of the
+  metadata in your package.json necessary for publishing on NPM or at the
+  monorepo level with workspaces.
 ---
 
 # @atomico/exports
@@ -9,6 +10,8 @@ description: >-
 Atomico export is a solution that parses the output of compilers like vite, esbuild, typescript, rollup or other bundle tool.
 
 Atomico export is also compatible with uncompiled code (standard Javascript).
+
+<figure><img src="../../.gitbook/assets/atomico-exports.png" alt=""><figcaption></figcaption></figure>
 
 ### The objective of Atomico/exports
 

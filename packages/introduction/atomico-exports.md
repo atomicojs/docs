@@ -2,7 +2,7 @@
 description: Facilitates the distribution of webcomponents
 ---
 
-# CLI and Flags
+# 🚩 CLI and Flags
 
 {% embed url="https://github.com/atomicojs/exports" %}
 

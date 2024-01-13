@@ -1,4 +1,4 @@
-# Wrapper for React
+# 🤖 Wrapper for React
 
 Atomico allows distributing webcomponnets with extended react support, automatically creating wrappers for each component and import paths for react.
 
