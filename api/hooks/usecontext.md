@@ -44,6 +44,31 @@ function card(){
 
 In this way useContext captures the value of the parent component or reuses the value given by default to createContext.
 
+### Custom context values
+
+By setting the `value` prop on the context, you can pass custom values down the sub-tree:
+
+```tsx
+function child() {
+    const {color, background} = useContext(Theme);
+    return <host>{color === "red" && background === "blue"}</host>
+}
+
+
+export const MyChild = c(child);
+customElements.define("my-child", MyChild);
+
+function parent() {
+    return (
+        <host>
+            <Theme value={{ color: "red", background: "blue" }}>
+                <my-child></my-child>
+            </Theme>
+        </host>
+    )
+}
+```
+
 {% hint style="info" %}
 It is highly recommended to always use custom properties to expose the appearance configuration of your component at the static CSS level, since useContext is designed to share information between components in a unidirectional way.
 {% endhint %}
