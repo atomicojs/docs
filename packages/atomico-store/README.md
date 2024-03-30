@@ -118,7 +118,7 @@ export default new Store(Actions.initialStore, { actions: { Actions } });
 {% endtab %}
 {% endtabs %}
 
-### Api
+### API
 
 {% content-ref url="store.md" %}
 [store.md](store.md)

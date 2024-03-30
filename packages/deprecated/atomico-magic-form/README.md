@@ -103,7 +103,7 @@ function component() {
 
 `magic-form-provider` captures all the forms nested in `magic-form` when executing the submit event by the form and distributes them according to the definition of the action attribute to each method of the actions object
 
-### Api
+### API
 
 {% content-ref url="magicformprovider-or-less-than-magic-form-provider-greater-than.md" %}
 [magicformprovider-or-less-than-magic-form-provider-greater-than.md](magicformprovider-or-less-than-magic-form-provider-greater-than.md)

@@ -10,7 +10,7 @@
   * [You can create mobile applications](what-can-you-do-with-atomico/you-can-create-mobile-applications.md)
   * [You can create web applications](what-can-you-do-with-atomico/you-can-create-web-applications.md)
 
-## Api
+## API
 
 * [🧬 Props(Properties)](api/props/README.md)
   * [Value cycle as prop](api/props/value-cycle-as-prop.md)
