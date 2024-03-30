@@ -12,7 +12,7 @@ description: >-
 async login(form: HTMLFormElement){
   const user = Object.fromEntries(new FormData(form) as any);
   
-  return myAPI.login(user);
+  return myApi.login(user);
 }
 ```
 

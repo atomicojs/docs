@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Slots are a powerful feature when working with webcomponents that use the shadowDOM and thanks to the hook `@atomico/hooks/use-slot` you will be able to observe the state of the slot and know the childNodes of this to manage the logic of the template, example:
+Slots are a powerful feature when working with webcomponents that use the shadowDOM. And thanks to the hook `@atomico/hooks/use-slot` you will be able to observe the state of the slot and know the childNodes of this to manage the logic of the template. For example:
 
 ```jsx
 import { useRef } from "atomico";
@@ -64,18 +64,18 @@ useSlot(refSlotSlides).filter(
 Slots are not only limited to a static definition, you can use them to identify a node and use it to create new nodes according to the logic of the webcomponent, example:
 
 ```jsx
-import { useRef } from "atomico";
+import { useRef, usePromise } from "atomico";
 import { useSlot } from "@atomico/hooks/use-slot";
-import { usePromise } from "@atomico/hooks/use-promise";
 
 function userFetch() {
   const refSlotTemplateUser = useRef();
   const [Template] = useSlot(refSlotTemplateUser);
-  const [result, status] = usePromise(
+  const promise = usePromise(
     () =>
       fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
         res.json()
       ),
+    [],
     true
   );
 
@@ -83,9 +83,9 @@ function userFetch() {
     <host shadowDom>
       <slot name="template" ref={refSlotTemplateUser} />
       <div class="list">
-        {status === "fulfilled"
+        {promise.fulfilled
           ? !!Template &&
-            result.map((props) => <Template {...props} cloneNode />)
+            promise.result.map((props) => <Template {...props} cloneNode />)
           : "Pending..."}
       </div>
     </host>
