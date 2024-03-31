@@ -27,15 +27,15 @@ With Atomico you can define a default slot for your components, this is useful i
 </my-component>
 ```
 
-To define a default slot you only have to declare the prop slot in the props, example:
+To define a default slot, you only have to declare `slot` in the props, example:
 
 ```javascript
 myComponentHeader.props = {
-    slot: { type:String, value: "header"}
+    slot: { type: String, value: "header" }
 }
 
 myComponentFooter.props = {
-    slot: { type:String, value: "footer"}
+    slot: { type: String, value: "footer" }
 }
 ```
 
@@ -49,14 +49,14 @@ Atomico has the hook [**@atomico/hooks/use-slot**](../../packages/atomico-hooks/
 import { useRef } from "atomico";
 import { useSlot } from "@atomico/hooks/use-slot";
 
-function component(){
+function component() {
     const ref = useRef();
     const childNodes = useSlot(ref);
     return <host shadowDom>
         <header style={{
             display: childNodes.length? "block": "none"
         }}>
-            <slot name="header" ref={ref}/>
+            <slot name="header" ref={ref} />
         </header>
     </host>
 }

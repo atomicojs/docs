@@ -11,8 +11,8 @@ The purpose of this hook is to facilitate the consumption of promises.
 ```tsx
 import { usePromise } from "atomico";
 
-const callback = (id: number)=>Promise.resolve(id);
-const args:Parameters<typeof callback> = [1];
+const callback = (id: number) => Promise.resolve(id);
+const args: Parameters<typeof callback> = [1];
 const autorun = true;
 
 const promise = usePromise( callback, args, autorun );
@@ -25,7 +25,7 @@ where:
 * `autorun`: by default true, it automatically executes the promise, if it is false the execution of the promise is suspended.
 * `promise` : return object, at the type level it defines the following properties:
   * `pending`: boolean, defines if the promise is executed but pending resolution.
-  * `fulfilled`: boolean , defines if the promise has been fulfilled
+  * `fulfilled`: boolean, defines if the promise has been fulfilled
   * `result`: result of the promise.
   * `rejected`: boolean, defines if the promise has been rejected.
 
