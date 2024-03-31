@@ -6,8 +6,8 @@ description: create connection between components to share internal states
 
 Now, Atomico includes a context API as part of its core. We recommend implementing it as an alternative to using `useChannel`.
 
-{% content-ref url="../../api/hooks/usecontext.md" %}
-[usecontext.md](../../api/hooks/usecontext.md)
+{% content-ref url="../../api/hooks/usecontext/" %}
+[usecontext](../../api/hooks/usecontext/)
 {% endcontent-ref %}
 
 \

@@ -54,8 +54,8 @@ description: >-
 [usememo-y-usecallback.md](usememo-y-usecallback.md)
 {% endcontent-ref %}
 
-{% content-ref url="usecontext.md" %}
-[usecontext.md](usecontext.md)
+{% content-ref url="usecontext/" %}
+[usecontext](usecontext/)
 {% endcontent-ref %}
 
 {% content-ref url="useid.md" %}
