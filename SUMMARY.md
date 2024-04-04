@@ -31,6 +31,7 @@
     * [useProvider](api/hooks/usecontext/useprovider.md)
   * [usePromise](api/hooks/usepromise.md)
   * [useAsync and useSuspense](api/hooks/useasync-and-usesuspense.md)
+  * [useAbortController](api/hooks/useabortcontroller.md)
 * [🔬 Testing](api/testing/README.md)
   * [Render cycle](api/testing/test-dom.md)
   * [atomico/test-hooks](api/testing/test-hooks.md)
