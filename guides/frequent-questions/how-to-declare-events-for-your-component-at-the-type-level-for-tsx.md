@@ -1,8 +1,8 @@
 # How to declare events for your component at the type level for TSX?
 
-Atomico permite fácilmente declarar eventos a nivel de tipos usando el tipo Host
+Atomico makes it easy to declare events at the type level using the Host type.
 
-## Ejemplo
+## Example
 
 <pre class="language-tsx"><code class="lang-tsx">import { Host, c, useEvent } from "atomico";
 
