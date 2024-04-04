@@ -1,6 +1,10 @@
-# Is it advisable to declare events using the props API?
+---
+description: >-
+  It is not recommended to use the props API to create an event, as this
+  callback associated as props will have the following limitations:
+---
 
-It is not recommended to use the props API to create an event, as this callback associated as props will have the following limitations:
+# Is it advisable to declare events using the props API?
 
 1. Its name cannot have the `on` prefix since, if it does, Atomico will recognize it as a property expecting to listen to the event.
 2. It can only have one listener, limiting others from observing the event.
