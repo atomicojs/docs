@@ -13,13 +13,12 @@ description: >-
 ```jsx
 import { c } from "atomico"; // 2.5kB
 
-function component({ name }) {
-  return <host shadowDom>Hello, {name}</host>;
-}
-
-component.props = {
-  name: String,
-};
+const MyComponent = c(
+  ()=><host shadowDom>Hello, {name}</host>,
+  {
+    props: { name: String }
+  }
+);
 
 customElements.define("my-component", c(component));
 ```
