@@ -57,13 +57,15 @@ function component() {
 ```
 {% endtab %}
 
-{% tab title="Typescript + detail" %}
+{% tab title="Typescript ⚡ " %}
 ```typescript
-import { useEvent } from "atomico";
+import { Host, useEvent } from "atomico";
 
-function component() {
-  //                             👇 type for detail
-  const dispatchEvent = useEvent<{id:number}>("clickButton", {
+type DetailClickButton = {id: number};
+//                             👇 declaration to associate event to JSX/TSX
+function component():Host<{onclickButton: CustomEvent<DetailClickButton>}> {
+//                             👇 type for detail
+  const dispatchEvent = useEvent<DetailClickButton >("clickButton", {
     bubbles: true,
     composed: true,
   });
