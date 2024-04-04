@@ -5,7 +5,7 @@ It is not recommended to use the props API to create an event, as this callback 
 1. Its name cannot have the `on` prefix since, if it does, Atomico will recognize it as an event listener prop.
 2. It can only have one listener, limiting others from observing the event.
 
-**We recommend**:
+### **We recommend**:
 
 1. Using the [**useEvent**](../../api/hooks/useevent.md) hook to dispatch component-level events or any custom hook.
 2. Using the [**Prop.event**](../../api/props/#prop.event) API to dispatch events when the observed prop changes.
@@ -17,3 +17,24 @@ Always prefer the two previously mentioned methods, as they allow you to:
 3. Define if the bubbling event can penetrate the shadow DOM.
 4. Define a custom constructor for the event.
 
+### When is it recommended to use a callback as a prop?
+
+Cuando se busca comunicar parametros o leer el retorno de este, ejemplo:
+
+```tsx
+const MyForm = c(
+  ({ getPosts }) => {
+    const posts = useAsync(getPosts, []);
+
+    return <host></host>;
+  },
+  {
+    props: {
+      getPosts: {
+        type: Function,
+        value: async (): Promise<{ id: number; title: string }[]> => [],
+      },
+    },
+  }
+);
+```
