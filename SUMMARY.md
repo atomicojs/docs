@@ -40,6 +40,7 @@
 ## Guides
 
 * [🤔 Frequent questions](guides/frequent-questions/README.md)
+  * [Is it advisable to declare events using the props API?](guides/frequent-questions/is-it-advisable-to-declare-events-using-the-props-api.md)
   * [How to declare events for your component at the type level for TSX?](guides/frequent-questions/how-to-declare-events-for-your-component-at-the-type-level-for-tsx.md)
   * [When and why to use shadowDom?](guides/frequent-questions/when-and-why-to-use-shadowdom.md)
   * [Can I use Atomico in browsers without ESM support?](guides/frequent-questions/page.md)

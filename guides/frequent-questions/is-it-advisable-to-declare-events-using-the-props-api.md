@@ -1,0 +1,19 @@
+# Is it advisable to declare events using the props API?
+
+It is not recommended to use the props API to create an event, as this callback associated as props will have the following limitations:
+
+1. Its name cannot have the `on` prefix since, if it does, Atomico will recognize it as an event listener prop.
+2. It can only have one listener, limiting others from observing the event.
+
+We recommend:
+
+1. Using the [**useEvent**](../../api/hooks/useevent.md) hook to dispatch component-level events or any custom hook.
+2. Using the [**Prop.event**](../../api/props/#prop.event) API to dispatch events when the observed prop changes.
+
+Always prefer the two previously mentioned methods, as they allow you to:
+
+1. Define if the event bubbles.
+2. Define if the event is cancelable.
+3. Define if the bubbling event can penetrate the shadow DOM.
+4. Define a custom constructor for the event.
+
