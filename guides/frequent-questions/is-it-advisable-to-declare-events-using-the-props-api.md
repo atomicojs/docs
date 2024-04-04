@@ -5,7 +5,7 @@ It is not recommended to use the props API to create an event, as this callback 
 1. Its name cannot have the `on` prefix since, if it does, Atomico will recognize it as an event listener prop.
 2. It can only have one listener, limiting others from observing the event.
 
-We recommend:
+**We recommend**:
 
 1. Using the [**useEvent**](../../api/hooks/useevent.md) hook to dispatch component-level events or any custom hook.
 2. Using the [**Prop.event**](../../api/props/#prop.event) API to dispatch events when the observed prop changes.
