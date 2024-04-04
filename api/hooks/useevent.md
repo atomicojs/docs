@@ -98,3 +98,9 @@ interface EventInit {
   base?: Event | CustomEvent;
 }
 ```
+
+## Recommended articles
+
+{% content-ref url="../../guides/frequent-questions/how-to-declare-events-for-your-component-at-the-type-level-for-tsx.md" %}
+[how-to-declare-events-for-your-component-at-the-type-level-for-tsx.md](../../guides/frequent-questions/how-to-declare-events-for-your-component-at-the-type-level-for-tsx.md)
+{% endcontent-ref %}

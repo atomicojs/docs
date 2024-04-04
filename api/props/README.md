@@ -170,3 +170,13 @@ function component() {
 
 component.props = { message: String };
 ```
+
+## Recommended articles
+
+{% content-ref url="../../guides/frequent-questions/is-it-advisable-to-declare-events-using-the-props-api.md" %}
+[is-it-advisable-to-declare-events-using-the-props-api.md](../../guides/frequent-questions/is-it-advisable-to-declare-events-using-the-props-api.md)
+{% endcontent-ref %}
+
+{% content-ref url="value-cycle-as-prop.md" %}
+[value-cycle-as-prop.md](value-cycle-as-prop.md)
+{% endcontent-ref %}
