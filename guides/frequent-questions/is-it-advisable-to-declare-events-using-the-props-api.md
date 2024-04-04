@@ -16,6 +16,7 @@ Always prefer the two previously mentioned methods, as they allow you to:
 2. Define if the event is cancelable.
 3. Define if the bubbling event can penetrate the shadow DOM.
 4. Define a custom constructor for the event.
+5. Having multiple listeners for the event
 
 ### When is it recommended to use a callback as a prop?
 
