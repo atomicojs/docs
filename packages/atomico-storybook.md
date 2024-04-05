@@ -20,7 +20,7 @@ The following configuration can be added per story or in the `.storybook/preview
 ```javascript
 import { decorator } from "@atomico/storybook";
 
-export const decorators = [decorator];
+export const decorators = [decorator()];
 ```
 
 ## Facilitate and automate the generation of stories.
@@ -91,5 +91,6 @@ You can use the spread operator according to the storybook configuration.&#x20;
 
 * **Storybook 6.\* webpack 4 + Vite**, does not support the spread operator in the default export of your story.&#x20;
 * **Storybook 7.\* + Vite**, if it supports the spread operator in its story.
+* **Storybook 8.\* + Vite**, if it supports the spread operator in its story.
 {% endhint %}
 
