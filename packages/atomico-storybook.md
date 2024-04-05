@@ -6,8 +6,10 @@ description: Improves the generation of stories in Storybook.
 
 This package has 2 main objectives:
 
-1. Render as stories webcomponents created with Atomico using JSX/TSX within Storybook.
+1. Render as stories webcomponents created with Atomico using JSX/TSX within Storybook
 2. Facilitate and automate the generation of stories.
+
+
 
 ## Render as stories webcomponents created with Atomico using JSX/TSX within Storybook.
 
