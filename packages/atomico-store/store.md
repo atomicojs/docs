@@ -1,55 +1,61 @@
+---
+description: >-
+  It is a minimalist solution for synchronizing the state of applications or
+  component systems that require controlled bidirectional data management.
+---
+
 # Store
 
-## Constructor
+## Getting Started
 
-```typescript
-new Store(
-    initialState,
-    {
-        actions,
-        getters
-    }
-);
-```
+Stores in Atomico are web components with behavior similar to the Atomico context API, for example:
 
-#### Where:
-
-1. `initialState`: Object or function that defines the initial state
-2. actions : Object that groups the actions of the state
-3. getters : Object that creates virtual values of the state.
-
-### actions
+### **Creating the store**
 
 ```tsx
-async function *myAction(state, optionalParam){
-    const stateUpdates = await logicAsync(optionalParam);
-    return {
-        ...(yield),
-        ...stateUpdates
-    }
-}
+import { createContext } from "@atomico/store";
+
+const MyStore = createContext({ counter: 0 });
+
+customElements.define("my-store", MyStore);
 ```
 
-### getters
+### **Defining the store**
 
-getters are just functions that compute state.
+```tsx
+import { c } from "atomico";
+import { MyStore } from "./my-store";
 
-```typescript
-const total = (state)=>state.a + state.b;
-```
-
-## Store.on((state)=>void)
-
-Subscribes to state changes, example:
-
-```typescript
-const off = store.on((state)=>{
-    console.log(state.loading);
+export const MyApp = c(() => {
+  return (
+    <host>
+      <MyStore state={{ counter: 0 }}>
+        <slot />
+      </MyStore>
+    </host>
+  );
 });
-
-off(); // remove the subscription
 ```
 
-## Store.clone( optionalNewState )
+### **Consuming the store**
 
-Clone the state and define a new state for it.
+```tsx
+import { c } from "atomico";
+import { useStore } from "@atomico/store";
+import { MyStore } from "./my-store";
+
+export const MyApp = c(() => {
+  const store = useStore(MyStore);
+  return (
+    <host>
+      <button onclick={() => store.counter++}>
+        Increment: {store.counter}
+      </button>
+    </host>
+  );
+});
+```
+
+### Bidirectional State Management?
+
+If you're familiar with the Atomico context API, you'll know it's unidirectional, meaning the parent dispatches updates to the child. @atomico/store is bidirectional, allowing any store consumer to synchronize. This means the parent can dispatch updates to the child, and the child can dispatch updates to the parent.

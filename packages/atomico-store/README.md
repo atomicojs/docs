@@ -81,8 +81,6 @@ await store.actions.updateAll();
 
 @atomico/store allows to decouple the actions and the state of the store, for a better modularization , example:
 
-
-
 {% tabs %}
 {% tab title="actions.js" %}
 ```typescript
@@ -124,6 +122,6 @@ export default new Store(Actions.initialStore, { actions: { Actions } });
 [store.md](store.md)
 {% endcontent-ref %}
 
-{% content-ref url="hooks.md" %}
-[hooks.md](hooks.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
