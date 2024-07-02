@@ -14,7 +14,7 @@ Let's understand that today Atomico covers 94% of existing browsers without the 
 
 If you depend on the uncovered segment of browsers you can use the following tools to support the apis necessary for Atomico to work.
 
-[https://polyfill.io/](https://polyfill.io/) to associate Map, Symbol, append and prepend.
+[polyfill-fastly.io](https://polyfill-fastly.io/v3/polyfill.min.js?features=Element.prototype.append%2CSymbol%2CElement.prototype.prepend%2CMap) to associate Map, Symbol, append and prepend.
 
 [https://github.com/Rich-Harris/shimport](https://github.com/Rich-Harris/shimport) to associate esm.
 
