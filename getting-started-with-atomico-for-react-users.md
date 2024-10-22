@@ -89,7 +89,7 @@ From the example we will highlight the following differences:
 5. The `<host/>` tag is similar to `<> </>` for React, but `<host/>` represents the webcomponent instance and **every component created with Atomico must return the host tag**
 6. This is only readability, but in Atomico by convention we do not use capital letters when naming our component, these are only used when creating the customElement as in line 16, since `Counter` is instantiable.
 
-Ahora quiero invitarte a que conoscas como declaras un estilo usando Atomico.
+Now I want to invite you to learn how to declare a style using Atomico.
 
 ## How do you declare styles using Atomico?
 
