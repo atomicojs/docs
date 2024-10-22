@@ -65,7 +65,7 @@ component.styles = css`
 `;
 
 // DEFINITION OF THE WEBCOMPONENT AS A TAG
-customElements.define("my-component", c(component)
+customElements.define("my-component", c(component));
 ```
 {% endtab %}
 {% endtabs %}
