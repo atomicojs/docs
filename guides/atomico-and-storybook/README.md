@@ -23,7 +23,7 @@ Easily render webcomponents created with Atomico inside storytbook stories.&#x20
 ```typescript
 import { decorator } from "@atomico/storybook";
 
-export const decorators = [decorator];
+export const decorators = [decorator()];
 ```
 
 ### define
