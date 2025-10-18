@@ -30,8 +30,6 @@ Export the return of the c function, since it is instantiable at the JSX level o
 ```tsx
 export const MyComponent = c(() => <host>My component in Atomico</host>);
 
-export const MyComponent = c(myComponent);
-
 customElements.define("my-component", MyComponent);
 ```
 {% endtab %}
