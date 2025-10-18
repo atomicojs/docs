@@ -11,7 +11,7 @@ description: Atomico's virtualDOM is designed to enhance the use of webcomponent
 ```jsx
 import { c } from "atomico";
 
-function component() {
+const MyComponent = c(() => {
   const handlerClick = () => console.log("click!");
   return (
     <host shadowDom onclick={handlerClick}>
@@ -19,9 +19,9 @@ function component() {
       <slot></slot>
     </host>
   );
-}
+});
 
-customElements.define("my-component", c(component));
+customElements.define("my-component", MyComponent);
 ```
 
 **Atomico supports jsx-runtime**, alternatively you can import the `h` function to declare manual of the JSX pragma, eg:
@@ -31,32 +31,21 @@ customElements.define("my-component", c(component));
 import { h } from "atomico";
 ```
 
-### Template String
-
-Atomico supports the use of template-string thanks to the use of the package [htm](https://github.com/developit/htm).
-
-```javascript
-import { c } from "atomico";
-import html from "atomico/html";
-
-function component() {
-  const handlerClick = () => console.log("click!");
-  return html`<host shadowDom onclick=${handlerClick}>
-    <h1>content</h1>
-    <slot></slot>
-  </host>`;
-}
-
-customElements.define("my-component", c(component));
-```
-
 ## Return rule
 
 ```jsx
-function component() {
+import { c } from "atomico";
+
+const MyComponent = c(() => {
   // The webcomponent should always return the host tag
-  return <host></host>;
-}
+  return (
+    <host shadowDom>
+      <slot></slot>
+    </host>
+  );
+});
+
+customElements.define("my-component", MyComponent);
 ```
 
 An important rule of Atomico's virtualDOM is that **every webcomponent must return the `<host/>` tag** since it represents the state of the webcomponent's DOM, such as:
@@ -156,4 +145,3 @@ myElement.myMethod();
 ```
 
 To access the DOM safely wait for the resolution of the updated property created by the [render cycle](../testing/test-dom.md).
-
