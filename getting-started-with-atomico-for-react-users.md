@@ -82,7 +82,7 @@ From the example we will highlight the following differences:
 
 1. In Atomico you only use one import.
 2. `useProp` is like `useState`, but with the difference that useProp references the state from the webcomponent property defined in `counter.props`.
-3. `counter.props` allows us to create the properties of our webcomponent, these are like React's propTypes, but with a big difference they are associated with the instance and can be read and modified by referencing the node, example `document.querySelector("my-counter").count = 10;`
+3. `const props` allows us to create the properties of our webcomponent, these are like React's propTypes, but with a big difference they are associated with the instance and can be read and modified by referencing the node, example `document.querySelector("my-counter").count = 10;`
 4. `ReactDom.render` needs a reference to mount the component, in Atomico you only need to create the `my-counter` tag to create a new instance of the component.
 5. The `<host/>` tag is similar to `<> </>` for React, but `<host/>` represents the webcomponent instance and **every component created with Atomico must return the host tag**
 6. This is only readability, but in Atomico by convention we do not use capital letters when naming our component, these are only used when creating the customElement as in line 16, since `Counter` is instantiable.
@@ -138,13 +138,9 @@ render(
 ```jsx
 import { c, css } from "atomico";
 
-function button() {
-  return <host shadowDom><slot/></host>;
-}
+const props = { primary: { type: Boolean, relfect: true } };
 
-button.props = { primary: { type: Boolean, relfect: true } };
-
-button.styles = css`
+const styles = css`
   :host {
     display: inline-block;
     border-radius: 3px;
@@ -162,7 +158,16 @@ button.styles = css`
   }
 `;
 
-export const Button = c(button);
+export const Button = c(
+  () => (
+    <host shadowDom>
+      <slot />
+    </host>
+  ),
+  { props, styles }
+);
+
+customElements.define("my-button", Button);
 ```
 {% endtab %}
 {% endtabs %}
