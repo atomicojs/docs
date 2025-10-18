@@ -14,7 +14,7 @@ description: >-
 import { c } from "atomico"; // 2.5kB
 
 const MyComponent = c(
-  ()=><host shadowDom>Hello, {name}</host>,
+  ({name})=><host shadowDom>Hello, {name}</host>,
   {
     props: { name: String }
   }
@@ -26,49 +26,14 @@ customElements.define("my-component", c(component));
 
 {% tab title="TSX" %}
 ```jsx
-import { Props, c } from "atomico"; // 2.5kB
+import { c } from "atomico"; // 2.5kB
 
-function component({ name }:Props<typeof component.props>) {
-  return <host shadowDom>Hello, {name}</host>;
-}
-
-component.props = {
-  name: String,
-};
-
-customElements.define("my-component", c(component));
-```
-{% endtab %}
-
-{% tab title="JS" %}
-```javascript
-import { c, html } from "atomico"; // 3.0kB
-
-
-function component({ name }) {
-  return html`<host shadowDom>Hello, ${name}</host>`;
-}
-
-component.props = {
-  name: String,
-};
-
-customElements.define("my-component", c(component));
-```
-{% endtab %}
-
-{% tab title="Browser" %}
-```javascript
-import { c, html } from "https://unpkg.com/atomico"; // 4.0kB
-
-
-function component({ name }) {
-  return html`<host shadowDom>Hello, ${name}</host>`;
-}
-
-component.props = {
-  name: String,
-};
+const MyComponent = c(
+  ({name})=><host shadowDom>Hello, {name}</host>,
+  {
+    props: { name: String }
+  }
+);
 
 customElements.define("my-component", c(component));
 ```
