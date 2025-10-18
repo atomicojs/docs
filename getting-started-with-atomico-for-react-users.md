@@ -2,9 +2,10 @@
 description: >-
   Hi, I'm Atomico js and I bring you the React syntax for webcomponents, I think
   you and I get along very well 😊.
+icon: atom
 ---
 
-# ⚛️ Getting started with Atomico for React users
+# Getting started with Atomico for React users
 
 First let's say that Atomico is light since it has a size close to 3kB vs React + ReactDOM that have a size close to 60kB, now if your project is already written in React I can integrate Atomico progressively since a component created can be instantiated as a component for React thanks to [@atomico/react](packages/atomico-react.md), example:
 

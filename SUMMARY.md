@@ -1,9 +1,9 @@
 # Table of contents
 
-* [👋 Atomico](README.md)
-* [🚀 Getting started with Atomico](getting-started-with-atomico.md)
-* [⚛️ Getting started with Atomico for React users](getting-started-with-atomico-for-react-users.md)
-* [💡 What can you do with Atomico?](what-can-you-do-with-atomico/README.md)
+* [Atomico](README.md)
+* [Getting started with Atomico](getting-started-with-atomico.md)
+* [Getting started with Atomico for React users](getting-started-with-atomico-for-react-users.md)
+* [What can you do with Atomico?](what-can-you-do-with-atomico/README.md)
   * [You can create amazing webcomponents](what-can-you-do-with-atomico/you-can-create-amazing-webcomponents.md)
   * [You can create design systems](what-can-you-do-with-atomico/you-can-create-design-systems.md)
   * [You can create websites](what-can-you-do-with-atomico/you-can-create-websites.md)
@@ -12,12 +12,12 @@
 
 ## API
 
-* [🧬 Props(Properties)](api/props/README.md)
+* [Props(Properties)](api/props/README.md)
   * [Value cycle as prop](api/props/value-cycle-as-prop.md)
   * [Is it advisable to declare events using the props API?](https://atomico.gitbook.io/doc/guides/frequent-questions/is-it-advisable-to-declare-events-using-the-props-api)
-* [🧩 VirtualDOM](api/virtualdom/README.md)
+* [VirtualDOM](api/virtualdom/README.md)
   * [Advanced](api/virtualdom/advanced.md)
-* [🎣 Hooks](api/hooks/README.md)
+* [Hooks](api/hooks/README.md)
   * [useProp](api/hooks/useprop.md)
   * [useEvent](api/hooks/useevent.md)
   * [useRef](api/hooks/useref.md)
@@ -33,7 +33,7 @@
   * [usePromise](api/hooks/usepromise.md)
   * [useAsync and useSuspense](api/hooks/useasync-and-usesuspense.md)
   * [useAbortController](api/hooks/useabortcontroller.md)
-* [🔬 Testing](api/testing/README.md)
+* [Testing](api/testing/README.md)
   * [Render cycle](api/testing/test-dom.md)
   * [atomico/test-hooks](api/testing/test-hooks.md)
   * [atomico/test-dom](api/testing/atomico-test-dom.md)

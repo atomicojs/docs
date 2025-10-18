@@ -2,9 +2,10 @@
 description: >-
   Improves the experience of reusing logic between webcomponents based on
   Atomico
+icon: fishing-rod
 ---
 
-# 🎣 Hooks
+# Hooks
 
 ## Hooks only for webcomponents
 

@@ -2,9 +2,10 @@
 description: >-
   The props in Atomico are the way to associate the webcomponent properties and
   reactive attributes that trigger the logic or interface of the webcomponent.
+icon: dna
 ---
 
-# 🧬 Props(Properties)
+# Props(Properties)
 
 Props is the Atomico recommended way to declare visible and accessible states at the instance level of your webcomponents, with props you can:
 

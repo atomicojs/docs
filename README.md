@@ -2,9 +2,10 @@
 description: >-
   A micro library inspired by React Hooks, designed and optimized for the
   creation of webcomponents.
+icon: hand-wave
 ---
 
-# 👋 Atomico
+# Atomico
 
 ![](.gitbook/assets/header-2.svg)
 

@@ -1,8 +1,9 @@
 ---
 description: Atomico's virtualDOM is designed to enhance the use of webcomponents.
+icon: puzzle-piece
 ---
 
-# 🧩 VirtualDOM
+# VirtualDOM
 
 ## Syntax
 

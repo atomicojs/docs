@@ -2,9 +2,10 @@
 description: >-
   This guide will know the essentials to start developing webcomponents with
   Atomico
+icon: rocket-launch
 ---
 
-# 🚀 Getting started with Atomico
+# Getting started with Atomico
 
 Thanks for being here and getting started with Atomico. Let's talk a little about what Atomico offers today:
 
