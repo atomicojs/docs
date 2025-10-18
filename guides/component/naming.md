@@ -27,14 +27,13 @@ Export the return of the c function, since it is instantiable at the JSX level o
 
 {% tabs %}
 {% tab title="my-component.tsx" %}
-<pre class="language-tsx"><code class="lang-tsx"><strong>function myComponent(){
-</strong>    return &#x3C;host>My component in Atomico&#x3C;/host>
-}
+```tsx
+export const MyComponent = c(() => <host>My component in Atomico</host>);
 
 export const MyComponent = c(myComponent);
 
 customElements.define("my-component", MyComponent);
-</code></pre>
+```
 {% endtab %}
 
 {% tab title="Instance in JSX" %}
