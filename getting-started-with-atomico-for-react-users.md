@@ -4,7 +4,7 @@ description: >-
   you and I get along very well 😊.
 ---
 
-# ⚛ Getting started with Atomico for React users
+# ⚛️ Getting started with Atomico for React users
 
 First let's say that Atomico is light since it has a size close to 3kB vs React + ReactDOM that have a size close to 60kB, now if your project is already written in React I can integrate Atomico progressively since a component created can be instantiated as a component for React thanks to [@atomico/react](packages/atomico-react.md), example:
 
@@ -57,25 +57,27 @@ render(
 ```jsx
 import { c, useProp } from "atomico";
 
-function counter() {
-  const [count, setCount] = useProp("count");
-  return (
-    <host>
-      Count: {count}
-      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
-    </host>
-  );
-}
+const props = { count: { type: Number, value: 0 } };
 
-counter.props = { count: { type: Number, value: 0 } }
-
-const Counter = c(counter);
-
-customElements.define(
-  "my-counter",
-  Counter  
+const Counter = c(
+  () => {
+    const [count, setCount] = useProp("count");
+    return (
+      <host>
+        Count: {count}
+        <button onClick={() => setCount((prevCount) => prevCount - 1)}>
+          -
+        </button>
+        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+          +
+        </button>
+      </host>
+    );
+  },
+  { props }
 );
+
+customElements.define("my-counter", Counter);
 ```
 {% endtab %}
 {% endtabs %}
