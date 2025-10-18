@@ -20,27 +20,25 @@ Any function that represents the webcomponent will be able to associate the stat
 ```jsx
 import { c } from "atomico";
 
-function component() {
-  return <host />;
-}
-
-component.props = {
-  // Simple statement
-  value1: String,
-  // Structured statement
-  value2: {
-    type: String,
-    reflect: true,
-    attr: "advaceprop",
-    value: "default string",
-    event: {
-      type: "UpdateAdvanceProp",
-      bubbles: true,
+const props = {
+    // Simple statement
+    value1: String,
+    // Structured statement
+    value2: {
+      type: String,
+      reflect: true,
+      attr: "advaceprop",
+      value: "default string",
+      event: {
+        type: "UpdateAdvanceProp",
+        bubbles: true,
+      },
     },
-  },
 };
 
-customElement.define("web-component", c(component));
+const MyComponent = c((props) => <host>{props.value1}</host>, { props });
+
+customElement.define("web-component", MyComponent);
 ```
 
 #### Consider that:
@@ -55,7 +53,7 @@ customElement.define("web-component", c(component));
 Simple statements allow setting just type validations.
 
 ```javascript
-component.props = {
+const props = {
   propString: String,
   propNumber: Number,
   propObject: Object,
@@ -73,9 +71,9 @@ Improve the definition by adding utility declarations, allowing for example to r
 
 ```javascript
 // valid declaration
-component.props = { myName: String };
+const props = { myName: String };
 // valid declaration
-component.props = { myName: { type: String } };
+const props = { myName: { type: String } };
 ```
 
 | Type                                                                                                            | Supports reflect |
@@ -95,7 +93,7 @@ component.props = { myName: { type: String } };
 If the "reflect" property is set to true, its value is reflected as an attribute of the webcomponent, this is useful for the declaration of CSS states, example:
 
 ```jsx
-component.props = {
+const props = {
   checked: {
     type: Boolean,
     reflect: true,
@@ -108,7 +106,7 @@ component.props = {
 It allows dispatching an automatic event before the prop value change, example:
 
 ```javascript
-component.props = {
+const props = {
   value: {
     type: String,
     event: {
@@ -139,7 +137,7 @@ The special properties of the event are the well-known `Event Init`, you can kno
 Atomico allows the definition of default values of the props.
 
 ```javascript
-WebComponents.props = {
+const props = {
   valueNormal: {
     type: Number,
     value: 100,
@@ -158,17 +156,20 @@ The association of callback as value allows generating unique values for each in
 Atomico removes the use of "this" given its functional approach, but adds the hook \[useProp] (hooks / useprop.md) which allows to reference a prop for use with a functional syntax, eg:
 
 ```jsx
-function component() {
-  const [message, setMessage] = useProp("message");
-  return (
-    <host>
-      Hello, {message}
-      <input oninput={({ target }) => setMessage(target.value)} />
-    </host>
-  );
-}
+const props = { message: String };
 
-component.props = { message: String };
+const MyComponent = c(
+  () => {
+    const [message, setMessage] = useProp("message");
+    return (
+      <host>
+        Hello, {message}
+        <input oninput={({ target }) => setMessage(target.value)} />
+      </host>
+    );
+  },
+  { props }
+);
 ```
 
 ## Recommended articles
