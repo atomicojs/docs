@@ -176,19 +176,18 @@ customElements.define("my-button", Button);
 
 It is normal for React to create components that you then instantiate within other components, for example:
 
-```tsx
-
+<pre class="language-tsx"><code class="lang-tsx">
 function Child({children}){
-    return <span>children</span>
+    return &#x3C;span>children&#x3C;/span>
 }
 
 function Main(){
-    return <>
-        <Child>text 1...</Child>
-        <Child>text 2...</Child>
-    </>
-}
-```
+    return &#x3C;>
+        &#x3C;Child>text 1...&#x3C;/Child>
+        &#x3C;Child>text 2...&#x3C;/Child>
+    &#x3C;/>
+<strong>}
+</strong></code></pre>
 
 with Atomico there are certain differences:
 
@@ -196,18 +195,15 @@ with Atomico there are certain differences:
 
 The constructor in Atomic is the product of the c function and is the one you will use to register your webcomponent, example:
 
-<pre class="language-tsx"><code class="lang-tsx"><strong>import { c } from "atomico";
-</strong>
-function myComponent(){
-    return &#x3C;host>
-        ...
-    &#x3C;/host>
-}
+{% code title="my-component.tsx" %}
+```tsx
+import { c } from "atomico";
 
-export const MyComponent = c(myComponent); // Constructor
+export const MyComponent = c(() => <host>...</host>); // Constructor
 
 customElements.define("my-component", MyComponent);
-</code></pre>
+```
+{% endcode %}
 
 According to the previous example, you can instantiate MyComponent as a JSX Component, example:
 
@@ -215,13 +211,11 @@ According to the previous example, you can instantiate MyComponent as a JSX Comp
 import { c } from "atomico";
 import { MyComponent } from "./my-component";
 
-function myApp(){
-    return <host>
-        <MyComponent/>
-    </host>;
-}
-
-export const MyApp = c(myApp);
+export const MyApp = c(() => (
+  <host>
+    <MyComponent />
+  </host>
+));
 
 customElements.define("my-app", MyApp);
 ```
@@ -231,15 +225,20 @@ This instance type allows autocompletion at the JSX level and type validation at
 ### 2. With Atomico you can instantiate components as functions as long as these are only stateless functions
 
 ```tsx
-function MyStatelessTemplateBlock(){
-
+function MyIcon({ size }) {
+  return (
+    <svg height={size} width={size}>
+      <circle r="45" cx="50" cy="50" fill="red" />
+    </svg>
+  );
 }
 
-function MyComponent(){
-    return <host>
-        <MyStatelessTemplateBlock/>
-    </host>
-}
+const MyComponent = c(() => (
+  <host>
+    Small <MyIcon size={"1rem"} />
+    Large <MyIcon size={"2rem"} />
+  </host>
+));
 ```
 
 This will be useful for reusing templates, but always remember stateless.
