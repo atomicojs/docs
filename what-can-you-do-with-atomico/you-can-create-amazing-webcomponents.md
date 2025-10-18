@@ -28,6 +28,7 @@ This is thanks to Atomico's reliance on React hooks syntax plus the ability to c
 
 Atomic offers additional coverage for native behavior for React and Vue, allowing your component to be more embed-friendly, example React:
 
+{% code title="react-app.tsx" %}
 ```tsx
 import { Button } from "@formas/button/react";
 
@@ -40,4 +41,5 @@ function App(){
    </>
 }
 ```
+{% endcode %}
 
