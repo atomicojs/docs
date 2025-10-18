@@ -66,11 +66,8 @@ Render rule "The first node of the render must always be the host tag".
 This technique allows you to use any registered custom element without the need to know its `tag-name` for its use, example:
 
 ```jsx
-function component(){
-    return <host/>
-}
 // 1️⃣ We create the custom element
-const Component = c(component);
+const Component = c(()=><host/>);
 
 // 2️⃣ We register the custom element
 customElements.define("my-component", Component);
@@ -92,14 +89,12 @@ Advantage :
 Atomico allows the use of the DOM, for this it establishes its created or recovered node as a constructor, example:
 
 ```jsx
-function component(){
-
+const MyComponent = c(()=>{
     const Div = useMemo(()=>document.createElement("div"));
-    
     return <host>
         <Div style="color: black">content...</Div>
     </host>
-}
+});
 ```
 
 ### Dynamic constructor
@@ -107,13 +102,12 @@ function component(){
 Atomico associates the variable associated with the instance as a constructor, example:
 
 ```jsx
-function component({ subComponent }){
+const MyComponent = c(()=>{
     const TagName = `my-${subComponent}`;
-    
     return <host>
         <TagName/>
     </host>
-}
+});
 ```
 
 ### staticNode
@@ -121,15 +115,13 @@ function component({ subComponent }){
 allows to declare a node within the scope of the function as static, this will optimize the diff process between render, achieving better performance in cases of high stress of the UI, example:
 
 ```jsx
-function component() {
-  return (
-    <host>
-      <h1 staticNode onclick={console.log}>
-        i am static node!
-      </h1>
-    </host>
-  );
-}
+const MyComponent = c(() => (
+  <host>
+    <h1 staticNode onclick={console.log}>
+      i am static node!
+    </h1>
+  </host>
+));
 ```
 
 the biggest advantage of this is that the node accesses the scope of the webcomponent
@@ -143,26 +135,22 @@ const Div = document.createElement("div");
 
 Div.innerHTML = `<h1>Div!</h1>`;
 
-function component() {
-  return (
-    <host>
-      <Div cloneNode onclick={console.log} />
-      <Div cloneNode onclick={console.log} />
-      <Div cloneNode onclick={console.log} />
-      <Div cloneNode onclick={console.log} />
-      <Div cloneNode onclick={console.log} />
-    </host>
-  );
-}
+const MyComponent = c(() => (
+  <host>
+    <Div cloneNode onclick={console.log} />
+    <Div cloneNode onclick={console.log} />
+    <Div cloneNode onclick={console.log} />
+    <Div cloneNode onclick={console.log} />
+    <Div cloneNode onclick={console.log} />
+  </host>
+));
 ```
 
 The objective of this feature is to retrieve slot and use it as a template from the webcomponent.
 
-## SSR hydration
+## SSR hydration&#x20;
 
-Atomico allows reusing existing DOM in the document. This is done during the
-webcomponent instatiation, by setting a special property in the tag to mark it
-for hydration.
+Atomico allows reusing existing DOM in the document. This is done during the webcomponent instatiation, by setting a special property in the tag to mark it for hydration.
 
 ```markup
 <my-webcomponent data-hydrate>
@@ -184,21 +172,5 @@ This can be done for shadowDom too:
 ```
 
 {% hint style="info" %}
-These code samples are not part of the standard yet, so polyfills must be used to
-ensure that it works in all browsers.
-Read more about **Google Chrome**'s proposal here [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/).
+These code samples are not part of the standard yet, so polyfills must be used to ensure that it works in all browsers. Read more about **Google Chrome**'s proposal here [https://web.dev/declarative-shadow-dom/](https://web.dev/declarative-shadow-dom/).
 {% endhint %}
-
-## Class name inheritance
-
-Atomic creates a customElement from a function, Atomico will take the name of the function and associate it as the name of the CustomElement in CamelCase format, example:
-
-```javascript
-function button(){
-    return <host/>
-}
-
-const Button = c(button);
-```
-
-This results in the class name being equal to Button. This feature is useful for tools like Storybook, when serializing the JSX.
