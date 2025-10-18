@@ -65,12 +65,8 @@ const Counter = c(
     return (
       <host>
         Count: {count}
-        <button onClick={() => setCount((prevCount) => prevCount - 1)}>
-          -
-        </button>
-        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
-          +
-        </button>
+        <button onClick={() => setCount((prevCount) => prevCount - 1)}>-</button>
+        <button onClick={() => setCount((prevCount) => prevCount + 1)}>+</button>
       </host>
     );
   },
