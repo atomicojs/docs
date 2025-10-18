@@ -5,7 +5,7 @@
 
 ## Api
 
-* [🧬 Props(Propiedades)](api/props.md)
+* [🧬 Props(Propiedades)](https://atomico.gitbook.io/doc/api/props)
 * [🧩 Virtual DOM](https://atomico.gitbook.io/doc/api/virtualdom)
 * [🎣 Hooks](https://atomico.gitbook.io/doc/api/hooks)
 * [🔬 Testing](https://atomico.gitbook.io/doc/api/testing)

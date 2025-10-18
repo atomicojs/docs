@@ -53,8 +53,8 @@ Atomico simplifica el aprendizaje, flujo de trabajo y el mantenimiento al crear 
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="api/props.md" %}
-[props.md](api/props.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="guias/sistemas-de-diseno/" %}
