@@ -44,7 +44,7 @@ customElements.define("my-component", c(component));
 
 Let's analyze the code in parts ...
 
-### 1. Imports <a href="#importacion" id="importacion"></a>
+### 1.0 Imports <a href="#importacion" id="importacion"></a>
 
 {% code title="MyComponent.jsx - Line: 1" %}
 ```javascript
@@ -57,7 +57,7 @@ What have we imported?
 1. `c`: Function that transforms the functional component into a standard customElement.
 2. `css`: Function that allows creating the CSSStyleSheet (CSS) for our component as long as it declares the shadowDom.
 
-### 2. Creating Our Web Component: Custom Element Definition
+### 2.0 Creating Our Web Component: Custom Element Definition
 
 #### 2.1 Defining Component Render Function
 
@@ -70,7 +70,7 @@ What have we imported?
 ```
 {% endcode %}
 
-Our component function receives all the props (Properties and Attributes) declared in component.props, the component function declares all the logic and template of the webcomponent. An important rule within Atomico is **"every component created with Atomico must always return the tag"**.
+Our function receives all the props (Properties and Attributes) declared in `props`, the component function declares all the logic and template of the webcomponent. An important rule within Atomico is **"📌 every component created with Atomico must always return the tag"**.
 
 #### 2.2 Defining Component Properties(props) and Attributes
 
