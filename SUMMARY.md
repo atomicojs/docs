@@ -21,11 +21,11 @@
   * [Tokens (CSS custom properties)](guias/sistemas-de-diseno/tokens-css-custom-properties.md)
   * [Slots](guias/sistemas-de-diseno/slots.md)
 * [📖 Atomico + Storybook](https://atomico.gitbook.io/doc/guides/atomico-and-storybook)
-* [🛡 Atomico + Typescript](https://atomico.gitbook.io/doc/guides/atomico-with-typescript)
-* [⚛ Atomico + React](https://atomico.gitbook.io/doc/guides/atomico-and-react)
+* [🛡️ Atomico + Typescript](https://atomico.gitbook.io/doc/guides/atomico-with-typescript)
+* [⚛️ Atomico + React](https://atomico.gitbook.io/doc/guides/atomico-and-react)
 * [💧 Atomico + SSR/SSG](https://atomico.gitbook.io/doc/guides/ssr-ssg)
 * [🧠 Patrones de diseño](https://atomico.gitbook.io/doc/guides/atomico-design-patterns)
-* [🗺 Guía de estilo (Estructuras)](https://atomico.gitbook.io/doc/guides/atomico-style-guide)
+* [🗺️ Guía de estilo (Estructuras)](https://atomico.gitbook.io/doc/guides/atomico-style-guide)
 * [🔀 Slot](https://atomico.gitbook.io/doc/guides/slot)
 
 ## @atomico
